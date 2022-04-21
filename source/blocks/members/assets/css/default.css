@@ -1,0 +1,71 @@
+.block-members-default{
+    width: 200px;
+}
+.block-members-default .block-title{
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-right-radius: 4px;
+    height: 39px; line-height: 39px;
+    background-color: #7fcf50;
+    font-family: "UTM Aurora","Myriad Pro";
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+}
+.block-members-default .block-title:after{
+    position: absolute; top: 39px; left: 12px;
+}
+.block-members-default .block-content{
+    background-color: #f5f5f5;
+    padding-top: 13px;
+}
+.block-members-default .block-content .mem-item{
+    height: 59px;
+    border-top: 1px solid #ffffff;
+    padding: 7px 15px 8px 39px;
+    color: #333333;
+    font-size: 11px;
+    line-height: 15px;
+    position: relative;
+}
+.block-members-default .block-content .mem-item .thumb{
+    display: inline-block;
+    height: 42px; width: 42px;
+    float: left;
+    margin-right: 9px;
+}
+.block-members-default .block-content .mem-item .thumb img{
+    height: 42px; width: 42px;
+}
+.block-members-default .block-content .mem-item .title{
+    color: #333333;
+    text-decoration: none;
+    font-size: 12px;
+}
+.block-members-default .block-content .mem-item span{
+    color: #eb001d;
+}
+.block-members-default .block-content .mem-item .number{
+    position: absolute; left: 0; top: 0;
+    display: block; height: 30px; width: 41px; padding: 5px 0 0 15px;
+    background: url(../images/strong.png) no-repeat;
+    color: #fff;
+    font-size: 13px; 
+}
+.block-members-default .block-content .mem-item .number.number-1{
+    background: url(../images/strong-1.png) no-repeat !important;
+}
+.block-members-default .block-content .mem-item .number.number-2{
+    background: url(../images/strong-2.png) no-repeat !important;
+}
+.block-members-default .block-content .mem-item .number.number-3{
+    background: url(../images/strong-3.png) no-repeat !important;
+}
+
+
+
+
+
+

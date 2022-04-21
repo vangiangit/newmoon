@@ -1,0 +1,24 @@
+@mixin after-icon($whidth, $height, $top: 0, $left: 0, $x: left, $y: top){
+    position: relative;
+
+    &:after{
+        display: block;
+        content: "";
+        position: absolute;
+        width: $whidth;
+        height: $height;
+        top: $top;
+        left: $left;
+        background: $x $y url("../images/sprinter.png") no-repeat;
+    }
+}
+
+@mixin block-heading{
+    text-align: center;
+    font-size: 30px;
+    color: #292929;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}

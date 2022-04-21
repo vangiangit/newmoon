@@ -1,0 +1,16 @@
+.block-faqs {
+    .block-heading {
+        @include block-heading;
+    }
+
+    &.block-faqs-default{
+        .block-heading {
+            text-align: left !important;
+
+            &:after{
+                left: 0 !important;
+                margin-left: 0 !important;
+            }
+        }
+    }
+}

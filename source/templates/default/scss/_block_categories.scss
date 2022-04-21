@@ -1,0 +1,9 @@
+.block-categories{
+    &.block-categories-default{
+        .block-heading {
+            @include block-heading;
+            margin-bottom: 40px;
+            margin-top: 30px;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+form .counter{
+    display: inline-block;
+	color: #c5c5c5;
+    padding-left: 10px;
+    vertical-align: top;
+}
+form .warning{color:#600;}	
+form .exceeded{color: red;}
+
+.admintable-news .counter,
+.admintable-news .comment{
+    padding-left: 0;
+    color: #777777;
+    display: none;
+}
+.admintable-news #summary,
+.admintable-news #alias,
+.admintable-news #seo_title,
+.admintable-news #seo_keyword,
+.admintable-news #seo_description{
+    max-width: 100%;
+    margin-bottom: 10px;
+}

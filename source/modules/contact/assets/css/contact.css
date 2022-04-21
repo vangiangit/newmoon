@@ -1,0 +1,44 @@
+.contact-form .bound-input{
+    margin-bottom: 14px;
+    position: relative;
+}
+.contact-form .bound-input img{
+    height: 38px;
+    margin-top: -2px;
+}
+.contact-form .bound-input span{
+    position: absolute;
+    line-height: 38px;
+    top: 0; right: -10px;
+}
+.contact-form .bound-input input,
+.contact-form .bound-input textarea{
+    width: 97%;
+    border: 1px solid #e0dede;
+    height: 38px;
+    outline: none;
+    padding-left: 10px;
+}
+.contact-form .bound-input input#txtCaptcha{
+    width: 175px;
+}
+.contact-form .bound-input textarea{
+    height: 124px !important;
+}
+.contact-form .sub-more-news:first-child{
+    width: 320px;
+}
+.contact-form .btn-submit{
+    height: 34px; line-height: 34px;
+    width: 125px;
+    text-align: center;
+    display: inline-block;
+    background: #c9a96e;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.contact-form .sub-more-news:last-child{
+    width: 500px;
+}
