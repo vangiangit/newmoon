@@ -4,6 +4,7 @@ $Itemid = FSInput::get('Itemid', 1, 'int');
 $tmpl->addStylesheet('style');
 $tmpl->addScript('bootstrap.min');
 $tmpl->addScript('library');
+$tmpl->addScript('slick.min', '', 'top');
 ?>
 
 <nav class="navbar navbar-expand-lg fixed-top">
@@ -22,6 +23,14 @@ $tmpl->addScript('library');
             <?php if ($tmpl->count_block('menu-position')) { ?>
                 <?php $tmpl->load_position('menu-position'); ?>
             <?php } ?>
+            <div class="d-flex right-button">
+                <a class="rb-item" href="#">
+                    <img src="<?php echo URL_ROOT ?>templates/default/images/iconSearch.svg" />
+                </a>
+                <a class="rb-item" href="#">
+                    <img src="<?php echo URL_ROOT ?>templates/default/images/iconNewMenu.svg" />
+                </a>
+            </div>
         </div>
     </div>
 </nav>
@@ -41,19 +50,27 @@ $tmpl->addScript('library');
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-lg-7">
-                <p class="heading">Cuchay.vn - Chia sẻ kinh ngiệm hay trong cuộc sống</p>
-                <p>Lưu ý: Các thông tin trên Cuchay.vn chỉ mang tính chất tham khảo. Chúng tôi tuyệt đối không chịu bất cứ trách nhiệm nào do việc tự ý áp dụng các thông tin trên Cuchay.vn gây ra.</p>
-                <p><span class="icon email">Email: <a href="mailto:info@cuchay.vn">info@cuchay.vn</a></span></p>
-            </div><!-- /.col-lg-7-->
-            <div class="col-lg-5 text-right">
-                <p class="heading"><?php echo FSText::_('Theo chúng tôi') ?></p>
-                <p class="social">
-                    <a class="facebook" rel="nofollow" href="<?php echo $config['link_facebook'] ?>"></a>
-                    <a class="twitter" rel="nofollow" href="<?php echo $config['link_twitter'] ?>"></a>
-                    <a class="youtube" rel="nofollow" href="<?php echo $config['link_youtube'] ?>"></a>
+            <div class="col-lg-3">
+                <p>
+                    <a class="navbar-brand" href="<?php echo URL_ROOT ?>">
+                        <img src="<?php echo URL_ROOT ?>templates/default/images/logo.svg" />
+                    </a>
                 </p>
+                <p>
+                    <a href="#"><img src="<?php echo URL_ROOT ?>templates/default/images/iconFacebookDark.svg" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#"><img src="<?php echo URL_ROOT ?>templates/default/images/iconYoutubeDark.svg" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#"><img src="<?php echo URL_ROOT ?>templates/default/images/iconTwitterDark.svg" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#"><img src="<?php echo URL_ROOT ?>templates/default/images/iconTelegramDark.svg" /></a>
+                </p>
+            </div><!-- /.col-lg-4-->
+            <div class="col-lg-9">
+                <?php if ($tmpl->count_block('menu-footer-position')) { ?>
+                    <?php $tmpl->load_position('menu-footer-position'); ?>
+                <?php } ?>
             </div>
         </div><!-- /.row-->
     </div><!-- /.container-->
+    <div class="footer-rights text-center">
+        2022 New Moon. All Rights Reserved
+    </div>
 </footer>

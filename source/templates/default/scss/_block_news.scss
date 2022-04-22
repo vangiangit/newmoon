@@ -157,4 +157,15 @@
             }
         }
     }
+
+    &.block-news-latest{
+        position: relative;
+
+        .slider-nav{
+            position: absolute;
+            right: 0;
+            width: 33%;
+            top: 0;
+        }
+    }
 }

@@ -57,13 +57,7 @@
             <div id="menu-bar">
                 <?php require('modules/menus/admin.php');?>
             </div><!--end: #menu-bar-->
-            <div id="menu-author">
-                <div class="bound">
-                    <a href="#"><span>Tin dịch vụ</span></a>
-                    <a href="#"><span>Gửi yêu cầu</span></a>
-                    <div class="clearfix"></div>
-                </div><!--end: .bound-->
-            </div><!--end: #menu-author-->
+            
             <div class="clearfix"></div>
         </div><!--end: #sidebar-->
         <div id="wrap-content">

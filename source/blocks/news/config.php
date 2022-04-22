@@ -26,7 +26,8 @@ $params = array(
     	'type' => 'select',
     	'value' => array(
             'default' => 'Default',
-            'aside' => 'Aside'
+            'aside' => 'Aside',
+            'latest' =>'Latest',
         )
 	),
 	'category_id' => array(

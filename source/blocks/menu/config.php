@@ -21,7 +21,8 @@ $params = array(
     	'name'=>'Style',
     	'type' => 'select',
     	'value' => array(
-            'nav' => 'Nav'
+            'default' => 'Default',
+            'nav' => 'Nav',
         )
 	),
 	'class' => array(

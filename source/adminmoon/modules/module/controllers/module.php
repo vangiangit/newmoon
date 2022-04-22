@@ -9,7 +9,8 @@ class ModuleControllersModule extends Controllers{
             'default-position',
             'aside-position',
             'content-position',
-            'footer-position'
+            'footer-position',
+            'menu-footer-position'
         );
             
         $this->position = $positions;
