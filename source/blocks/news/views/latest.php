@@ -19,16 +19,18 @@ $Itemid = 5;
                     <?php }?>
                 <?php }?>
             </div>
-            <div class="slider slider-nav">
-                <?php $i = 0;
-                foreach($list as $item){?>
-                    <article class="post-slider-nav">
-                        <a class="thumb" href="<?php echo $link;?>" title="<?php echo $title;?>">
-                            <img class="img-fluid" src="<?php echo URL_ROOT.str_replace('/original/','/small/', $item->image); ?>" alt="<?php echo $title;?>" />
-                        </a>
-                        <h4 class="heading"><a href="<?php echo $link;?>" title="<?php echo $title ?>"><?php echo $item->title?></a></h4>
-                    </article><!-- /.post-item-->
-                <?php $i++; }?>
+            <div class="slider-nav-bound">
+                <div class="slider slider-nav">
+                    <?php $i = 0;
+                    foreach($list as $item){?>
+                        <article class="post-slider-nav">
+                            <a class="thumb" href="<?php echo $link;?>" title="<?php echo $title;?>">
+                                <img class="img-fluid" src="<?php echo URL_ROOT.str_replace('/original/','/small/', $item->image); ?>" alt="<?php echo $title;?>" />
+                            </a>
+                            <h4 class="heading"><a href="<?php echo $link;?>" title="<?php echo $title ?>"><?php echo $item->title?></a></h4>
+                        </article><!-- /.post-item-->
+                    <?php $i++; }?>
+                </div>
             </div>
         </div><!-- /.block-content-->
     </div>
@@ -37,7 +39,7 @@ $Itemid = 5;
     $('#block-<?php echo $blockId ?> .slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: true,
+        arrows: false,
         fade: true,
         asNavFor: '#block-<?php echo $blockId ?> .slider-nav'
     });
