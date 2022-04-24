@@ -9,111 +9,110 @@ $tmpl->addMetades($seo_description);
 $Itemid = 5;		
 $tmpl->setMeta('og:image', URL_ROOT.str_replace('/original/','/og-image/', $data->image));
 ?>
+<div class="contentWrapperNormal">
+    <div class="minHeight">
+        <main>
+            <div class="contentWrapper row">
+                <div class="colLeft col">
+                    <div class="colLeftSticky">
+                        <div class="boxColLeft mb-4">
+                            <div class="boxColLeftWrap" style="padding: 20px 12px;">
+                                <ul>
+                                    <li onclick="goSetIdTop('section-10')" data-id="section-10">
+                                        <div class="d-flex">
+                                            <span class="textNumber">1.</span> 
+                                            <span class="ml-2">Polkastarter Overview</span>
+                                        </div>
+                                    </li>
+                                    <li onclick="goSetIdTop('section-10')" data-id="section-10">
+                                        <div class="d-flex">
+                                            <span class="textNumber">2.</span> 
+                                            <span class="ml-2">How Polkastarter selects a whitelist winner</span>
+                                        </div>
+                                    </li>
+                                    <li onclick="goSetIdTop('section-10')" data-id="section-10">
+                                        <div class="d-flex">
+                                            <span class="textNumber">3.</span> 
+                                            <span class="ml-2">Preparations before participating</span>
+                                        </div>
+                                    </li>
+                                    <li onclick="goSetIdTop('section-10')" data-id="section-10">
+                                        <div class="d-flex">
+                                            <span class="textNumber">4.</span> 
+                                            <span class="ml-2">How to participate</span>
+                                        </div>
+                                    </li>
+                                    <li onclick="goSetIdTop('section-10')" data-id="section-10">
+                                        <div class="d-flex">
+                                            <span class="textNumber">5.</span> 
+                                            <span class="ml-2">FAQ about Polkastarter IDO</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!-- /.boxColLeft-->
 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-9">
-            <?php if($tmpl -> count_block('content-position')){?>
-                <?php $tmpl -> load_position('content-position');?>
-            <?php }?>
-            <div class="post-detail">
-                <h1 class="content-title post-title"><?php echo $data->title;?></h1>
-                <div class="post-date">
-                    <?php echo date('d/m/Y | H:i', strtotime($data->created_time));?>
-                </div>
-                <div class="post-summary">
-                    <?php echo $data->summary; ?>
-                </div><!-- /.post-summary-->
-                <div class="row">
-                    <?php foreach ($products as $item){ continue; ?>
-                        <div class="col-lg-3 col-xs-6">
-                            <?php $tmpl->product_item($item); ?>
+                        <?php 
+                        $tags = explode(',', $data->tags); 
+                        if($tags){
+                        ?>
+                            <div class="boxColLeft">
+                                <div class="boxColLeftWrap">
+                                    <div class="block-heading">
+                                        <span>Keyword</span>
+                                    </div>
+                                    <div class="listTag d-flex">
+                                        <?php foreach($tags as $tag){ ?>
+                                            <a href="/tag/<?php echo $tag ?>">
+                                                <div class="hashTag">
+                                                    <div><?php echo $tag ?></div>
+                                                </div>
+                                            </a>
+                                        <?php } ?>
+                                    </div>
+                                </div>
+                            </div><!-- /.boxColLeft-->
+                        <?php } ?>
+                    </div><!-- /.colLeftSticky-->
+                </div><!-- /.colLeft-->
+                <div class="colCenter col">
+                    <div class="postContent">
+                        <h1 class="post-title pd50"><?php echo $data->title;?></h1>
+                        <div class="infoWrapper pd50">
+
                         </div>
-                    <?php } ?>
-                </div>
-                <div class="post-content">
-                    <?php echo $data->content; ?>
-                </div><!-- /.post-content-->
-                <div id="player"></div>
-                <p>&nbsp;</p>
-                <div class="row">
-                    <?php foreach ($products2 as $item){ continue; ?>
-                        <div class="col-lg-3 col-xs-6">
-                            <?php $tmpl->product_item($item); ?>
+                        <div class="thumbnailWrapper pd50">
+                            <div class="thumbnailBox">
+                                <img src="<?php echo URL_ROOT . $data->image;?>" />
+                            </div>
                         </div>
-                    <?php } ?>
-                </div>
-            </div><!-- /#post-detail-->
-            <?php if($otherList){ ?>
-                <h5 class="content-title"><?php echo FSText::_('Tin khác')?></h5>
-                <ul class="news-other">
-                <?php
-                foreach($otherList as $item){
-                    $title = htmlspecialchars($item->title);
-                    $link = FSRoute::_('index.php?module=news&view=news&id='.$item->id.'&code='.$item->alias.'&ccode='.$item->category_alias); ?>
-                    <li>
-                        <h4 class="heading"><a href="<?php echo $link;?>" title="<?php echo $title ?>"><?php echo $item->title?></a></h4>
-                    </li><!-- /.col-lg-6-->
-                <?php } ?>
-                </ul><!-- /.row-->
-            <?php } ?>
-        </div><!-- /.col-lg-9-->
-        <div class="col-lg-3">
-            <?php if($tmpl -> count_block('aside-position')){?>
-                <?php $tmpl -> load_position('aside-position');?>
-            <?php }?>
-        </div><!-- /.col-lg-3-->
-    </div><!-- /.row-->
-</div><!-- /.container-->
-<?php /*
-<script type="text/javascript">
-    // 2. This code loads the IFrame Player API code asynchronously.
-    var tag = document.createElement('script');
-
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    // 3. This function creates an <iframe> (and YouTube player)
-    //    after the API code downloads.
-    var player;
-    var width = $('#player').width();
-    var height = width*9/16;
-    function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-            height: height,
-            width: width,
-            videoId: '54nY1vcs3bw',
-            events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
-            }
-        });
-    }
-
-    // 4. The API will call this function when the video player is ready.
-    function onPlayerReady(event) {
-        event.target.playVideo();
-    }
-
-    // 5. The API calls this function when the player's state changes.
-    //    The function indicates that when playing a video (state=1),
-    //    the player should play for six seconds and then stop.
-    var done = true;
-    function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
-            setTimeout(stopVideo, 60000);
-            done = true;
-        }
-    }
-
-    function stopVideo() {
-        player.stopVideo();
-    }
-    <?php if(!isset($_SESSION['href'])){ $_SESSION['href'] = 1; ?>
-    setTimeout(function () {
-        $(window.location).attr('href', 'http://bit.ly/2H6ZcGj');
-    }, 36000);
-    <?php } ?>
-</script>
- */ ?>
+                        <div class="textDescription pd50">
+                            <?php echo $data->summary; ?>
+                        </div><!-- /.textDescription-->
+                        <div class="postContentWrapper pd50">
+                            <?php echo $data->content; ?>
+                        </div><!-- /.postContentWrapper-->
+                    </div><!-- /#post-detail-->
+                </div><!-- /.colCenter-->
+                <div class="colRight col">
+                    <div class="colRightSticky">
+                        <div id="block-<?php echo $data->id?>" class="block-news block-news-related">
+                            <div class="blurWrapper"></div>
+                            <div class="block-heading">
+                                Related Posts
+                            </div>
+                            <div class="block-content">
+                                <?php foreach($otherList as $item){
+                                    $tmpl->news_tiny($item, 'tiny');
+                                }?>
+                            </div><!-- /.block-content-->
+                        </div><!-- #block-<?php echo $data->id?>-->
+                        <?php if($tmpl -> count_block('aside-position')){?>
+                            <?php $tmpl -> load_position('aside-position');?>
+                        <?php }?>
+                    </div>
+                </div><!-- /.colRight-->
+            </div><!-- /.contentWrapper-->
+        </main>
+    </div><!-- /.minHeight-->
+</div><!-- /.contentWrapperNormal-->

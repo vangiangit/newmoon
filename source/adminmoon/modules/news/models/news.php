@@ -15,8 +15,8 @@ class NewsModelsNews extends FSModels
         $this->table_category_name = 'fs_news_categories';
         $this->table_types = 'fs_news_types';
         $this->arr_img_paths = array(
-            array('tiny', 600, 600, 'resize_image_fix'),
-            array('small', 640, 360, 'resize_image_fix'),
+            array('tiny', 360, 204, 'resize_image_fix'),
+            array('small', 1200, 675, 'resize_image_fix'),
             array('og-image', 600, 314, 'resize_image_fix'),
         );
         $this->table_name = 'fs_news';
@@ -63,6 +63,7 @@ class NewsModelsNews extends FSModels
 						  	WHERE 1=1 " . $where . $ordering . " ";
         return $query;
     }
+
     function save()
     {
         $title = FSInput::get('title');
@@ -80,6 +81,11 @@ class NewsModelsNews extends FSModels
         $row['category_alias_wrapper'] = $cat->alias_wrapper;
         $row['category_name'] = $cat->name;
         $row['category_alias'] = $cat->alias;
+
+        $row['creator'] = @$_SESSION['ad_username']  ;
+        $row['creator_id'] = @$_SESSION['ad_userid'] ;
+        $row['creator_name'] = @$_SESSION['ad_fullname'] ;
+
         $row['content'] = htmlspecialchars_decode(FSInput::get('content'));
         return parent::save($row);
     }

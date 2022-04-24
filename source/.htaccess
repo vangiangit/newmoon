@@ -19,10 +19,12 @@ RewriteRule ^([^/]*).api$ index.php?module=ajax&view=ajax&raw=1&task=$1&%{QUERY_
 #shortlink
 RewriteRule ^L([0-9]*)$ index.php?module=ajax&view=ajax&task=shortlink&id=$1&%{QUERY_STRING} [L]
 #news
+RewriteRule ^news$ index.php?module=news&view=home&Itemid=2&%{QUERY_STRING} [L]
+RewriteRule ^author/([^/]*)-([0-9]*)$ index.php?module=news&view=home&task=author&code=$1&id=$2&Itemid=2&%{QUERY_STRING} [L]
 RewriteRule ^([^/]*)-ch([0-9]*).html$ index.php?module=news&view=news&code=$1&id=$2&Itemid=7&%{QUERY_STRING} [L]
 RewriteRule ^([^/]*)(/trang-([0-9]*))?.html$ index.php?module=news&view=cat&ccode=$1&page=$3&Itemid=6&%{QUERY_STRING} [L]
 #album
 RewriteRule ^([^/]*)-ald([0-9]*)$ index.php?module=album&view=album&code=$1&id=$2&Itemid=9&%{QUERY_STRING} [L]
 RewriteRule ^([^/]*)-al([0-9]*)(/trang-([0-9]*))?$ index.php?module=album&view=cat&ccode=$1&id=$2&page=$4&Itemid=9&%{QUERY_STRING} [L]
 #contact
-RewriteRule ^lien-he$ index.php?module=contact&Itemid=10 [L]
+RewriteRule ^contact-us$ index.php?module=contact&Itemid=10&%{QUERY_STRING} [L]

@@ -35,6 +35,7 @@ $this -> dt_form_begin(0);
             <table cellspacing="1" class="admintable" style="width: 100%">
                 <?php
                 TemplateHelper::dt_edit_text_1(FSText :: _('Summary'),'summary',@$data -> summary,'',100,9);
+                TemplateHelper::dt_edit_text_1(FSText :: _('Tags'),'tags',@$data -> tags,'',100,9);
                 TemplateHelper::dt_edit_text_1(FSText :: _('Alias'),'alias',@$data -> alias,'',60,1,0,FSText::_("Can auto generate"));
                 TemplateHelper::dt_edit_text_1(FSText :: _('SEO title'),'seo_title',@$data -> seo_title,'',100,1);
                 TemplateHelper::dt_edit_text_1(FSText :: _('SEO meta keyword'),'seo_keyword',@$data -> seo_keyword,'',100,1);

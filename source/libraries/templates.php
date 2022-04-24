@@ -476,13 +476,72 @@ class Templates{
         <?php
     }
 
+    function grid_item($item, $size = 'tiny'){
+        $Itemid = 7;
+        $title = htmlspecialchars($item->title);
+        $link = FSRoute::_('index.php?module=news&view=news&id='.$item->id.'&code='.$item->alias.'&ccode='.$item->category_alias.'&Itemid='.$Itemid);
+        $link_creator = FSRoute::_('index.php?module=news&view=home&task=author&id='.$item->creator_id.'&code='.$item->creator.'&Itemid='.$Itemid);?>
+            <article class="grid-item">
+                <a class="thumb" href="<?php echo $link;?>" title="<?php echo $title;?>">
+                    <img onerror="this.src='/images/no-<?php echo $size?>-news.jpg'" class="img-fluid" src="<?php echo URL_ROOT.str_replace('/original/','/'.$size.'/', $item->image); ?>" alt="<?php echo $title;?>" />
+                </a>
+                <div class="info">
+                    <h4 class="heading"><a href="<?php echo $link;?>" title="<?php echo $title ?>"><?php echo $item->title?></a></h4>
+                    <div class="creator">
+                        <div class="align-items-center d-flex">
+                            <a href="<?php echo $link_creator ?>" title="<?php echo htmlspecialchars($item->creator_name); ?>">
+                                <img src="/images/iconCoinNM.png" class="rounded-circle" alt="icon">
+                                <?php echo $item->creator_name ?>
+                            </a>
+                            <div class="aic-dot"></div>
+                            <div class="aic-date">
+                                <?php echo date('M d', strtotime($item->created_time)); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article><!-- /.grid-item-->
+        <?php
+    }
+
+    function list_item($item, $size = 'tiny'){
+        $Itemid = 7;
+        $title = htmlspecialchars($item->title);
+        $link = FSRoute::_('index.php?module=news&view=news&id='.$item->id.'&code='.$item->alias.'&ccode='.$item->category_alias.'&Itemid='.$Itemid);
+        $link_creator = FSRoute::_('index.php?module=news&view=home&task=author&id='.$item->creator_id.'&code='.$item->creator.'&Itemid='.$Itemid);?>
+            <article class="list-item">
+                <div class="thumb">
+                    <a href="<?php echo $link;?>" title="<?php echo $title;?>">
+                        <img onerror="this.src='/images/no-<?php echo $size?>-news.jpg'" class="img-fluid" src="<?php echo URL_ROOT.str_replace('/original/','/'.$size.'/', $item->image); ?>" alt="<?php echo $title;?>" />
+                    </a>
+                </div>
+                <div class="info">
+                    <h4 class="heading"><a href="<?php echo $link;?>" title="<?php echo $title ?>"><?php echo $item->title?></a></h4>
+                    <p><?php echo $item->summary ?></p>
+                    <div class="creator">
+                        <div class="align-items-center d-flex">
+                            <a href="<?php echo $link_creator ?>" title="<?php echo htmlspecialchars($item->creator_name); ?>">
+                                <img src="/images/iconCoinNM.png" class="rounded-circle" alt="icon">
+                                <?php echo $item->creator_name ?>
+                            </a>
+                            <div class="aic-dot"></div>
+                            <div class="aic-date">
+                                <?php echo date('M d', strtotime($item->created_time)); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article><!-- /.grid-item-->
+        <?php
+    }
+
     function about_item($item, $size = 'tiny'){
         $Itemid = 8;
         $title = htmlspecialchars($item->title);
         $link = FSRoute::_('index.php?module=about&view=about&id='.$item->id.'&code='.$item->alias.'&ccode='.$item->category_alias.'&Itemid='.$Itemid);?>
         <article class="about-item">
             <a class="thumb" href="<?php echo $link;?>" title="<?php echo $title;?>">
-                <img class="img-responsive" src="<?php echo URL_ROOT.str_replace('/original/','/'.$size.'/', $item->image); ?>" alt="<?php echo $title;?>" />
+                <img class="img-fluid" src="<?php echo URL_ROOT.str_replace('/original/','/'.$size.'/', $item->image); ?>" alt="<?php echo $title;?>" />
             </a>
             <div class="holder">
                 <h4 class="heading"><a href="<?php echo $link;?>" title="<?php echo $title ?>"><?php echo $item->title?></a></h4>

@@ -69,17 +69,12 @@
                 ?>
                 <div class="clearfix"></div>
             </div><!--end: #box-content-->
-            <div class="copyright">
-                <a target="_blank" href="http://finalstyle.com" title="Thiết kế web, thiết web chuyên nghiệp"><img alt="Thiết kế web, thiết web chuyên nghiệp" src="templates/default/images/logo/finalstyle.png" /></a>
-            </div><!--end: .copyright-->
             <div class="clearfix"></div>
         </div><!--end: #wrap-content-->
         <div class="clearfix"></div>
     </div><!--end: #wrapper-->
-    <div id="footer">
-        © Copyright 2005-<?php echo date('Y');?> <a target="_blank" href="http://finalstyle.com" title="Thiết kế web, Thiết kế web chuyên nghiệp"><strong>FinalStyle</strong></a> All rights reserved <a target="_blank" class="contact-us" href="http://www.finalstyle.com/lien-he" title="Thông tin liên hệ">Contact us</a><br /> 
-        <b>Mobile:</b> (84-04) 2219 2996&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <b>E-mail:</b> <a href="mailto:info@finalstyle.com" title="Gửi email liên hệ">info@finalstyle.com</a>
+    <div id="footer" style="text-align: center;">
+        © Copyright <?php echo date('Y');?> <strong><?php echo $_SERVER['HTTP_HOST'] ?></strong> All rights reserved
     </div><!--end: #footer-->
 </body>		
 </html>

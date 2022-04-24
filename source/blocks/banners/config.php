@@ -15,7 +15,7 @@ $params = array (
     	'type' => 'select',
     	'value' => array(
 			'default' => 'Default',
-			'default_text' => 'Default (Text)',
+			'default_container' => 'Default (Container)',
             'multiple' => 'Multiple',
 			'comments' => 'Comments',
             'slideshow' =>'Slideshow (Next & Prev)',
@@ -54,6 +54,7 @@ $params = array (
 		'default' => '0'
 	)
 );
+
 function getBannersCategory(){
 	global $db;
 	$query = "  SELECT name, id 

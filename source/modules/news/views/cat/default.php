@@ -10,22 +10,21 @@ if(trim($cat->seo_description != ''))
     $tmpl->addMetades($cat->seo_description);
 $Itemid = 5;
 ?>
-<div class="container">
-    <div class="row">
-        <div class="col-lg-9">
-            <?php if($tmpl -> count_block('content-position')){?>
-                <?php $tmpl -> load_position('content-position');?>
-            <?php }?>
-            <h1 class="content-title"><?php echo $cat->name ?></h1>
-            <?php foreach($listNews as $item){?>
-                <?php $tmpl->news_item($item, 'small');?>
-            <?php } ?>
-            <?php if($pagination) echo $pagination->showPagination(); ?>
-        </div><!-- /.col-lg-9-->
-        <div class="col-lg-3">
-            <?php if($tmpl -> count_block('aside-position')){?>
-                <?php $tmpl -> load_position('aside-position');?>
-            <?php }?>
-        </div><!-- /.col-lg-3-->
-    </div><!-- /.row-->
+<div class="container container-news">
+    <h1 class="block-heading">
+        <?php echo $cat->name?>
+    </h1>
+    <div class="row list-news">
+        <?php $i = 0;
+        foreach($listNews as $item){
+            $i++;?>
+            <div class="<?php if($i=='1') echo 'col-lg-12'; else echo 'col-lg-6'; ?>">
+                <?php $tmpl->list_item($item, 'small'); ?>
+            </div>
+        <?php } ?>
+    </div><!-- /.list-grid-->
+    <?php if($pagination) echo $pagination->showPagination(); ?>
+    <?php if($tmpl -> count_block('content-position')){?>
+        <?php $tmpl -> load_position('content-position');?>
+    <?php }?>
 </div><!-- /.container-->

@@ -15,10 +15,64 @@
 
 @mixin block-heading{
     text-align: center;
-    font-size: 30px;
-    color: #292929;
+    font-size: 38px;
+    color: #ededed;
     font-weight: bold;
     padding-top: 10px;
-    padding-bottom: 10px;
-    text-transform: uppercase;
+    padding-bottom: 20px;
+
+    a{
+        color: #ededed;
+        text-decoration: none;
+
+        &:hover{
+            color: #fbe08e;
+        }
+    }
+}
+
+@mixin post-creator {
+    display: -webkit-flex;
+        display: -moz-box;
+        display: flex;
+        -webkit-justify-content: space-between;
+        -moz-box-pack: justify;
+        justify-content: space-between;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        align-items: center;
+        margin-top: 24px;
+
+        .align-items-center{
+            -webkit-align-items: center!important;
+            -moz-box-align: center!important;
+            align-items: center!important;
+
+            a {
+                text-decoration: none;
+                color: #ededed;
+                font-size: 14px;
+            }
+
+            .rounded-circle{
+                width: 26px;
+                height: 26px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+
+            .aic-dot{
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                margin-left: 16px;
+                background-color: #959393;
+            }
+
+            .aic-date {
+                font-size: 14px;
+                margin-left: 8px;
+                color: #959393;
+            }
+        }
 }

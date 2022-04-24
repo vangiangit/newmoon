@@ -208,7 +208,15 @@ class FSRoute
                     switch ($view)
                     {
                         case 'home':
-                            return URL_LANG.'tin-tuc';
+                            switch($task){
+                                case 'author':
+                                    $id  = isset($array_params['id'])?$array_params['id']: 0;
+                                    $code  = isset($array_params['code'])?$array_params['code']: 'admin';
+                                    return URL_LANG.'author/'.$code.'-'.$id;
+                                default:
+                                    return URL_LANG.'news';
+                            }
+                            
                         case 'news':
                             if($task== 'display'){
 								$id  = isset($array_params['id'])?$array_params['id']: 0;

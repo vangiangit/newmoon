@@ -243,7 +243,7 @@ function validateComment(){
 
 function goSetIdTop($id){
 	offset = $('#'+$id).offset();
-	$("html,body").animate({scrollTop:offset.top},"slow");
+	$("html,body").animate({scrollTop:offset.top}, 200);
 }
 
 jQuery(document).ready(function($){

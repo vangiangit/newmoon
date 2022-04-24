@@ -8,13 +8,18 @@ $Itemid = 5;
             <div class="slider slider-for">
                 <?php $i = 0;
                 foreach($list as $item){
+                    $title = htmlspecialchars($item->title);
+                    $link = FSRoute::_('index.php?module=news&view=news&id='.$item->id.'&code='.$item->alias.'&ccode='.$item->category_alias);
                     $i++;?>
                     <?php if($item -> image){?>
                         <article class="post-slider-for">
-                            <a class="thumb" href="<?php echo $link;?>" title="<?php echo $title;?>">
-                                <img class="img-fluid" src="<?php echo URL_ROOT.str_replace('/original/','/small/', $item->image); ?>" alt="<?php echo $title;?>" />
-                            </a>
-                            <h4 class="heading"><a href="<?php echo $link;?>" title="<?php echo $title ?>"><?php echo $item->title?></a></h4>
+                            <img class="img-fluid img-bg" src="<?php echo URL_ROOT.str_replace('/original/','/small/', $item->image); ?>" alt="<?php echo $title;?>" />
+                            <div class="post-slider-for-info">
+                                <a class="thumb" href="<?php echo $link;?>" title="<?php echo $title;?>">
+                                    <img class="img-fluid" src="<?php echo URL_ROOT.str_replace('/original/','/small/', $item->image); ?>" alt="<?php echo $title;?>" />
+                                </a>
+                                <h4 class="heading"><a href="<?php echo $link;?>" title="<?php echo $title ?>"><?php echo $item->title?></a></h4>
+                            </div>
                         </article><!-- /.post-item-->
                     <?php }?>
                 <?php }?>
@@ -22,7 +27,9 @@ $Itemid = 5;
             <div class="slider-nav-bound">
                 <div class="slider slider-nav">
                     <?php $i = 0;
-                    foreach($list as $item){?>
+                    foreach($list as $item){
+                        $title = htmlspecialchars($item->title);
+                        $link = FSRoute::_('index.php?module=news&view=news&id='.$item->id.'&code='.$item->alias.'&ccode='.$item->category_alias);?>
                         <article class="post-slider-nav">
                             <a class="thumb" href="<?php echo $link;?>" title="<?php echo $title;?>">
                                 <img class="img-fluid" src="<?php echo URL_ROOT.str_replace('/original/','/small/', $item->image); ?>" alt="<?php echo $title;?>" />
@@ -50,7 +57,7 @@ $Itemid = 5;
         asNavFor: '#block-<?php echo $blockId ?> .slider-for',
         dots: false,
         centerMode: false,
-        focusOnSelect: true,
+        focusOnSelect: false,
         vertical: true,
         verticalSwiping: true,
     });

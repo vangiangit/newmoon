@@ -104,19 +104,10 @@
 					
 					<tr>
 						<td valign="top" class="key">
-							<?php echo FSText :: _('First name'); ?>
+							<?php echo FSText :: _('Fullname'); ?>
 						</td>
 						<td>
-							<input type="text" name='fname' value="<?php echo @$data->fname; ?>" >
-							
-						</td>
-					</tr>
-					<tr>
-						<td valign="top" class="key">
-							<?php echo FSText :: _('Middle-last name'); ?>
-						</td>
-						<td>
-							<input type="text" name='lname' value="<?php echo @$data->lname; ?>" >
+							<input type="text" name='fullname' value="<?php echo @$data->fullname; ?>" >
 							
 						</td>
 					</tr>

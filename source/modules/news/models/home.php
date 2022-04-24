@@ -22,7 +22,7 @@ class NewsModelsHome extends FSModels{
             $sqlWhere = ' AND category_id_wrapper LIKE \'%,'.$catId.',%\'';
         else
             $sqlWhere = '';
-        $query = '  SELECT id, title, image, summary, alias, created_time, category_id, category_name, category_alias
+        $query = '  SELECT id, title, image, summary, alias, created_time, category_id, category_name, category_alias, creator, creator_id, creator_name
                     FROM '.$this->table_name.'
                     WHERE published = 1 '.$sqlWhere.SQL_PUBLISH.SQL_LANG.'
                     ORDER BY ordering DESC';
@@ -71,4 +71,26 @@ class NewsModelsHome extends FSModels{
         $result = $db->query($query);
         return $db->getObjectList();
     }
+
+    /**
+     * Lấy danh mục
+     * @return Object
+     */
+    function getAuthor(){
+        global $db;
+		$code = FSInput::get('code');
+		if($code){
+			$where = ' AND username = \''.$code.'\'';
+		} else {
+			$id = FSInput::get('id',0,'int');
+			if(!$id)
+				die('Not exist this url');
+			$where = ' AND id = '.$id.' ';
+		}
+        $query = '  SELECT id, username, fullname
+                    FROM fs_users 
+                    WHERE published = 1 '.$where;
+		$db->query($query);
+		return $db->getObject();
+	}
 }

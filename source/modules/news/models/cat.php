@@ -22,7 +22,7 @@ class NewsModelsCat extends FSModels{
             $sqlWhere = ' AND category_id_wrapper LIKE \'%,'.$catId.',%\'';
         else
             $sqlWhere = '';
-        $query = '  SELECT id, title, image, summary, alias, created_time, category_id, category_name, category_alias
+        $query = '  SELECT id, title, image, summary, alias, created_time, category_id, category_name, category_alias, creator, creator_id, creator_name
                     FROM '.$this->table_name.'
                     WHERE published = 1 '.$sqlWhere.SQL_PUBLISH.SQL_LANG.'
                     ORDER BY ordering DESC';

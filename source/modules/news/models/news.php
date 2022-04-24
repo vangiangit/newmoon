@@ -53,14 +53,14 @@ class NewsModelsNews extends FSModels{
         global $db;
         $code = FSInput::get('code');
         if ($catId)
-            $sqlWhere = ' AND n.category_id_wrapper LIKE \'%,'.$catId.',%\' AND alias <> \''.$code.'\'';
+            $sqlWhere = ''; // ' AND n.category_id_wrapper LIKE \'%,'.$catId.',%\' AND alias <> \''.$code.'\'';
         else
             $sqlWhere = '';
         $query = '  SELECT n.id, n.title, n.image, n.alias, n.created_time, n.category_id , n.category_alias, n.summary 
                     FROM '.$this->table_name.' AS n
                     WHERE n.published = 1 '.$sqlWhere.SQL_PUBLISH.SQL_LANG.'
                     ORDER BY n.ordering DESC
-                    LIMIT 4';
+                    LIMIT 3';
         $result = $db->query($query); 
         return $db->getObjectList();
     }

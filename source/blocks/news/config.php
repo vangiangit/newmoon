@@ -28,6 +28,8 @@ $params = array(
             'default' => 'Default',
             'aside' => 'Aside',
             'latest' =>'Latest',
+            'grid' => 'Grid',
+            'list' => 'List - Top',
         )
 	),
 	'category_id' => array(

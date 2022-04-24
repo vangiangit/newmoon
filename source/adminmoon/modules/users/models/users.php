@@ -178,6 +178,7 @@
 			$username= FSInput::get('username');
 			$password= md5(FSInput::get('password'));
 			$repass = md5(FSInput::get('repass'));
+			$fullname = FSInput::get('fullname');
 			$fname = FSInput::get('fname');
 			$lname = FSInput::get('lname');
 			$lname = FSInput::get('lname');
@@ -209,6 +210,7 @@
 							$sql_set.
 							"fname  = '$fname',
 							lname  = '$lname',
+							fullname  = '$fullname',
 							email  = '$email',
 							phone  = '$phone',
 							address  = '$address',

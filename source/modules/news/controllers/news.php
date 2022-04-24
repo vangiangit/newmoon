@@ -14,12 +14,6 @@ class NewsControllersNews extends FSControllers{
             setRedirect(URL_ROOT);
         $cat = $this->model->getCategoryById($data->category_id);
         $otherList = $this->model->getOtherNewsList($data->category_id);
-        $this->model->category_id = $data->category_id;
-        $products = $this->model->get_records('', 'fs_products', '*', 'rand()', 4);
-        $ids = 0;
-        foreach ($products as $item)
-            $ids .= ','.$item->id;
-        $products2 = $this->model->get_records('id NOT IN ('.$ids.')', 'fs_products', '*', 'rand()', 4);
         /* Thêm thanh điều hướng */
         global $tmpl;
         $breadcrumbs = array();

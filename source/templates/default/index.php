@@ -39,7 +39,7 @@ $tmpl->addScript('slick.min', '', 'top');
     <?php $tmpl->load_position('header-position'); ?>
 <?php } ?>
 
-<?php if ($Itemid != 1) $tmpl->load_direct_blocks('breadcrumbs'); ?>
+<?php // if ($Itemid != 1) $tmpl->load_direct_blocks('breadcrumbs'); ?>
 
 <?php echo $main_content ?>
 

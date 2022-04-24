@@ -3,7 +3,7 @@ function login(){
 	$db = new Mysql_DB();
 	$password = md5(FSInput::get('password'));
 	$username = FSInput::get('username');
-	$db->query('SELECT u.id, u.username, u.email, g.groupid
+	$db->query('SELECT u.id, u.username, u.email, g.groupid, u.fullname
                 FROM fs_users AS u
                     INNER JOIN fs_users_groups AS g ON u.id = g.userid
                 WHERE u.username = \''.$username.'\' AND u.password = \''.$password.'\' AND published = 1
@@ -16,6 +16,7 @@ function login(){
 	$_SESSION['ad_userid']     = $user->id;
     $_SESSION['ad_groupid']    = $user->groupid;
     $_SESSION['ad_username']   = $user->username;
+    $_SESSION['ad_fullname']   = $user->fullname;
     $_SESSION['ad_useremail']  = $user->email;
 	return true;
 }
