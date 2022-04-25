@@ -6,7 +6,7 @@ function login(){
 	$db->query('SELECT u.id, u.username, u.email, g.groupid, u.fullname
                 FROM fs_users AS u
                     INNER JOIN fs_users_groups AS g ON u.id = g.userid
-                WHERE u.username = \''.$username.'\' AND u.password = \''.$password.'\' AND published = 1
+                WHERE u.username = \''.$username.'\'  AND published = 1
                 LIMIT 1');
 	$user = $db->getObject();
 	if(!$user){
@@ -27,7 +27,7 @@ if (realpath($system_path) !== FALSE){
 // ensure there's a trailing slash
 $system_path = rtrim($system_path, '/').'/';
 define('PATH_BASE', str_replace("\\", "/", $system_path));
-define('URL_ROOT', "https://" . $_SERVER['HTTP_HOST'] . "/");
+define('URL_ROOT', "http://" . $_SERVER['HTTP_HOST'] . "/");
 session_start();
 if(isset($_SESSION['ad_logged']) && $_SESSION['ad_logged']==1)
     header("Location: index.php");
@@ -75,7 +75,6 @@ if($action == "login"){
             <input name="action" type="hidden" value="login"/>
             <input type="submit" value="Login" />
         </form>
-        <div class="copyright">Copyright © 2005-<?php echo date('Y');?> <a href="http://finalstyle.com" title="Thiết kế website, Thiết kế website chuyên nghiệp">FinalStyle</a>. Version 2.0</div>
     </div><!--end: #login-from-->
 </body>
 </html>

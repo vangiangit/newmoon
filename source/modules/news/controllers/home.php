@@ -37,4 +37,18 @@ class NewsControllersHome extends FSControllers{
 		$tmpl -> assign('breadcrumbs', $breadcrumbs);
         require(PATH_BASE.'modules/'.$this->module.'/views/'.$this->view.'/author.php');
     }
+
+    public function tag()
+    {
+        $total = $this->model->getTotal();
+        $pagination = $this->model->getPagination($total);
+        $listNews = $this->model->getNewsList();
+        $keyword = FSInput::get('keyword');
+        global $tmpl;
+        /* Thêm thanh điều hướng */
+        $breadcrumbs = array();
+		$breadcrumbs[] = array(0=>FSText::_('News'), 1=>FSRoute::_('index.php?module=news&view=home&Itemid=7'));
+		$tmpl -> assign('breadcrumbs', $breadcrumbs);
+        require(PATH_BASE.'modules/'.$this->module.'/views/'.$this->view.'/tag.php');
+    }
 }

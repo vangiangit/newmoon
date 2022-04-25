@@ -10,7 +10,7 @@ $tmpl->addScript('slick.min', '', 'top');
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
         <a class="navbar-brand" href="<?php echo URL_ROOT ?>">
-            <img src="<?php echo URL_ROOT ?>templates/default/images/logo.svg" />
+            <img src="<?php echo URL_ROOT ?>templates/default/images/logo.png" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon">
@@ -24,12 +24,34 @@ $tmpl->addScript('slick.min', '', 'top');
                 <?php $tmpl->load_position('menu-position'); ?>
             <?php } ?>
             <div class="d-flex right-button">
-                <a class="rb-item" href="#">
+                <a class="rb-item" href="javascript:void(0);" onclick="$('.searchMobileWrapper').toggleClass('show')">
                     <img src="<?php echo URL_ROOT ?>templates/default/images/iconSearch.svg" />
                 </a>
                 <a class="rb-item" href="#">
                     <img src="<?php echo URL_ROOT ?>templates/default/images/iconNewMenu.svg" />
                 </a>
+            </div>
+        </div>
+    </div>
+    <div class="searchMobileWrapper">
+        <div class="container">
+            <div class="inputSearchWrapper">
+                <input type="text" placeholder="Search" />
+            </div>
+            <div class="txtTrending">
+                Trending Search
+            </div>
+            <div class="tagWrapper d-flex">
+                <?php 
+                $tags = explode(',', $config['tags']);
+                ?>
+                <?php foreach($tags as $tag){ ?>
+                    <a href="/tag/<?php echo trim($tag) ?>">
+                        <div class="hashTag">
+                            <div><?php echo trim($tag) ?></div>
+                        </div>
+                    </a>
+                <?php } ?>
             </div>
         </div>
     </div>
@@ -53,7 +75,7 @@ $tmpl->addScript('slick.min', '', 'top');
             <div class="col-lg-3">
                 <p>
                     <a class="navbar-brand" href="<?php echo URL_ROOT ?>">
-                        <img src="<?php echo URL_ROOT ?>templates/default/images/logo.svg" />
+                        <img src="<?php echo URL_ROOT ?>templates/default/images/logo.png" />
                     </a>
                 </p>
                 <p>

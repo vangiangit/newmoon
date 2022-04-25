@@ -415,4 +415,16 @@
             @include block-heading;
         }
     }
+
+    &.block-news-list2{
+        .list-item{
+            background: transparent;
+            box-shadow: none;
+
+            .info{
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        }
+    }
 }

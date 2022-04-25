@@ -11,7 +11,7 @@
  Target Server Version : 80018
  File Encoding         : 65001
 
- Date: 25/04/2022 03:02:29
+ Date: 26/04/2022 03:30:04
 */
 
 SET NAMES utf8mb4;
@@ -222,7 +222,7 @@ CREATE TABLE `fs_blocks`  (
   `module_categories` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL,
   `lang` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT 'vi',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 25 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 26 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of fs_blocks
@@ -231,10 +231,11 @@ INSERT INTO `fs_blocks` VALUES (1, 'Menu top', '', 1, 1, 'menu', 'menu-position'
 INSERT INTO `fs_blocks` VALUES (6, 'Ecosystems', '', 6, 1, 'news', 'header-position', ',1,', 'suffix=_album\rwhere=default\rorder_by=default\rstyle=list\rcategory_id=\rlimit=5\rwidth=\rfloat=none\rmargin_pos=_\rmargin_value=', 0, '', 'all', 'vi');
 INSERT INTO `fs_blocks` VALUES (19, 'Beginner', '', 4, 1, 'news', 'header-position', ',1,', 'suffix=_news\rwhere=default\rorder_by=new\rstyle=grid\rcategory_id=\rlimit=6\rwidth=\rfloat=none\rmargin_pos=margin-bottom\rmargin_value=30', 0, '', 'all', 'vi');
 INSERT INTO `fs_blocks` VALUES (20, 'Banner home', '', 2, 1, 'banners', 'header-position', ',1,', 'suffix=_banner\rcategory_id=1\rstyle=default_container\rwidth=\rfloat=none\rmargin_pos=margin-bottom\rmargin_value=30', 0, '', 'all', 'vi');
-INSERT INTO `fs_blocks` VALUES (21, 'Latest', '', 3, 1, 'news', 'header-position', ',1,', 'suffix=_news\rwhere=default\rorder_by=default\rstyle=grid\rcategory_id=\rlimit=6\rwidth=\rfloat=none\rmargin_pos=margin-bottom\rmargin_value=30', 0, '', 'all', 'vi');
+INSERT INTO `fs_blocks` VALUES (21, 'Latest', '', 3, 1, 'news', 'header-position', ',1,', 'suffix=_news\rwhere=default\rorder_by=default\rstyle=list2\rcategory_id=\rlimit=4\rwidth=\rfloat=none\rmargin_pos=margin-bottom\rmargin_value=30', 0, '', 'all', 'vi');
 INSERT INTO `fs_blocks` VALUES (22, 'Menu footer', '', 4, 1, 'menu', 'menu-footer-position', 'all', 'suffix=_menu\rgroup=2\rorder_by=default\rstyle=default\rclass=', 0, '', 'all', 'vi');
 INSERT INTO `fs_blocks` VALUES (23, 'Latest Slideshow', '', 1, 1, 'news', 'header-position', ',1,', 'suffix=_categories\rwhere=default\rorder_by=default\rstyle=latest\rcategory_id=\rlimit=5\rwidth=\rfloat=none\rmargin_pos=_\rmargin_value=', 0, '', 'all', 'vi');
 INSERT INTO `fs_blocks` VALUES (24, 'Latest', '', 1, 1, 'news', 'aside-position', ',7,', 'suffix=_news\rwhere=default\rorder_by=default\rstyle=aside\rcategory_id=\rlimit=2\rwidth=\rfloat=none\rmargin_pos=margin-top\rmargin_value=30', 0, '', 'all', 'vi');
+INSERT INTO `fs_blocks` VALUES (25, 'Chuyên mục', '', 2, 1, 'menu', 'header-position', ',1,', 'suffix=_menu\rgroup=5\rorder_by=default\rstyle=cats\rclass=', 0, '', 'all', 'vi');
 
 -- ----------------------------
 -- Table structure for fs_blocks_exist
@@ -291,25 +292,25 @@ CREATE TABLE `fs_config`  (
 -- ----------------------------
 -- Records of fs_config
 -- ----------------------------
-INSERT INTO `fs_config` VALUES (1, 'site_name', 'Site Name', 'Cuchay.vn', 'text', 1, 1, 1, 'vi');
-INSERT INTO `fs_config` VALUES (2, 'title', 'Title', 'Cuchay.vn - Chia sẻ kinh ngiệm hay trong cuộc sống', 'text', 1, 2, 1, 'vi');
-INSERT INTO `fs_config` VALUES (3, 'meta_des', 'Meta description', 'Chia sẻ kinh ngiệm hay trong cuộc sống. Mẹo vặt hàng ngày, hướng dẫn cách làm, thủ thuật, mẹo vặt...', 'text', 1, 4, 1, 'vi');
-INSERT INTO `fs_config` VALUES (4, 'mate_key', 'Meta keywords', 'kinh nghiem, chia se, lam gi', 'text', 1, 3, 1, 'vi');
-INSERT INTO `fs_config` VALUES (5, 'admin_name', 'Admin name', 'admin', 'text', 1, 8, 1, 'vi');
-INSERT INTO `fs_config` VALUES (6, 'admin_email', 'Admin email', 'hotro@ybcmjsc.com.vn', 'text', 1, 9, 1, 'vi');
+INSERT INTO `fs_config` VALUES (1, 'site_name', 'Site Name', 'New Moon', 'text', 1, 1, 1, 'vi');
+INSERT INTO `fs_config` VALUES (2, 'title', 'Title', 'New Moon - Your Daily Source for Crypto Latest News &amp; Information', 'text', 1, 2, 1, 'vi');
+INSERT INTO `fs_config` VALUES (3, 'meta_des', 'Meta description', 'Your Daily Source for Crypto Latest News &amp; Information', 'text', 1, 4, 1, 'vi');
+INSERT INTO `fs_config` VALUES (4, 'mate_key', 'Meta keywords', 'Your Daily Source for Crypto Latest News &amp; Information', 'text', 1, 3, 1, 'vi');
+INSERT INTO `fs_config` VALUES (5, 'admin_name', 'Admin name', '', 'text', 1, 8, 1, 'vi');
+INSERT INTO `fs_config` VALUES (6, 'admin_email', 'Admin email', '', 'text', 1, 9, 1, 'vi');
 INSERT INTO `fs_config` VALUES (7, 'main_title', 'Đuôi tiêu đề', '', 'text', 1, 5, 1, 'vi');
 INSERT INTO `fs_config` VALUES (8, 'main_meta_key', 'Thẻ meta_key chính', '', 'text', 1, 6, 0, 'vi');
 INSERT INTO `fs_config` VALUES (9, 'main_meta_des', 'Thẻ meta_des chính', '', 'text', 1, 7, 0, 'vi');
 INSERT INTO `fs_config` VALUES (10, 'contact', 'Liên hệ', '', 'editor', 1, 100, 1, 'vi');
 INSERT INTO `fs_config` VALUES (11, 'footer_info', 'Thông tin chân trang', '', 'editor', 1, 13, 0, 'vi');
 INSERT INTO `fs_config` VALUES (21, 'link_google', 'Link Google+', 'https://plus.google.com/', 'text', 1, 20, 0, 'vi');
-INSERT INTO `fs_config` VALUES (22, 'link_youtube', 'Link Youtube', 'https://www.youtube.com/', 'text', 1, 20, 1, 'vi');
+INSERT INTO `fs_config` VALUES (22, 'link_youtube', 'Link Youtube', '', 'text', 1, 20, 1, 'vi');
 INSERT INTO `fs_config` VALUES (14, 'ganalytics', 'Google Analytics ID', '', 'text', 1, 11, 1, 'vi');
 INSERT INTO `fs_config` VALUES (15, 'license', 'license', '62b95176555ef61086ceb33f6d3b1b7d', 'text', 1, 11, 0, 'vi');
 INSERT INTO `fs_config` VALUES (16, 'hotline', 'Hotline', '', 'text', 1, 10, 1, 'vi');
-INSERT INTO `fs_config` VALUES (17, 'link_facebook', 'Link Facebook', 'https://www.facebook.com/CucHayOfficial/', 'text', 1, 20, 1, 'vi');
-INSERT INTO `fs_config` VALUES (18, 'link_twitter', 'Link Twitter', 'https://www.facebook.com/CucHayOfficial/', 'text', 1, 20, 1, 'vi');
-INSERT INTO `fs_config` VALUES (23, 'tags', 'Tìm kiếm nhiều nhất', 'Xi măng Yên Bái', 'text', 1, 14, 1, 'vi');
+INSERT INTO `fs_config` VALUES (17, 'link_facebook', 'Link Facebook', '', 'text', 1, 20, 1, 'vi');
+INSERT INTO `fs_config` VALUES (18, 'link_twitter', 'Link Twitter', '', 'text', 1, 20, 1, 'vi');
+INSERT INTO `fs_config` VALUES (23, 'tags', 'Trending Search', 'Airdrop,BSC,Perspective,Metamask,Panorama,Wallet,Exchange', 'text', 1, 14, 1, 'vi');
 INSERT INTO `fs_config` VALUES (24, 'contact_map', 'Liên hệ - Map', '<p><img alt=\"\" class=\"img-responsive\" src=\"/uploaded/images/config/map.jpg\" /></p>', 'editor', 1, 101, 1, 'vi');
 INSERT INTO `fs_config` VALUES (45, 'atm_info', 'Thông tin chuyển khoản', '<p>Th&ocirc;ng tin chuyển khoản</p>', 'editor', 1, 102, 1, 'vi');
 
@@ -1842,13 +1843,14 @@ CREATE TABLE `fs_menus_groups`  (
   `ordering` int(11) NULL DEFAULT NULL,
   `lang` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT 'vi',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 5 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 6 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of fs_menus_groups
 -- ----------------------------
 INSERT INTO `fs_menus_groups` VALUES (1, 'Menu top', 1, 1, 'vi');
-INSERT INTO `fs_menus_groups` VALUES (2, 'Menu footer', 1, 1, 'vi');
+INSERT INTO `fs_menus_groups` VALUES (2, 'Menu footer', 1, 2, 'vi');
+INSERT INTO `fs_menus_groups` VALUES (5, 'Menu cats', 1, 3, 'vi');
 
 -- ----------------------------
 -- Table structure for fs_menus_items
@@ -1878,7 +1880,7 @@ CREATE TABLE `fs_menus_items`  (
   `lang` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT 'vi',
   `category_banner` tinyint(4) NULL DEFAULT 0,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 96 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 104 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of fs_menus_items
@@ -1891,6 +1893,7 @@ INSERT INTO `fs_menus_items` VALUES (5, 'Tin tức', 'tin-tuc', NULL, '', 0, 0, 
 INSERT INTO `fs_menus_items` VALUES (6, 'Danh mục tin tức', 'danh-muc-tin-tuc', NULL, '', 0, 0, 0, '_self', 0, 6, 0, 1, '2013-02-21 08:45:29', '2013-02-21 08:45:29', NULL, NULL, '1', 0, 0, 'vi', 0);
 INSERT INTO `fs_menus_items` VALUES (7, 'Chi tiết tin tức', 'chi-tiet-tin-tuc', NULL, '', 0, 0, 0, '_self', 0, 7, 0, 1, '2013-02-21 08:45:29', '2013-02-21 08:45:29', NULL, NULL, '1', 0, 0, 'vi', 0);
 INSERT INTO `fs_menus_items` VALUES (73, 'AMA Recap', 'ama-recap', NULL, '', 0, 0, 1, '_self', 1, 1, 0, 1, '2020-02-12 15:02:03', '2022-04-24 02:22:40', NULL, NULL, '73', 0, 0, 'vi', 0);
+INSERT INTO `fs_menus_items` VALUES (97, 'Tin nổi bật', 'tin-noi-bat', 'images/menus/tin-noi-bat-1650905367.png', '', 0, 0, 1, '_self', 5, 27, 0, 1, '2022-04-25 23:49:27', '2022-04-25 23:49:27', NULL, NULL, '97', 0, 0, 'vi', 0);
 INSERT INTO `fs_menus_items` VALUES (74, 'Ecosystem', 'ecosystem', NULL, '', 0, 0, 1, '_self', 1, 2, 0, 1, '2020-02-12 15:08:35', '2022-04-24 02:23:00', NULL, NULL, '74', 0, 0, 'vi', 0);
 INSERT INTO `fs_menus_items` VALUES (75, 'Projects', 'projects', NULL, '', 0, 0, 1, '_self', 1, 3, 0, 1, '2020-02-12 15:09:45', '2022-04-24 02:25:29', NULL, NULL, '75', 0, 0, 'vi', 0);
 INSERT INTO `fs_menus_items` VALUES (76, 'Make money', 'make-money', NULL, 'index.php?module=news&view=cat&ccode=make-money&id=1', 0, 0, 1, '_self', 1, 4, 0, 1, '2020-02-12 15:10:05', '2022-04-24 02:33:28', NULL, NULL, '76', 0, 0, 'vi', 0);
@@ -1898,6 +1901,7 @@ INSERT INTO `fs_menus_items` VALUES (77, 'Investment', 'investment', NULL, 'inde
 INSERT INTO `fs_menus_items` VALUES (78, 'News', 'news', NULL, 'index.php?module=news&view=home', 0, 0, 1, '_self', 1, 6, 0, 1, '2020-02-12 15:15:21', '2022-04-24 17:55:20', NULL, NULL, '78', 0, 0, 'vi', 0);
 INSERT INTO `fs_menus_items` VALUES (79, 'Contact Us', 'contact-us', NULL, '', 0, 0, 1, '_self', 1, 7, 0, 1, '2020-02-12 15:15:50', '2022-04-24 02:27:11', NULL, NULL, '79', 0, 0, 'vi', 0);
 INSERT INTO `fs_menus_items` VALUES (80, 'Home', 'home', NULL, 'index.php?module=home', 0, 0, 1, '_self', 1, 0, 0, 1, '2020-02-12 21:04:38', '2022-04-24 02:23:24', NULL, NULL, '80', 0, 0, 'vi', 0);
+INSERT INTO `fs_menus_items` VALUES (96, 'Trending', 'trending', 'images/menus/trending-1650905337.png', '', 0, 0, 1, '_self', 5, 1, 0, 1, '2022-04-25 23:48:57', '2022-04-25 23:48:57', NULL, NULL, '96', 0, 0, 'vi', 0);
 INSERT INTO `fs_menus_items` VALUES (82, 'About', 'about', NULL, '', 0, 0, 1, '_self', 2, 13, 0, 1, '2022-04-22 21:29:54', '2022-04-22 21:29:54', NULL, NULL, '82', 0, 0, 'vi', 0);
 INSERT INTO `fs_menus_items` VALUES (83, 'Products', 'products', NULL, '', 0, 0, 1, '_self', 2, 14, 0, 1, '2022-04-22 21:30:07', '2022-04-22 21:30:07', NULL, NULL, '83', 0, 0, 'vi', 0);
 INSERT INTO `fs_menus_items` VALUES (84, 'Support', 'support', NULL, '', 0, 0, 1, '_self', 2, 15, 0, 1, '2022-04-22 21:30:18', '2022-04-22 21:30:18', NULL, NULL, '84', 0, 0, 'vi', 0);
@@ -1912,6 +1916,12 @@ INSERT INTO `fs_menus_items` VALUES (92, 'Email', 'email', NULL, '', 84, 0, 1, '
 INSERT INTO `fs_menus_items` VALUES (93, 'Live Chat', 'live-chat', NULL, '', 84, 0, 1, '_self', 2, 24, 0, 1, '2022-04-22 21:41:19', '2022-04-22 21:41:19', NULL, NULL, '84,93', 1, 0, 'vi', 0);
 INSERT INTO `fs_menus_items` VALUES (94, 'Telegram Chat', 'telegram-chat', NULL, '', 85, 0, 1, '_self', 2, 25, 0, 1, '2022-04-22 21:42:28', '2022-04-22 21:42:28', NULL, NULL, '85,94', 1, 0, 'vi', 0);
 INSERT INTO `fs_menus_items` VALUES (95, 'Telegram News', 'telegram-news', NULL, '', 85, 0, 1, '_self', 2, 26, 0, 1, '2022-04-22 21:42:39', '2022-04-22 21:42:39', NULL, NULL, '85,95', 1, 0, 'vi', 0);
+INSERT INTO `fs_menus_items` VALUES (98, 'Tin tức', 'tin-tuc', 'images/menus/tin-tuc-1650905427.png', '', 0, 0, 1, '_self', 5, 28, 0, 1, '2022-04-25 23:50:16', '2022-04-25 23:50:27', NULL, NULL, '98', 0, 0, 'vi', 0);
+INSERT INTO `fs_menus_items` VALUES (99, 'Kiến thức đầu tư', 'kien-thuc-dau-tu', 'images/menus/kien-thuc-dau-tu-1650905452.png', '', 0, 0, 1, '_self', 5, 29, 0, 1, '2022-04-25 23:50:52', '2022-04-25 23:50:52', NULL, NULL, '99', 0, 0, 'vi', 0);
+INSERT INTO `fs_menus_items` VALUES (100, 'Sàn giao dịch', 'san-giao-dich', 'images/menus/san-giao-dich-1650905469.png', '', 0, 0, 1, '_self', 5, 30, 0, 1, '2022-04-25 23:51:09', '2022-04-25 23:51:09', NULL, NULL, '100', 0, 0, 'vi', 0);
+INSERT INTO `fs_menus_items` VALUES (101, 'Hệ sinh thái', 'he-sinh-thai', 'images/menus/he-sinh-thai-1650905490.png', '', 0, 0, 1, '_self', 5, 31, 0, 1, '2022-04-25 23:51:30', '2022-04-25 23:51:30', NULL, NULL, '101', 0, 0, 'vi', 0);
+INSERT INTO `fs_menus_items` VALUES (102, 'Airdrop', 'airdrop', NULL, '', 76, 0, 1, '_self', 1, 32, 0, 1, '2022-04-26 01:17:04', '2022-04-26 01:17:04', NULL, NULL, '76,102', 1, 0, 'vi', 0);
+INSERT INTO `fs_menus_items` VALUES (103, 'ICO, IEO, SHO &amp; IDO', 'ico-ieo-sho-amp;-ido', NULL, '', 76, 0, 1, '_self', 1, 33, 0, 1, '2022-04-26 01:17:22', '2022-04-26 01:17:22', NULL, NULL, '76,103', 1, 0, 'vi', 0);
 
 -- ----------------------------
 -- Table structure for fs_modules_admin
@@ -2079,7 +2089,7 @@ CREATE TABLE `fs_products`  (
   `price` double NULL DEFAULT NULL,
   `price_old` double NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 11 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of fs_products

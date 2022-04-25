@@ -47,7 +47,7 @@ $toolbar->addButton('cancel',FSText :: _('Cancel'),'','cancel.png');
         				</td>
         			</tr>
                     <?php TemplateHelper::dt_edit_text(FSText :: _('Name'),'name',@$data -> name); ?>
-                    <?php // TemplateHelper::dt_edit_image(FSText :: _('Image'),'image',URL_ROOT.@$data->image); ?>
+                    <?php TemplateHelper::dt_edit_image(FSText :: _('Image'),'image',URL_ROOT.@$data->image); ?>
                     <?php TemplateHelper::dt_checkbox(FSText::_('Published'),'published',@$data -> published,1); ?>
                     <?php TemplateHelper::dt_edit_text(FSText :: _('Ordering'),'ordering',@$data -> ordering,@$maxOrdering,'20'); ?>
         		</table>

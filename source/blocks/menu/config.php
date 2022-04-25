@@ -23,6 +23,7 @@ $params = array(
     	'value' => array(
             'default' => 'Default',
             'nav' => 'Nav',
+            'cats' => 'Cats',
         )
 	),
 	'class' => array(

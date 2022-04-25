@@ -63,9 +63,9 @@ $tmpl->setMeta('og:image', URL_ROOT.str_replace('/original/','/og-image/', $data
                                     </div>
                                     <div class="listTag d-flex">
                                         <?php foreach($tags as $tag){ ?>
-                                            <a href="/tag/<?php echo $tag ?>">
+                                            <a href="/tag/<?php echo trim($tag) ?>">
                                                 <div class="hashTag">
-                                                    <div><?php echo $tag ?></div>
+                                                    <div><?php echo trim($tag) ?></div>
                                                 </div>
                                             </a>
                                         <?php } ?>

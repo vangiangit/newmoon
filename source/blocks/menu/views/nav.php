@@ -18,7 +18,7 @@ global $tmpl;
                 $item->link .= '&';
             $link = FSRoute::_($item->link.'Itemid='.$item->id);
         }
-        echo '<li class="menu-'.$item->id.' '.$item->selected.' '.($item->children?'has-child':'').' dropdown nav-item"><a class="nav-link" target="'.$item->target.'" href="'.$link.'" title="'.htmlspecialchars($item->name).'">'.$item->name.'</a><span></span>';
+        echo '<li class="menu-'.$item->id.' '.$item->selected.' '.($item->children?'has-child':'').' dropdown nav-item"><a class="nav-link" target="'.$item->target.'" href="'.$link.'" title="'.htmlspecialchars($item->name).'">'.$item->name.'<span></span></a>';
         if($item->children){
             $parentId = $item->id;
             $numChild = $item->children;

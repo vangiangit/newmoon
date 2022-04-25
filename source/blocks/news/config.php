@@ -29,6 +29,7 @@ $params = array(
             'aside' => 'Aside',
             'latest' =>'Latest',
             'grid' => 'Grid',
+            'list2' => 'List',
             'list' => 'List - Top',
         )
 	),
