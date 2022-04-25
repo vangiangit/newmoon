@@ -49,7 +49,7 @@
 									echo "<option value='" . $item->id . "'>" . $item->group_name . "</option>";
 								}
 							?>
-							<? } ?>
+							<?php } ?>
 						</select>
 					</td>
 				</tr>
