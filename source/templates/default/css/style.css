@@ -13655,5 +13655,14 @@ footer .col-lg-9 > ul::after {
 .block-menu-cats .menu-item a:hover {
   color: #cfb160;
 }
+.block-menu-cats.block-menu-projects .menu-item span {
+  height: 80px;
+  display: block;
+  padding: 0 20px;
+}
+.block-menu-cats.block-menu-projects .menu-item span img {
+  max-width: 100%;
+  width: unset;
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -234,23 +234,23 @@ class FSRoute
                     }
                     break;
 
-                case 'album':
+                case 'projects':
                     switch ($view)
                     {
                         case 'home':
-                            return URL_LANG.'album';
-                        case 'album':
+                            return URL_LANG.'projects';
+                        case 'projects':
                             if($task== 'display'){
                                 $id  = isset($array_params['id'])?$array_params['id']: 0;
-                                $code  = isset($array_params['code'])?$array_params['code']: 'album';
-                                return URL_LANG.$code.'-ald'.$id;
+                                $code  = isset($array_params['code'])?$array_params['code']: 'projects';
+                                return URL_LANG.'projects/'.$code.'-d'.$id;
                             }else{
                                 return URL_ROOT.$url;
                             }
                         case 'cat':
                             $id  = isset($array_params['id'])?$array_params['id']: 0;
-                            $ccode  = isset($array_params['ccode'])?$array_params['ccode']: 'danh-muc-album';
-                            return URL_LANG.$ccode.'-al'.$id;
+                            $ccode  = isset($array_params['ccode'])?$array_params['ccode']: 'danh-muc-projects';
+                            return URL_LANG.'projects/'.$ccode.'-c'.$id;
                         default:
                             return URL_ROOT . $url;
                     }

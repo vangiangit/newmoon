@@ -25,8 +25,10 @@ RewriteRule ^tag/([^/]*)$ index.php?module=news&view=home&task=tag&keyword=$1&It
 RewriteRule ^author/([^/]*)-([0-9]*)$ index.php?module=news&view=home&task=author&code=$1&id=$2&Itemid=2&%{QUERY_STRING} [L]
 RewriteRule ^([^/]*)-ch([0-9]*).html$ index.php?module=news&view=news&code=$1&id=$2&Itemid=7&%{QUERY_STRING} [L]
 RewriteRule ^([^/]*)(/trang-([0-9]*))?.html$ index.php?module=news&view=cat&ccode=$1&page=$3&Itemid=6&%{QUERY_STRING} [L]
-#album
-RewriteRule ^([^/]*)-ald([0-9]*)$ index.php?module=album&view=album&code=$1&id=$2&Itemid=9&%{QUERY_STRING} [L]
-RewriteRule ^([^/]*)-al([0-9]*)(/trang-([0-9]*))?$ index.php?module=album&view=cat&ccode=$1&id=$2&page=$4&Itemid=9&%{QUERY_STRING} [L]
+#projects
+RewriteRule ^projects$ index.php?module=projects&view=home&Itemid=2&%{QUERY_STRING} [L]
+RewriteRule ^projects/([^/]*)-c([0-9]*)(/trang-([0-9]*))?$ index.php?module=projects&view=cat&ccode=$1&id=$2&page=$4&Itemid=9&%{QUERY_STRING} [L]
+RewriteRule ^projects/([^/]*)-d([0-9]*)$ index.php?module=projects&view=projects&code=$1&id=$2&Itemid=9&%{QUERY_STRING} [L]
 #contact
 RewriteRule ^contact-us$ index.php?module=contact&Itemid=10&%{QUERY_STRING} [L]
+
