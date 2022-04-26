@@ -662,6 +662,38 @@ footer{
     footer .col-lg-5.text-right{
         text-align: left;
     }
+
+    #block-22{
+        > li{
+            width: 50%;
+        }
+    }
+
+    .contentWrapperNormal main .contentWrapper.row{
+        .colLeft {
+            display: none !important;
+        }
+
+        .colCenter{
+            padding: 0 !important;
+        }
+
+        .postContent{
+            padding: unset !important;
+            background: transparent !important;
+
+            .pd50{
+                padding: 0 !important;
+            }
+        }
+
+        .colRight{
+            padding-left: 0 !important;
+            width: unset;
+            max-width: unset;
+        }
+    }
+
 }
 
 .scrollShow::-webkit-scrollbar {
@@ -1429,7 +1461,7 @@ footer{
 }
 
 .block-menu-cats{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 
     .block-heading{
         text-align: center;
@@ -1448,6 +1480,7 @@ footer{
         box-shadow: 0 1px 24px 0 rgb(0 0 0 / 10%);
         text-align: center;
         padding: 15px 0;
+        margin-bottom: 20px;
 
         div{
             overflow: hidden;
