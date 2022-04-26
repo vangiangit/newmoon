@@ -36,7 +36,11 @@ $tmpl->addScript('slick.min', '', 'top');
     <div class="searchMobileWrapper">
         <div class="container">
             <div class="inputSearchWrapper">
-                <input type="text" placeholder="Search" />
+                <?php $link = '/search'; ?>
+                <form action="<?php echo $link ?>" onsubmit="return submitSearch();">
+                    <input id="keyword" name="keyword" type="text" placeholder="Search" />
+                    <input type="hidden" id="link_search" value="<?php echo $link ?>" />
+                </form>
             </div>
             <div class="txtTrending">
                 Trending Search

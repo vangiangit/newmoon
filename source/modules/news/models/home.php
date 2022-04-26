@@ -16,12 +16,8 @@ class NewsModelsHome extends FSModels{
      * Lấy danh sách tin
      * @return Object list
      */ 
-    function getNewsList($catId = 0){
+    function getNewsList($sqlWhere = ''){
         global $db;
-        if ($catId)
-            $sqlWhere = ' AND category_id_wrapper LIKE \'%,'.$catId.',%\'';
-        else
-            $sqlWhere = '';
         $query = '  SELECT id, title, image, summary, alias, created_time, category_id, category_name, category_alias, creator, creator_id, creator_name
                     FROM '.$this->table_name.'
                     WHERE published = 1 '.$sqlWhere.SQL_PUBLISH.SQL_LANG.'
@@ -34,12 +30,8 @@ class NewsModelsHome extends FSModels{
      * Lấy tổng số tin
      * @return Int
      */
-    function getTotal($catId = 0){
+    function getTotal($sqlWhere = ''){
         global $db;
-        if ($catId)
-            $sqlWhere = ' AND category_id = '.$catId;
-        else
-            $sqlWhere = '';
         $query = '  SELECT count(id)
                     FROM '.$this->table_name.'
                     WHERE published = 1 '.$sqlWhere.SQL_PUBLISH.SQL_LANG;

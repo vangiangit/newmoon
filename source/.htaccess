@@ -20,6 +20,7 @@ RewriteRule ^([^/]*).api$ index.php?module=ajax&view=ajax&raw=1&task=$1&%{QUERY_
 RewriteRule ^L([0-9]*)$ index.php?module=ajax&view=ajax&task=shortlink&id=$1&%{QUERY_STRING} [L]
 #news
 RewriteRule ^news$ index.php?module=news&view=home&Itemid=2&%{QUERY_STRING} [L]
+RewriteRule ^search/([^/]*)$ index.php?module=news&view=home&task=tag&keyword=$1&Itemid=2&%{QUERY_STRING} [L]
 RewriteRule ^tag/([^/]*)$ index.php?module=news&view=home&task=tag&keyword=$1&Itemid=2&%{QUERY_STRING} [L]
 RewriteRule ^author/([^/]*)-([0-9]*)$ index.php?module=news&view=home&task=author&code=$1&id=$2&Itemid=2&%{QUERY_STRING} [L]
 RewriteRule ^([^/]*)-ch([0-9]*).html$ index.php?module=news&view=news&code=$1&id=$2&Itemid=7&%{QUERY_STRING} [L]

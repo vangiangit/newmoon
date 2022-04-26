@@ -27,9 +27,10 @@ class NewsControllersHome extends FSControllers{
             echo 'Mục này không tồn tại';
             return;   
         }
-        $total = $this->model->getTotal();
+        $sqlWhere = ' AND creator_id = '.$author->id;
+        $total = $this->model->getTotal($sqlWhere);
         $pagination = $this->model->getPagination($total);
-        $listNews = $this->model->getNewsList();
+        $listNews = $this->model->getNewsList($sqlWhere);
         global $tmpl;
         /* Thêm thanh điều hướng */
         $breadcrumbs = array();
@@ -40,10 +41,11 @@ class NewsControllersHome extends FSControllers{
 
     public function tag()
     {
-        $total = $this->model->getTotal();
-        $pagination = $this->model->getPagination($total);
-        $listNews = $this->model->getNewsList();
         $keyword = FSInput::get('keyword');
+        $sqlWhere = ' AND tags LIKE \'%'.$keyword.'%\'';
+        $total = $this->model->getTotal($sqlWhere);
+        $pagination = $this->model->getPagination($total);
+        $listNews = $this->model->getNewsList($sqlWhere);
         global $tmpl;
         /* Thêm thanh điều hướng */
         $breadcrumbs = array();
