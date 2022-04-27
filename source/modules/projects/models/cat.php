@@ -73,7 +73,7 @@ class ProjectsModelsCat extends FSModels{
 				die('Not exist this url');
 			$where = ' AND id = '.$id.' ';
 		}
-        $query = '  SELECT id, name, icon, alias, seo_title, seo_keyword, seo_description
+        $query = '  SELECT id, name, icon, alias, seo_title, summary, tags, seo_keyword, seo_description
                     FROM '.$this->table_category.' 
                     WHERE published = 1 '.$where.SQL_LANG;
 		$sql = $db->query($query);

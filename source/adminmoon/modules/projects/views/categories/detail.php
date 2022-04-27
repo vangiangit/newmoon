@@ -10,6 +10,8 @@ TemplateHelper::dt_edit_text(FSText :: _('Name'),'name',@$data -> name);
 TemplateHelper::dt_edit_text(FSText :: _('Alias'),'alias',@$data -> alias,'',60,1,0,FSText::_("Can auto generate"));
 //TemplateHelper::dt_edit_selectbox(FSText::_('Parent'),'parent_id',@$data -> parent_id,0,$categories,$field_value = 'id', $field_label='treename',$size = 10,0,1);
 TemplateHelper::dt_edit_image(FSText :: _('Ảnh'),'icon',URL_ROOT.@$data -> icon);
+TemplateHelper::dt_edit_text(FSText :: _('Tags'),'tags',@$data -> tags,'',100,9);
+TemplateHelper::dt_edit_text(FSText :: _('Summary'),'summary',@$data -> summary,'',100,9);
 TemplateHelper::dt_checkbox(FSText::_('Published'),'published',@$data -> published,1);
 //TemplateHelper::dt_checkbox(FSText::_('Hiển thị tên category trong bài viết'),'display_title',@$data -> display_title,1);
 //TemplateHelper::dt_checkbox(FSText::_('Hiển thị comment trong bài viết'),'display_comment',@$data -> display_comment,1);
