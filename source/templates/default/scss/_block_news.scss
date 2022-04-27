@@ -402,6 +402,28 @@
                 }
             }
         }
+
+        @media (max-width: 768px){
+            .slider-nav-bound{
+                position: unset;
+                width: unset;
+                height: unset;
+            }
+
+            .post-slider-for-info{
+                width: unset !important;
+
+                .heading{
+                    bottom: 15px !important;
+                    padding: 10px !important;
+                    font-size: 17px !important;
+
+                    a{
+                        font-size: 17px !important;
+                    }
+                }
+            }
+        }
     }
 
     &.block-news-grid{

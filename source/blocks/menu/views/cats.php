@@ -11,7 +11,7 @@
                 $item->link .= '&';
             $link = FSRoute::_($item->link.'Itemid='.$item->id);
             ?>
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-6">
                 <div class="menu-item">
                     <a href="<?php echo $link; ?>">
                         <img src="<?php echo URL_ROOT.$item->image; ?>" />
