@@ -13143,6 +13143,16 @@ footer .col-lg-9 > ul::after {
   font-size: 17px;
   line-height: 25px;
 }
+@media (max-width: 768px) {
+  .list-item {
+    height: 120px;
+  }
+  .list-item .thumb {
+    height: 120px;
+    max-width: 120px;
+    width: 120px;
+  }
+}
 
 .container-news .block-heading {
   text-align: center;

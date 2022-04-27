@@ -896,6 +896,16 @@ footer{
         font-size: 17px;
         line-height: 25px;
     }
+
+    @media (max-width: 768px){
+        height: 120px;
+
+        .thumb{
+            height: 120px;
+            max-width: 120px;
+            width: 120px;
+        }
+    }
 }
 
 .container-news{
