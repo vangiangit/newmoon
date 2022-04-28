@@ -25,12 +25,13 @@ $params = array(
     	'name'=>'Style',
     	'type' => 'select',
     	'value' => array(
-            'default' => 'Default',
+            // 'default' => 'Default',
             'aside' => 'Aside',
             'latest' =>'Latest',
             'grid' => 'Grid',
             'list2' => 'List',
             'list' => 'List - Top',
+            'list_tags' => 'List - Tags',
         )
 	),
 	'category_id' => array(

@@ -23,10 +23,12 @@ $tmpl->addScript('slick.min', '', 'top');
             <?php } ?>
             <div class="d-flex right-button">
                 <a class="rb-item" href="javascript:void(0);" onclick="$('.searchMobileWrapper').toggleClass('show')">
-                    <img src="<?php echo URL_ROOT ?>templates/default/images/iconSearch.svg" />
+                    <img class="theme-icon icon-dark" src="<?php echo URL_ROOT ?>templates/default/images/iconSearch.svg" />
+                    <img class="theme-icon icon-light" src="<?php echo URL_ROOT ?>templates/default/images/iconSearchShortLight.svg" />
                 </a>
-                <a class="rb-item" href="#">
-                    <img src="<?php echo URL_ROOT ?>templates/default/images/iconNewMenu.svg" />
+                <a class="rb-item" href="javascript:void(0);">
+                    <img class="theme-icon icon-dark" src="<?php echo URL_ROOT ?>templates/default/images/iconNewMenu.svg" />
+                    <img class="theme-icon icon-light" src="<?php echo URL_ROOT ?>templates/default/images/iconNewMenu2Light.svg" />
                 </a>
             </div>
         </div>
@@ -81,10 +83,22 @@ $tmpl->addScript('slick.min', '', 'top');
                     </a>
                 </p>
                 <p>
-                    <a href="#"><img src="<?php echo URL_ROOT ?>templates/default/images/iconFacebookDark.svg" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="#"><img src="<?php echo URL_ROOT ?>templates/default/images/iconYoutubeDark.svg" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="#"><img src="<?php echo URL_ROOT ?>templates/default/images/iconTwitterDark.svg" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="#"><img src="<?php echo URL_ROOT ?>templates/default/images/iconTelegramDark.svg" /></a>
+                    <a href="#">
+                        <img class="theme-icon icon-dark" src="<?php echo URL_ROOT ?>templates/default/images/iconFacebookDark.svg" />
+                        <img class="theme-icon icon-light" src="<?php echo URL_ROOT ?>templates/default/images/iconFacebookLight.svg" />
+                    </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#">
+                        <img class="theme-icon icon-dark" src="<?php echo URL_ROOT ?>templates/default/images/iconYoutubeDark.svg" />
+                        <img class="theme-icon icon-light" src="<?php echo URL_ROOT ?>templates/default/images/iconYoutubeLight.svg" />
+                    </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#">
+                        <img class="theme-icon icon-dark" src="<?php echo URL_ROOT ?>templates/default/images/iconTwitterDark.svg" />
+                        <img class="theme-icon icon-light" src="<?php echo URL_ROOT ?>templates/default/images/iconTwitterLight.svg" />
+                    </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#">
+                        <img class="theme-icon icon-dark" src="<?php echo URL_ROOT ?>templates/default/images/iconTelegramDark.svg" />
+                        <img class="theme-icon icon-light" src="<?php echo URL_ROOT ?>templates/default/images/iconTelegramLight.svg" />
+                    </a>
                 </p>
             </div><!-- /.col-lg-4-->
             <div class="col-lg-9">

@@ -14419,4 +14419,19 @@ footer .col-lg-9 > ul::after {
   width: unset;
 }
 
+.theme-icon {
+  display: none;
+}
+
+[data-theme=light] .icon-light {
+  display: inline-block;
+}
+[data-theme=light] .navbar .has-child > a > span {
+  background: url(../images/iconDropdownHeaderLight.svg);
+}
+
+[data-theme=dark] .icon-dark {
+  display: inline-block;
+}
+
 /*# sourceMappingURL=style.css.map */
