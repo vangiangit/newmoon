@@ -5,11 +5,12 @@
     </div>
     <div class="row">
         <?php foreach($list as $item){ 
-            if(strpos($item->link, '?') == FALSE) 
-                $item->link .= '?';
-            else
-                $item->link .= '&';
-            $link = FSRoute::_($item->link.'Itemid='.$item->id);
+            // if(strpos($item->link, '?') == FALSE) 
+            //     $item->link .= '?';
+            // else
+            //     $item->link .= '&';
+            // $link = FSRoute::_($item->link.'Itemid='.$item->id);
+            $link = FSRoute::_($item->link);
             ?>
             <div class="col-lg-2 col-6">
                 <div class="menu-item">

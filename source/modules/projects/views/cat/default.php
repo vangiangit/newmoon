@@ -1,4 +1,5 @@
 <?php
+$string = new FSString();
 global $tmpl;
 if(trim($cat->seo_title != ''))
     $tmpl->addTitle($cat->seo_title);
@@ -10,7 +11,7 @@ if(trim($cat->seo_description != ''))
     $tmpl->addMetades($cat->seo_description);
 $Itemid = 5;
 ?>
-<div class="container container-news">
+<div class="container container-news container-projects">
     <h1 class="block-heading project-heading">
         <?php echo $cat->summary?>
     </h1>
@@ -28,17 +29,19 @@ $Itemid = 5;
             <div class="col-lg-4">
                 <?php $tmpl->project_item($item, 'tiny'); ?>
             </div>
-        <?php } ?>
+        <?php if($i==3) break; } ?>
     </div><!-- /.list-grid-->
     <div class="listTag d-flex">
         <?php $tags = explode(',', $cat->tags); ?>
-        <a href="javascript:void(0);">
+        <a href="javascript:void(0);" data-tag="all">
             <div class="hashTag">
                 <div>All</div>
             </div>
         </a>
-        <?php foreach($tags as $tag){ ?>
-            <a href="javascript:void(0);">
+        <?php 
+        foreach($tags as $tag){ 
+        ?>
+            <a href="javascript:void(0);" data-tag="<?php echo $string->stringStandart($tag); ?>">
                 <div class="hashTag">
                     <div><?php echo trim($tag) ?></div>
                 </div>
@@ -48,8 +51,12 @@ $Itemid = 5;
     <div class="row list-news">
         <?php $i = 0;
         foreach($listNews as $item){
+            $class = '';
+            $tags = explode(',', $item->tags);
+            foreach($tags as $tag)
+                $class .= ' project-tag-'.trim($string->stringStandart($tag));
             $i++;?>
-            <div class="col-lg-4">
+            <div class="col-lg-4 project-tag <?php echo $class ?>">
                 <?php $tmpl->project_item($item, 'tiny'); ?>
             </div>
         <?php } ?>
@@ -59,3 +66,15 @@ $Itemid = 5;
         <?php $tmpl -> load_position('content-position');?>
     <?php }?>
 </div><!-- /.container-->
+<script type="text/javascript">
+    $('.listTag a').click(function(){
+        $tag = $(this).data('tag');
+        if($tag=='all'){
+            $('.project-tag').removeClass('d-none');
+            return false;
+        }else{
+            $('.project-tag').addClass('d-none');
+            $('.project-tag-'+$tag).removeClass('d-none');
+        }
+    });
+</script>

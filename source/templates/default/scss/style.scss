@@ -1620,6 +1620,16 @@ footer{
     display: none;
 }
 
+.container-projects{
+    .listTag{
+        .hashTag{
+            background: var(--background-card-header) !important;
+            box-shadow: var(--card-shadow) !important;
+            color: var(--text-title-post-color) !important;
+        }
+    }
+}
+
 [data-theme=light]{
     .icon-light{
         display: inline-block;

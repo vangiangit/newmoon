@@ -31,6 +31,7 @@ foreach ($this->model->arr_img_paths as $val){
         TemplateHelper::dt_edit_image(FSText :: _('Image'),'image',URL_ROOT.str_replace('/original/', '/tiny/', @$data->image));
         TemplateHelper::dt_edit_text(FSText :: _('Ordering'),'ordering',@$data -> ordering,@$maxOrdering,'20');
         TemplateHelper::dt_date_pick ( FSText :: _('Published time' ), 'created_time', @$data->created_time?@$data->created_time:date('Y-m-d H:i:s'), FSText :: _('Bạn vui lòng chọn thời gian hiển thị'), 20);
+        TemplateHelper::dt_edit_text(FSText :: _('Tags'),'tags',@$data -> tags);
         TemplateHelper::dt_checkbox(FSText::_('Published'),'published',@$data -> published,1);
         ?>
         </table>

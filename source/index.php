@@ -24,6 +24,7 @@ require(PATH_BASE.'libraries/fsmodels.php');
 require(PATH_BASE.'libraries/database/mysql.php');
 require(PATH_BASE.'libraries/fsmobile.php');
 require(PATH_BASE.'libraries/fsuser.php');
+require(PATH_BASE.'libraries/fsstring.php');
 /* Phiên bản mobile */
 define('IS_MOBILE', 0);
 /* Kiểm tra tốc độ website */

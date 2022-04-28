@@ -87,7 +87,7 @@ class ProjectsModelsCat extends FSModels{
      */
     public function getListCats(){
         global $db;
-        $query = '  SELECT id, name, alias, level, parent_id, alias, list_parents
+        $query = '  SELECT id, name, alias, level, parent_id, alias, list_parents, tags
                     FROM '.$this->table_category.'
                     WHERE published = 1 '.SQL_LANG.'
                     ORDER BY ordering ASC';
