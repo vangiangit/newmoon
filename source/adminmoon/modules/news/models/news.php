@@ -176,5 +176,40 @@ class NewsModelsNews extends FSModels
         }
         return $record_change_success;
     }
+
+    function saveEditNews(){
+		$string = FSFactory::getClass('FSString','','../');
+		$row = array();
+		$row['name'] = FSInput::get('news_name');
+		$parent_id = FSInput::get('news_parent_id', 0);
+		$data_parent_id = FSInput::get('data_parent_id', 0);
+		if(!$parent_id) {
+			$parent_id = $data_parent_id;
+		}
+        $row['link'] = FSInput::get('news_link');
+		$row['parent_id'] = FSInput::get('news_parent_id', 0);
+		$row['ordering'] = FSInput::get('news_ordering', 0);
+		$row['published'] = FSInput::get('news_published', 0);
+        $row['created_time'] = $row['updated_time'] = date('Y-m-d H:i:s');
+        $row['post_id'] = $data_parent_id;
+		$data_id = FSInput::get('data_id', 0);
+		if($data_id)
+			$this->_update($row, 'fs_news_menus', 'id='.$data_id);
+		else{
+			$data_id = $this->_add($row, 'fs_news_menus');
+        }
+	}
+
+    function get_news_menu($id){
+		global $db;
+		$query = " 	SELECT a.*
+                    FROM 
+                    fs_news_menus AS a WHERE post_id = $id
+                    ORDER BY ordering ";
+        $db->query($query);
+		$result = $db->getObjectList();
+		$tree  = FSFactory::getClass('tree','tree/');
+		return $tree -> indentRows($result);
+	}
 }
 ?>

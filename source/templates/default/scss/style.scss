@@ -1616,6 +1616,7 @@ footer{
         .colContent{
             padding-left: 275px;
             position: relative;
+            z-index: 2;
         }
     }
 
@@ -1632,7 +1633,8 @@ footer{
         height: -webkit-calc(100vh - 200px);
         height: calc(100vh - 200px);
         left: 0;
-        z-index: 3;
+        z-index: 9;
+        
 
         .boxColLeft{
             position: relative;
@@ -1641,7 +1643,6 @@ footer{
             box-shadow: var(--card-shadow);
             color: var(--text-title-post-color);
             border-radius: 10px;
-            z-index: -3;
 
             .blurWrapper{
                 height: 100%;
@@ -1684,6 +1685,7 @@ footer{
                 scrollbar-width: none;
                 margin: 0;
                 padding: 0;
+                z-index: 3;
 
                 li{
                     margin: 0;
@@ -1693,6 +1695,7 @@ footer{
                     border-radius: 10px;
                     margin-bottom: 4px;
                     cursor: pointer;
+                    z-index: 3;
 
                     .textNumber{
                         display: -webkit-flex;

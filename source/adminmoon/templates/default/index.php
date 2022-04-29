@@ -13,7 +13,7 @@
     <!--[if gte IE]>
         <link rel="stylesheet" type="text/css" href="templates/default/css/ie.css"/>
     <![endif]-->
-    <script type="text/javascript" src="<?php echo URL_ROOT; ?>libraries/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="<?php echo URL_ROOT; ?>libraries/jquery/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="<?php echo URL_ROOT; ?>libraries/jquery/jquery.ui/jquery-ui.js"></script>
     <script type="text/javascript" src="<?php echo URL_ROOT; ?>libraries/ckeditor/ckeditor.js"></script>
 	<script type="text/javascript" src="<?php echo URL_ROOT; ?>libraries/ckeditor/plugins/ckfinder/ckfinder.js"></script>

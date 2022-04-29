@@ -14,6 +14,7 @@ class NewsControllersNews extends FSControllers{
             setRedirect(URL_ROOT);
         $cat = $this->model->getCategoryById($data->category_id);
         $otherList = $this->model->getOtherNewsList($data->category_id);
+        $menus = $this->model->getMenuList($data->id);
         /* Thêm thanh điều hướng */
         global $tmpl;
         $breadcrumbs = array();

@@ -14478,6 +14478,7 @@ footer .col-lg-9 > ul::after {
 .container-detail .cd-content .colContent {
   padding-left: 275px;
   position: relative;
+  z-index: 2;
 }
 .container-detail .colLeft {
   width: 250px;
@@ -14492,7 +14493,7 @@ footer .col-lg-9 > ul::after {
   height: -webkit-calc(100vh - 200px);
   height: calc(100vh - 200px);
   left: 0;
-  z-index: 3;
+  z-index: 9;
 }
 .container-detail .colLeft .boxColLeft {
   position: relative;
@@ -14501,7 +14502,6 @@ footer .col-lg-9 > ul::after {
   box-shadow: var(--card-shadow);
   color: var(--text-title-post-color);
   border-radius: 10px;
-  z-index: -3;
 }
 .container-detail .colLeft .boxColLeft .blurWrapper {
   height: 100%;
@@ -14540,6 +14540,7 @@ footer .col-lg-9 > ul::after {
   scrollbar-width: none;
   margin: 0;
   padding: 0;
+  z-index: 3;
 }
 .container-detail .colLeft .boxColLeft ul li {
   margin: 0;
@@ -14549,6 +14550,7 @@ footer .col-lg-9 > ul::after {
   border-radius: 10px;
   margin-bottom: 4px;
   cursor: pointer;
+  z-index: 3;
 }
 .container-detail .colLeft .boxColLeft ul li .textNumber {
   display: -webkit-flex;

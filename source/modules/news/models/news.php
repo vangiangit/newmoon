@@ -127,6 +127,17 @@ class NewsModelsNews extends FSModels{
 		$result = $db->getObjectList();
 		return $result;
     }
+
+    function getMenuList($id){
+        global $db;
+        $query = '  SELECT *
+                    FROM fs_news_menus 
+                    WHERE post_id = '.$id.'
+                    ORDER BY id DESC';
+		$sql = $db->query($query);
+		$result = $db->getObjectList();
+		return $result;
+    }
     
     function products_suggest(){
         global $db;

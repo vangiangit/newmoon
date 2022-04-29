@@ -43,36 +43,16 @@ $link_creator = FSRoute::_('index.php?module=news&view=home&task=author&id='.$da
                 <div class="boxColLeft">
                     <div class="boxColLeftWrap" style="padding: 20px 12px;">
                         <ul>
-                            <li onclick="goSetIdTop('section-10')" data-id="section-10">
-                                <div class="d-flex">
-                                    <span class="textNumber">1.</span> 
-                                    <span class="ml-2">Polkastarter Overview</span>
-                                </div>
-                            </li>
-                            <li onclick="goSetIdTop('section-10')" data-id="section-10">
-                                <div class="d-flex">
-                                    <span class="textNumber">2.</span> 
-                                    <span class="ml-2">How Polkastarter selects a whitelist winner</span>
-                                </div>
-                            </li>
-                            <li onclick="goSetIdTop('section-10')" data-id="section-10">
-                                <div class="d-flex">
-                                    <span class="textNumber">3.</span> 
-                                    <span class="ml-2">Preparations before participating</span>
-                                </div>
-                            </li>
-                            <li onclick="goSetIdTop('section-10')" data-id="section-10">
-                                <div class="d-flex">
-                                    <span class="textNumber">4.</span> 
-                                    <span class="ml-2">How to participate</span>
-                                </div>
-                            </li>
-                            <li onclick="goSetIdTop('section-10')" data-id="section-10">
-                                <div class="d-flex">
-                                    <span class="textNumber">5.</span> 
-                                    <span class="ml-2">FAQ about Polkastarter IDO</span>
-                                </div>
-                            </li>
+                            <?php $i=0;
+                            foreach($menus as $item){ 
+                                $i++;?>
+                                <li onclick="goSetIdTop('<?php echo $item->link ?>')" data-id="<?php echo $item->link ?>">
+                                    <div class="d-flex">
+                                        <span class="textNumber"><?php echo $i ?>.</span> 
+                                        <span class="ml-2"><?php echo $item->name ?></span>
+                                    </div>
+                                </li>
+                            <?php } ?>
                         </ul>
                     </div>
                 </div><!-- /.boxColLeft-->
@@ -108,9 +88,6 @@ $link_creator = FSRoute::_('index.php?module=news&view=home&task=author&id='.$da
         var aTop = $(".colContent").offset().top;
 
         $(window).scroll(function(){
-            console.log(aTop);
-            console.log($(this).scrollTop());
-
             if($(this).scrollTop() >= aTop){
                 $('.colLeft').css({'left': $(".colContent").offset().left+'px', 'position': 'fixed', 'top': '92px'});
             }else{
