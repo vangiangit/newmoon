@@ -59,8 +59,8 @@ class NewsModelsNews extends FSModels{
         $query = '  SELECT n.id, n.title, n.image, n.alias, n.created_time, n.category_id , n.category_alias, n.summary 
                     FROM '.$this->table_name.' AS n
                     WHERE n.published = 1 '.$sqlWhere.SQL_PUBLISH.SQL_LANG.'
-                    ORDER BY n.ordering DESC
-                    LIMIT 3';
+                    ORDER BY RAND()
+                    LIMIT 6';
         $result = $db->query($query); 
         return $db->getObjectList();
     }
