@@ -14,7 +14,8 @@ $tmpl->addScript('slick.min', '', 'top');
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon">
-                <img src="<?php echo URL_ROOT ?>templates/default/images/iconBurgerMenu.svg">
+                <img class="theme-icon icon-dark" src="<?php echo URL_ROOT ?>templates/default/images/iconBurgerMenu.svg">
+                <img class="theme-icon icon-light" src="<?php echo URL_ROOT ?>templates/default/images/iconBurgerMenuLight.svg">
             </span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">

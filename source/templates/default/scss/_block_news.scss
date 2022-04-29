@@ -423,6 +423,10 @@
                     }
                 }
             }
+
+            .block-content{
+                max-height: unset !important;
+            }
         }
     }
 
