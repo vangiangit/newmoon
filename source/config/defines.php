@@ -9,4 +9,5 @@ define('MULTI_LANGUAGE', 0);
 define('USE_CACHE', 0);
 define('USE_BENMARCH', 0);
 define('SQL_PUBLISH', ' AND created_time < \''.date('Y-m-d H:i:s').'\'');
+define('ASSET_VERSION', '20220502')
 ?>

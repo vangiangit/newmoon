@@ -46,7 +46,7 @@ class Templates{
             $folder_css = URL_ROOT."templates"."/".$this->tmpl_name."/"."css"."/";
         else
             $folder_css = URL_ROOT . $folder . "/";
-        $path = $folder_css . $file . ".css";
+        $path = $folder_css . $file . ".css?v=".ASSET_VERSION;
         array_push($this->style, $path);
     }
     function addScript($file, $folder = "", $position = 'bottom'){
@@ -59,7 +59,7 @@ class Templates{
                 $folder_js = URL_ROOT . $folder . "/";
             }
         }
-        $path = $folder_js . $file . ".js";
+        $path = $folder_js . $file . ".js?v=".ASSET_VERSION;
         if ($position == 'top'){
             array_push($this->script_top, $path);
         } else{

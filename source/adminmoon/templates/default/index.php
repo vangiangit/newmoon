@@ -29,7 +29,7 @@
         <div id="sidebar" class="fl">
             <div id="admin-info">
                 <div class="avatar fl">
-                    <a href="<?php echo URL_ADMIN?>"><img src="templates/default/images/logo/logo.jpg" /></a>
+                    <a href="<?php echo URL_ADMIN?>"><img src="templates/default/images/logo/logo.jpg?v=<?php echo ASSET_VERSION; ?>" /></a>
                 </div><!--end: .avatar-->
                 <div class="info fr">
                     <div class="lang">
