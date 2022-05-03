@@ -123,7 +123,7 @@ body{
         top: 100%;
         left: 0;
         width: 100%;
-        background-image: linear-gradient(0deg,rgba(19,19,19,0.6),rgba(0,0,0,0.2));
+        background-image: var(--background-input-search);
         backdrop-filter: blur(44px);
         -webkit-backdrop-filter: blur(44px);
         -webkit-box-shadow: var(--box-shadow);
@@ -149,14 +149,14 @@ body{
                 content: "";
                 height: 1px;
                 width: 100%;
-                background-color: #3d3d3d;;
+                background-color: var(--divider-input-search);
                 position: absolute;
                 bottom: 0;
             }
 
             input{
                 background-color: transparent!important;
-                color: #fff;
+                color: var(--text-input-search);
                 font-size: 17px;
                 border: none;
                 padding: 0 8px;
@@ -172,7 +172,7 @@ body{
             font-size: 17px;
             margin-bottom: 16px;
             text-align: center;
-            color: #fff;
+            color: var(--text-input-search);
             display: -webkit-flex;
             display: -moz-box;
             display: flex;
@@ -192,7 +192,7 @@ body{
                     font-size: 13px;
                     padding: 8px 16px;
                     max-height: 32px;
-                    color: #d2d0ce;
+                    color: var(--text-color);
                     display: -webkit-flex;
                     display: -moz-box;
                     display: flex;
@@ -205,7 +205,7 @@ body{
                     border-radius: 8px;
                     background-color: #444443;;
                     margin-right: 16px;
-                    background-color: rgba(36,36,36,0.8);
+                    background-color: var(--background-scroll)!important;
                     cursor: pointer;
                     margin-bottom: 16px;
                     -webkit-transition: all .3s;
@@ -1813,13 +1813,17 @@ footer{
     &.block-menu-projects{
         .menu-item{
             span{
-                height: 80px;
-                display: block;
+                height: 80px !important;
+                display: flex;
                 padding: 0 20px;
+                align-items: center;
+                justify-content: center;
 
                 img{
-                    max-width: 100%;
+                    max-width: 100% !important;
+                    max-height: 80px !important;
                     width: unset;
+                    height: unset;
                 }
             }
         }

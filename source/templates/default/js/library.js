@@ -1,11 +1,12 @@
 var is_rewrite = 0;
-var root = 'http://localhost:3012/';
+var root = '/';
+
 function fsAlert($option){
     $option = $option||{};
     var box = $("<div></div>");
     box.html($option.msg).dialog({
         modal: true, 
-        title: 'Thông báo', 
+        title: 'Alert', 
         buttons: { 
             Ok: function() {
                 $.isFunction($option.func) && ($option.func)();
@@ -61,7 +62,7 @@ function submitSearch(){
 		var check =0;
 	}
 	if(check == 0){
-		alert('Bạn phải nhập tham số tìm kiếm');
+		alert('You must enter a search keyword');
 		return false;
 	}
 	if(link_search.indexOf("&") == '-1')
@@ -84,7 +85,7 @@ function submitSearchmobile(){
 		var check =0;
 	}
 	if(check == 0){
-		alert('Bạn phải nhập tham số tìm kiếm');
+		alert('You must enter a search keyword');
 		return false;
 	}
 	if(link_search.indexOf("&") == '-1')
@@ -93,24 +94,6 @@ function submitSearchmobile(){
 		var link = link_search+'&keyword='+keyword;
 	window.location.href=link;
 	return false;
-}
-
-function validMCallMe(){
-    if(!isPhone('txtmphone')) {
-        Boxy.alert('Bạn vui lòng nhập số điện thoại.',function(){ $('#qmobile').focus();},{title:'Thông báo.',afterShow: function() {$('#boxy_button_OK').focus();}});
-      	return false;
-   	}
-    var $data = $('form#frm_call_me').serialize();
-	$.ajax({
-		type : 'POST',
-		url : '/index.php?module=ajax&view=ajax&task=call_me&raw=1',
-		dataType : 'json',
-		data: $data,
-		success : function(data){Boxy.alert(data.message,function(){if (data.error==false) {location.reload(true)}},{title:'Thông báo.',afterShow: function() { $('#boxy_button_OK').focus();} });},
-		error : function(XMLHttpRequest, textStatus, errorThrown) {Boxy.alert('Có lỗi trong quá trình đưa lên máy chủ. Xin bạn vui lòng kiểm tra lại kết nối.',function(){},{title:'Thông báo.',afterShow: function() { $('#boxy_button_OK').focus();} });
-		}
-	});
-    return false;
 }
 
 function isInteger(value) {
@@ -124,121 +107,10 @@ $('a#gotop').click(function(){
     $('html, body').animate({scrollTop:0},'slow');
 })
 
-$(document).ready(function() {
-    $('ul.cats li.selected').parent().parent('li').addClass('selected');
-    
-    $('.cart .show-cart').click(function(){
-        tb_show('Giỏ hàng', '/index.php?module=product&view=cart&raw=1&task=display_ajax&width=865');
-    });
-});
-
-function valid_consult_product(){
-    if($('#cart-name').val() == ''){
-        fsAlert('Bạn vui lòng nhập họ tên.');
-        return false;
-    }
-    if(!isPhone('cart-mobile')) {
-        fsAlert('Bạn vui lòng nhập số điện thoại.');
-        return false;
-    }
-    var $data = $('form#frm_consult_product').serialize();
-    $('.box-addcart .btn-warning').addClass('btn-process');
-    $.ajax({
-        type : 'POST',
-        url : '/index.php?module=product&view=product&task=quick_order&raw=1',
-        dataType : 'json',
-        data: $data,
-        success : function(data){
-            fsAlert(data.message);
-			if (data.error==false)
-                window.location = data.url;
-            $('.box-addcart .btn-warning').removeClass('btn-process');
-        }
-    });
-    return false;
-}
 
 function fsAlert($msg){
     $('#fs-alert-msg').html($msg);
     $('#fs-alert').modal();
-}
-
-function validNewsletter(){
-	if(!isEmail($('#newsletter').val())){
-        fsAlert('Địa chỉ email không đúng!');
-		return false;
-	}
-    $("#btn-newsletter").addClass('btn-process');
-	$.ajax({
-		type : 'POST',
-		url : '/index.php?module=ajax&view=ajax&raw=1&task=registerNewsletter',
-		dataType : 'json',
-		data: 'email='+$('#newsletter').val(),
-		success : function(data){
-			$('#newsletter').attr('value', '');
-            fsAlert(data.message);
-            $("#btn-newsletter").removeClass('btn-process');
-		},
-		error : function(XMLHttpRequest, textStatus, errorThrown){
-            fsAlert('Có lỗi trong quá trình đưa lên máy chủ. Xin bạn vui lòng kiểm tra lại kết nối.');
-            $("#btn-newsletter").removeClass('btn-process');
-		}
-	});
-	return false;
-}
-
-function validBCallMe(){
-	if(!isPhone('callme_phone')) {
-		fsAlert('Bạn vui lòng nhập số điện thoại.');
-		return false;
-	}
-	var $data = $('form#frm_call_me').serialize();
-	$.ajax({
-		type : 'POST',
-		url : '/index.php?module=ajax&view=ajax&task=call_me&raw=1',
-		dataType : 'json',
-		data: $data,
-		success : function(data){
-			fsAlert(data.message);
-			if (data.error==false) {document.getElementById("frm_call_me").reset();}
-		}
-	});
-	return false;
-}
-
-function validateComment(){
-	if ($('#bc-comment').val() == '') {
-		fsAlert('Bạn vui lòng nhập bình luận.');
-		return false;
-	}
-	if ($('#bc-name').val() == '') {
-		fsAlert('Bạn vui lòng nhập tên.');
-		return false;
-	}
-	if(!isEmail($('#bc-email').val())){
-		fsAlert('Hãy nhập địa chỉ Email.');
-		return false;
-	}
-	if ($('#bc-capcha').val()=='') {
-		fsAlert('Bạn vui lòng nhập mã bảo mật.');
-		return false;
-	}
-	var $data = $('form#form-comment').serialize();
-	$.ajax({
-		type : 'POST',
-		url : '/index.php?module=ajax&view=ajax&task=commentProduct',
-		dataType : 'json',
-		data: $data,
-		success : function(data){
-			fsAlert(data.message);
-			if(data.error == false)
-				document.getElementById("form-comment").reset();
-			//location.reload(true)
-		},
-		error : function(XMLHttpRequest, textStatus, errorThrown) {fsAlert('Có lỗi trong quá trình đưa lên máy chủ. Xin bạn vui lòng kiểm tra lại kết nối.');
-		}
-	});
-	return false;
 }
 
 function goSetIdTop($id){
@@ -283,4 +155,10 @@ jQuery(document).ready(function($){
 			$(this).attr('show-menu', '0');
 		}
 	});
+
+    $('.searchMobileWrapper').hover(function(){
+
+    },function(){
+        $('.searchMobileWrapper').toggleClass('show')
+    })
 });
