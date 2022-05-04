@@ -806,6 +806,19 @@ footer{
             }
         }
     }
+
+    .social{
+        a{
+            color: var(--text-title-post-color);
+            text-decoration: none;
+            display: inline-block;
+            padding-right: 10px;
+
+            &:hover{
+                color: #fbe08e;
+            }
+        }
+    }
 }
 
 .project-heading{

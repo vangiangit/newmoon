@@ -13651,6 +13651,15 @@ footer .col-lg-9 > ul::after {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
+.project-item .social a {
+  color: var(--text-title-post-color);
+  text-decoration: none;
+  display: inline-block;
+  padding-right: 10px;
+}
+.project-item .social a:hover {
+  color: #fbe08e;
+}
 
 .project-heading {
   text-align: left !important;
