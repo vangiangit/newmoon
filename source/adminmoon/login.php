@@ -18,6 +18,7 @@ function login(){
     $_SESSION['ad_username']   = $user->username;
     $_SESSION['ad_fullname']   = $user->fullname;
     $_SESSION['ad_useremail']  = $user->email;
+    $_SESSION['ad_avatar']  = $user->avatar;
 	return true;
 }
 $system_path = $_SERVER['DOCUMENT_ROOT'];

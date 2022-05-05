@@ -42,8 +42,11 @@ foreach ($this->model->arr_img_paths as $val){
             TemplateHelper::dt_edit_text(FSText :: _('Summary'),'summary',@$data -> summary,'',100,9);
             TemplateHelper::dt_edit_text(FSText :: _('Website'),'website',@$data -> website);
             TemplateHelper::dt_edit_text(FSText :: _('Twitter'),'twitter',@$data -> twitter);
-            TemplateHelper::dt_edit_text(FSText :: _('telegram'),'telegram',@$data -> telegram);
+            TemplateHelper::dt_edit_text(FSText :: _('Facebook'),'facebook',@$data -> facebook);
+            TemplateHelper::dt_edit_text(FSText :: _('Telegram'),'telegram',@$data -> telegram);
             TemplateHelper::dt_edit_text(FSText :: _('Github'),'github',@$data -> github);
+            TemplateHelper::dt_edit_text(FSText :: _('Reddit'),'reddit',@$data -> reddit);
+            TemplateHelper::dt_edit_text(FSText :: _('Medium'),'medium',@$data -> medium);
             ?>
             <!-- <tr>
                 <td class="label key">Thêm ảnh</td>

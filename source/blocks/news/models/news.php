@@ -48,7 +48,7 @@ class NewsBModelsNews{
         else if($category_id)
             $where .= ' AND category_id_wrapper LIKE \'%,'.$category_id.',%\'';
 
-        $query = '  SELECT id, title, image, summary, alias, created_time, category_id, category_name, category_alias, category_icon, creator, creator_id, creator_name
+        $query = '  SELECT id, title, image, summary, alias, created_time, category_id, category_name, category_alias, category_icon, creator, creator_id, creator_name, creator_avatar
                     FROM '.$this->table_name.' 
                     WHERE '.$where.SQL_PUBLISH.'
                     ORDER BY '.$this->getOrdering().'

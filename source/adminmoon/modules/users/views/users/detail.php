@@ -111,6 +111,7 @@
 							
 						</td>
 					</tr>
+                    <?php TemplateHelper::dt_edit_image(FSText :: _('Avatar'),'avatar',URL_ROOT.@$data->avatar); ?>
 					<tr>
 						<td valign="top" class="key">
 							<?php echo FSText :: _('Phone'); ?>

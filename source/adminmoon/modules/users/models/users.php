@@ -189,6 +189,15 @@
 			$published = FSInput::get('published');
 			$ordering = FSInput::get('ordering');
 			$time = gmdate('Y-m-d H:i:s');
+            $avatar = $_FILES["avatar"]["name"];
+            if ($avatar){
+                $fsFile = FSFactory::getClass('FsFiles');
+                $path = PATH_BASE . 'images/avatar/'; 
+                $avatar = $fsFile->uploadImage("avatar", $path, 2000000, $username.'-' . time());
+                if (!$avatar)
+                    return false;
+                $avatar = 'images/avatar/'.$avatar;
+            }
 			
 			$id = FSInput::get('id');
 			
@@ -217,6 +226,7 @@
 							country = '$country',
 							published  = '$published',
 							ordering  = '$ordering',
+							avatar  = '$avatar',
 							updated_time = '$time'
 						WHERE id = 	$id 
 				";
@@ -232,8 +242,8 @@
 					return false;
 	
 				$sql = " INSERT INTO fs_users
-							(`username`,`password`,fname,lname,email,phone,address,country,published,ordering,updated_time,created_time)
-							VALUES ('$username','$password','$fname','$lname','$email','$phone','$address','$country','$published','$ordering','$time','$time')
+							(`username`,`password`,fname,lname,email,phone,address,country,published,ordering,avatar,updated_time,created_time)
+							VALUES ('$username','$password','$fname','$lname','$email','$phone','$address','$country','$published','$ordering','$avatar','$time','$time')
 							";
 				$db->query($sql);
 				$id = $db->insert();

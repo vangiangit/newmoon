@@ -85,7 +85,8 @@ class NewsModelsNews extends FSModels
         $row['creator'] = @$_SESSION['ad_username']  ;
         $row['creator_id'] = @$_SESSION['ad_userid'] ;
         $row['creator_name'] = @$_SESSION['ad_fullname'] ;
-
+        $row['creator_avatar'] = @$_SESSION['ad_avatar'] ;
+        
         $row['content'] = htmlspecialchars_decode(FSInput::get('content'));
         return parent::save($row);
     }

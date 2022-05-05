@@ -18,7 +18,7 @@ class NewsModelsHome extends FSModels{
      */ 
     function getNewsList($sqlWhere = ''){
         global $db;
-        $query = '  SELECT id, title, image, summary, alias, created_time, category_id, category_name, category_alias, creator, creator_id, creator_name
+        $query = '  SELECT id, title, image, summary, alias, created_time, category_id, category_name, category_alias, creator, creator_id, creator_name, creator_avatar
                     FROM '.$this->table_name.'
                     WHERE published = 1 '.$sqlWhere.SQL_PUBLISH.SQL_LANG.'
                     ORDER BY ordering DESC';
