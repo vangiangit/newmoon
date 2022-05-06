@@ -31,6 +31,7 @@ $Itemid = 5;
             </div>
         <?php if($i==3) break; } ?>
     </div><!-- /.list-grid-->
+    <?php if($tags){ ?>
     <div class="listTag d-flex">
         <?php $tags = explode(',', $cat->tags); ?>
         <a href="javascript:void(0);" data-tag="all">
@@ -48,6 +49,7 @@ $Itemid = 5;
             </a>
         <?php } ?>
     </div>
+    <?php } ?>
     <div class="row list-news">
         <?php $i = 0;
         foreach($listNews as $item){

@@ -18,7 +18,8 @@
 body{
     font-size: 15px;
     color: var(--text-color);
-    font-family: 'IBM Plex Sans', sans-serif;
+    // font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: var(--background-general);
     padding-top: 92px;
 }
@@ -36,10 +37,13 @@ body{
             text-transform: uppercase;
             font-weight: bold;
             color: var(--text-title-color);
+            padding-right: 2rem;
+            padding-left: 2rem;
         }
     }
 
     .navbar-brand{
+        margin-right: 5rem;
         img{
             height: 36px;
         }
@@ -95,7 +99,7 @@ body{
                     content: "";
                     width: 95%;
                     height: 2px;
-                    background-color: #cfb160;
+                    background-color: #1f80bd;
                     top: 0;
                     left: 5.5px;
                 }
@@ -214,7 +218,7 @@ body{
 
                 &:hover{
                     .hashTag{
-                        color: #cfb160;
+                        color: var(--text-hover-link);
                     }
                 }
             }
@@ -542,7 +546,7 @@ footer{
         text-decoration: none;
 
         &:hover {
-            color: #cfb160;
+            color: var(--text-hover-link);;
         }
     }
 
@@ -783,7 +787,7 @@ footer{
             text-decoration: none;
 
             &:hover{
-                color: #fbe08e;
+                color: var(--text-hover-link);
             }
         }
     }
@@ -815,7 +819,7 @@ footer{
             padding-right: 10px;
 
             &:hover{
-                color: #fbe08e;
+                color: var(--text-hover-link);
             }
         }
     }
@@ -869,7 +873,7 @@ footer{
                 text-decoration: none;
 
                 &:hover{
-                    color: #fbe08e;
+                    color: var(--text-hover-link);
                 }
             }
         }
@@ -975,7 +979,7 @@ footer{
                 text-decoration: none;
 
                 &:hover{
-                    color: #fbe08e;
+                    color: var(--text-hover-link);
                 }
             }
         }
@@ -1062,7 +1066,7 @@ footer{
         height: 100%;
         left: 0;
         top: 0;
-        background-image: linear-gradient(180deg,rgba(0,0,0,0.5),rgba(38,38,38,0.6) 99%);
+        background-image: var(--background-author-page);
         backdrop-filter: blur(44px);
         -webkit-backdrop-filter: blur(44px);
         z-index: -2;
@@ -1114,7 +1118,7 @@ footer{
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: linear-gradient(180deg,hsla(0,0%,100%,0) 2%,#fff);;
+            background-image: var(--background-author-page-info);
             border-radius: 1.6rem;
             z-index: -1;
             opacity: .12;
@@ -1218,7 +1222,7 @@ footer{
                 h4{
                     font-size: 24px;
                     line-height: 24px;
-                    color: #cfb160;
+                    color: var(--text-hover-link);
                     font-weight: 600;
                     margin-right: 8px;
                     display: inline-block;
@@ -1299,7 +1303,7 @@ footer{
                 }
 
                 &.authorTabItemActive{
-                    color: #cfb160;
+                    color: var(--text-hover-link);
                 }
             }
         }
@@ -1818,7 +1822,7 @@ footer{
             color: var(--text-title-post-color);
 
             &:hover{
-                color: #cfb160;
+                color: var(--text-hover-link);;
             }
         }
     }

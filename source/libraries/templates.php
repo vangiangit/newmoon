@@ -240,10 +240,14 @@ class Templates{
         echo '    <meta name="author" content="'.$_SERVER['HTTP_HOST'].'"/>'."\n";
         echo '    <link rel="canonical" href="http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'" />'."\n";
         echo '<meta name="yandex-verification" content="c6bf5fc6caed4160" />';
+        // echo '<link rel="preconnect" href="https://fonts.googleapis.com">';
+        // echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>';
+        // echo '<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">';
+        
         echo '<link rel="preconnect" href="https://fonts.googleapis.com">';
         echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>';
-        echo '<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">';
-        
+        echo '<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">';
+
         $array_meta = $this->array_meta;
         for ($i = 0; $i < count($array_meta); $i++){
             $item = $array_meta[$i];

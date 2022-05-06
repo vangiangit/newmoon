@@ -26,7 +26,7 @@
         text-decoration: none;
 
         &:hover{
-            color: #fbe08e;
+            color: var(--text-hover-link);;
         }
     }
 }
@@ -145,7 +145,7 @@
     --background-banner-blur: rgba(27,27,27,0.7);
     --background-banner-blur-firefox: rgba(27,27,27,0.7);
     --background-toast: #3b3a39;
-    --background-input-search: linear-gradient(0deg,rgba(19,19,19,0.6),rgba(0,0,0,0.2));
+    --background-input-search: linear-gradient(0deg,rgba(19,19,19,0.9),rgba(0,0,0,0.5));
     --background-dropdown-header: rgba(37,36,35,0.8);
     --background-list-action-mobile: linear-gradient(180deg,rgba(0,0,0,0.57),rgba(19,19,19,0.86) 99%);
     --background-box-share: rgba(36,36,36,0.5019607843137255);
@@ -242,8 +242,8 @@
     --text-color: #d2d0ce;
     --text-secondary-color: #444443;
     --text-small-color: #d2d0ce;
-    --text-hover-link-light: #fbe08e;
-    --text-hover-link: #cfb160;
+    --text-hover-link-light: #1f80bd;
+    --text-hover-link: #1f80bd;
     --text-disabled: grey;
     --text-light: #d2d0ce;
     --text-heading: #fff;
@@ -458,7 +458,7 @@
     --background-banner-blur: hsla(0,0%,100%,0.9);
     --background-banner-blur-firefox: hsla(0,0%,100%,0.6);
     --background-toast: #fff;
-    --background-input-search: linear-gradient(180deg,hsla(0,0%,100%,0.2),hsla(0,0%,100%,0.6) 97%);
+    --background-input-search: linear-gradient(0deg,rgba(19,19,19,0.9),rgba(0,0,0,0.5));
     --background-dropdown-header: hsla(0,0%,100%,0.8);
     --background-list-action-mobile: linear-gradient(270deg,hsla(0,0%,100%,0.62) 100%,hsla(0,0%,100%,0.62) 0);
     --background-box-share: hsla(0,0%,94.9%,0.5019607843137255);
@@ -547,8 +547,8 @@
     --text-color: #605e5c;
     --text-secondary-color: #e1dfdd;
     --text-small-color: #fff;
-    --text-hover-link-light: #fbe08e;
-    --text-hover-link: #cfb160;
+    --text-hover-link-light: #1f80bd;
+    --text-hover-link: #1f80bd;
     --text-disabled: #d2d0ce;
     --text-light: #605e5c;
     --text-heading: #262626;
@@ -576,7 +576,7 @@
     --text-color-title-footer: #262626;
     --text-child-footer: #262626;
     --text-input-placeholder: #9e9e9e;
-    --text-input-search: #262626;
+    --text-input-search: #000;
     --text-description-post-detail: #656464;
     --text-header-not-choose: #656464;
     --text-breadcrumb: #a19f9f;

@@ -84,22 +84,36 @@ $tmpl->addScript('slick.min', '', 'top');
                     </a>
                 </p>
                 <p>
-                    <a href="#">
+                    <?php if($config['link_facebook']){ ?>
+                    <a href="<?php echo $config['link_facebook'] ?>">
                         <img class="theme-icon icon-dark" src="<?php echo URL_ROOT ?>templates/default/images/iconFacebookDark.svg?v=<?php echo ASSET_VERSION; ?>" />
                         <img class="theme-icon icon-light" src="<?php echo URL_ROOT ?>templates/default/images/iconFacebookLight.svg?v=<?php echo ASSET_VERSION; ?>" />
                     </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="#">
+                    <?php } ?>
+                    <?php if($config['link_youtube']){ ?>
+                    <a href="<?php echo $config['link_youtube'] ?>">
                         <img class="theme-icon icon-dark" src="<?php echo URL_ROOT ?>templates/default/images/iconYoutubeDark.svg?v=<?php echo ASSET_VERSION; ?>" />
                         <img class="theme-icon icon-light" src="<?php echo URL_ROOT ?>templates/default/images/iconYoutubeLight.svg?v=<?php echo ASSET_VERSION; ?>" />
                     </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="#">
+                    <?php } ?>
+                    <?php if($config['link_twitter']){ ?>
+                    <a href="<?php echo $config['link_twitter'] ?>">
                         <img class="theme-icon icon-dark" src="<?php echo URL_ROOT ?>templates/default/images/iconTwitterDark.svg?v=<?php echo ASSET_VERSION; ?>" />
                         <img class="theme-icon icon-light" src="<?php echo URL_ROOT ?>templates/default/images/iconTwitterLight.svg?v=<?php echo ASSET_VERSION; ?>" />
                     </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="#">
+                    <?php } ?>
+                    <?php if($config['link_telegram']){ ?>
+                    <a href="<?php echo $config['link_telegram'] ?>">
                         <img class="theme-icon icon-dark" src="<?php echo URL_ROOT ?>templates/default/images/iconTelegramDark.svg?v=<?php echo ASSET_VERSION; ?>" />
                         <img class="theme-icon icon-light" src="<?php echo URL_ROOT ?>templates/default/images/iconTelegramLight.svg?v=<?php echo ASSET_VERSION; ?>" />
+                    </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <?php } ?>
+                    <?php if($config['link_discord']){ ?>
+                    <a href="<?php echo $config['link_discord'] ?>">
+                        <img class="theme-icon icon-dark" src="<?php echo URL_ROOT ?>templates/default/images/iconDiscordDark.svg?v=<?php echo ASSET_VERSION; ?>" />
+                        <img class="theme-icon icon-light" src="<?php echo URL_ROOT ?>templates/default/images/iconDiscordLight.svg?v=<?php echo ASSET_VERSION; ?>" />
                     </a>
+                    <?php } ?>
                 </p>
             </div><!-- /.col-lg-4-->
             <div class="col-lg-9">

@@ -11186,7 +11186,7 @@ textarea.form-control-lg {
   --background-banner-blur: rgba(27,27,27,0.7);
   --background-banner-blur-firefox: rgba(27,27,27,0.7);
   --background-toast: #3b3a39;
-  --background-input-search: linear-gradient(0deg,rgba(19,19,19,0.6),rgba(0,0,0,0.2));
+  --background-input-search: linear-gradient(0deg,rgba(19,19,19,0.9),rgba(0,0,0,0.5));
   --background-dropdown-header: rgba(37,36,35,0.8);
   --background-list-action-mobile: linear-gradient(180deg,rgba(0,0,0,0.57),rgba(19,19,19,0.86) 99%);
   --background-box-share: rgba(36,36,36,0.5019607843137255);
@@ -11283,8 +11283,8 @@ textarea.form-control-lg {
   --text-color: #d2d0ce;
   --text-secondary-color: #444443;
   --text-small-color: #d2d0ce;
-  --text-hover-link-light: #fbe08e;
-  --text-hover-link: #cfb160;
+  --text-hover-link-light: #1f80bd;
+  --text-hover-link: #1f80bd;
   --text-disabled: grey;
   --text-light: #d2d0ce;
   --text-heading: #fff;
@@ -11499,7 +11499,7 @@ textarea.form-control-lg {
   --background-banner-blur: hsla(0,0%,100%,0.9);
   --background-banner-blur-firefox: hsla(0,0%,100%,0.6);
   --background-toast: #fff;
-  --background-input-search: linear-gradient(180deg,hsla(0,0%,100%,0.2),hsla(0,0%,100%,0.6) 97%);
+  --background-input-search: linear-gradient(0deg,rgba(19,19,19,0.9),rgba(0,0,0,0.5));
   --background-dropdown-header: hsla(0,0%,100%,0.8);
   --background-list-action-mobile: linear-gradient(270deg,hsla(0,0%,100%,0.62) 100%,hsla(0,0%,100%,0.62) 0);
   --background-box-share: hsla(0,0%,94.9%,0.5019607843137255);
@@ -11588,8 +11588,8 @@ textarea.form-control-lg {
   --text-color: #605e5c;
   --text-secondary-color: #e1dfdd;
   --text-small-color: #fff;
-  --text-hover-link-light: #fbe08e;
-  --text-hover-link: #cfb160;
+  --text-hover-link-light: #1f80bd;
+  --text-hover-link: #1f80bd;
   --text-disabled: #d2d0ce;
   --text-light: #605e5c;
   --text-heading: #262626;
@@ -11617,7 +11617,7 @@ textarea.form-control-lg {
   --text-color-title-footer: #262626;
   --text-child-footer: #262626;
   --text-input-placeholder: #9e9e9e;
-  --text-input-search: #262626;
+  --text-input-search: #000;
   --text-description-post-detail: #656464;
   --text-header-not-choose: #656464;
   --text-breadcrumb: #a19f9f;
@@ -11874,7 +11874,7 @@ textarea.form-control-lg {
   text-decoration: none;
 }
 .block-banner.block-banner-multiple .block-heading a:hover {
-  color: #fbe08e;
+  color: var(--text-hover-link);
 }
 .block-banner.block-banner-multiple .item {
   text-align: center;
@@ -12114,7 +12114,7 @@ textarea.form-control-lg {
   text-decoration: none;
 }
 .block-banner.block-banner-multiple .block-heading a:hover {
-  color: #fbe08e;
+  color: var(--text-hover-link);
 }
 .block-banner.block-banner-multiple .item {
   text-align: center;
@@ -12460,13 +12460,11 @@ textarea.form-control-lg {
   border-radius: 10px;
 }
 .block-news.block-news-latest .post-slider-for .post-slider-for-info .heading {
-  width: 85%;
   padding: 24px;
   position: absolute;
-  left: 50%;
-  bottom: 32px;
-  -webkit-transform: translate(-50%);
-  transform: translate(-50%);
+  left: 15px;
+  bottom: 15px;
+  right: 15px;
   display: -webkit-flex;
   display: -moz-box;
   display: flex;
@@ -12479,6 +12477,7 @@ textarea.form-control-lg {
   flex-direction: column;
   color: var(--text-fill-slide);
   z-index: 1;
+  margin-bottom: 0;
 }
 .block-news.block-news-latest .post-slider-for .post-slider-for-info .heading a {
   font-size: 33px;
@@ -12500,7 +12499,7 @@ textarea.form-control-lg {
   -webkit-backdrop-filter: var(--blur-background2);
   -webkit-box-shadow: 0 1px 2.4rem 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2.4rem 0 rgba(0, 0, 0, 0.1);
-  background-image: var(--background-fill);
+  background-image: linear-gradient(0deg, rgba(31, 128, 189, 0.38), rgba(133, 202, 244, 0.1));
   border-radius: 10px;
 }
 .block-news.block-news-latest .slider-nav-bound {
@@ -12590,7 +12589,7 @@ textarea.form-control-lg {
   text-decoration: none;
 }
 .block-news.block-news-grid .block-heading a:hover {
-  color: #fbe08e;
+  color: var(--text-hover-link);
 }
 .block-news.block-news-list .block-heading {
   text-align: center;
@@ -12605,7 +12604,7 @@ textarea.form-control-lg {
   text-decoration: none;
 }
 .block-news.block-news-list .block-heading a:hover {
-  color: #fbe08e;
+  color: var(--text-hover-link);
 }
 .block-news.block-news-list2 .list-item {
   background: transparent;
@@ -12655,7 +12654,7 @@ textarea.form-control-lg {
   text-decoration: none;
 }
 .block-categories.block-categories-default .block-heading a:hover {
-  color: #fbe08e;
+  color: var(--text-hover-link);
 }
 
 /* Slider */
@@ -12914,7 +12913,7 @@ textarea.form-control-lg {
 body {
   font-size: 15px;
   color: var(--text-color);
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: var(--background-general);
   padding-top: 92px;
 }
@@ -12931,6 +12930,11 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   color: var(--text-title-color);
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+.navbar .navbar-brand {
+  margin-right: 5rem;
 }
 .navbar .navbar-brand img {
   height: 36px;
@@ -12976,7 +12980,7 @@ body {
   content: "";
   width: 95%;
   height: 2px;
-  background-color: #cfb160;
+  background-color: #1f80bd;
   top: 0;
   left: 5.5px;
 }
@@ -13079,7 +13083,7 @@ body {
   transition: all 0.3s;
 }
 .navbar .searchMobileWrapper .tagWrapper a:hover .hashTag {
-  color: #cfb160;
+  color: var(--text-hover-link);
 }
 
 .about-item {
@@ -13189,7 +13193,7 @@ body {
   text-decoration: none;
 }
 .block-album-default .block-heading a:hover {
-  color: #fbe08e;
+  color: var(--text-hover-link);
 }
 .block-album-default .note {
   text-align: center;
@@ -13425,7 +13429,7 @@ footer a {
   text-decoration: none;
 }
 footer a:hover {
-  color: #cfb160;
+  color: var(--text-hover-link);
 }
 footer .footer-rights {
   border-top: 1px solid var(--divider-line-footer);
@@ -13636,7 +13640,7 @@ footer .col-lg-9 > ul::after {
   text-decoration: none;
 }
 .project-item .heading a:hover {
-  color: #fbe08e;
+  color: var(--text-hover-link);
 }
 .project-item p {
   padding-bottom: 0;
@@ -13658,7 +13662,7 @@ footer .col-lg-9 > ul::after {
   padding-right: 10px;
 }
 .project-item .social a:hover {
-  color: #fbe08e;
+  color: var(--text-hover-link);
 }
 
 .project-heading {
@@ -13707,7 +13711,7 @@ footer .col-lg-9 > ul::after {
   text-decoration: none;
 }
 .grid-item .info .heading a:hover {
-  color: #fbe08e;
+  color: var(--text-hover-link);
 }
 .grid-item .info .creator {
   display: -webkit-flex;
@@ -13868,7 +13872,7 @@ footer .col-lg-9 > ul::after {
   text-decoration: none;
 }
 .list-item .info .heading a:hover {
-  color: #fbe08e;
+  color: var(--text-hover-link);
 }
 .list-item p {
   padding-bottom: 0;
@@ -13913,7 +13917,7 @@ footer .col-lg-9 > ul::after {
   text-decoration: none;
 }
 .container-news .block-heading a:hover {
-  color: #fbe08e;
+  color: var(--text-hover-link);
 }
 
 .list-news .col-lg-12 .list-item .thumb {
@@ -13951,7 +13955,7 @@ footer .col-lg-9 > ul::after {
   height: 100%;
   left: 0;
   top: 0;
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(38, 38, 38, 0.6) 99%);
+  background-image: var(--background-author-page);
   backdrop-filter: blur(44px);
   -webkit-backdrop-filter: blur(44px);
   z-index: -2;
@@ -14001,7 +14005,7 @@ footer .col-lg-9 > ul::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 2%, #fff);
+  background-image: var(--background-author-page-info);
   border-radius: 1.6rem;
   z-index: -1;
   opacity: 0.12;
@@ -14098,7 +14102,7 @@ footer .col-lg-9 > ul::after {
 .container-author .authorInfoContainer .authorInfoLeft .boxPostNumber h4, .container-author .authorInfoContainer .authorInfoLeft .boxPostNumber .h4 {
   font-size: 24px;
   line-height: 24px;
-  color: #cfb160;
+  color: var(--text-hover-link);
   font-weight: 600;
   margin-right: 8px;
   display: inline-block;
@@ -14173,7 +14177,7 @@ footer .col-lg-9 > ul::after {
   margin-right: 8px;
 }
 .container-author .authorPostHeadTabs .authorHeadContent .authorTabItem.authorTabItemActive {
-  color: #cfb160;
+  color: var(--text-hover-link);
 }
 
 .contentWrapperNormal {
@@ -14660,7 +14664,7 @@ footer .col-lg-9 > ul::after {
   color: var(--text-title-post-color);
 }
 .block-menu-cats .menu-item a:hover {
-  color: #cfb160;
+  color: var(--text-hover-link);
 }
 .block-menu-cats.block-menu-projects .menu-item span {
   height: 80px !important;
