@@ -160,7 +160,7 @@ body{
 
             input{
                 background-color: transparent!important;
-                color: var(--text-input-search);
+                color: #fff;
                 font-size: 17px;
                 border: none;
                 padding: 0 8px;
@@ -168,6 +168,28 @@ body{
                 text-align: center;
                 outline: none;
                 border: none;
+
+                &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+                    color:    #fff;
+                }
+                &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+                   color:    #fff;
+                   opacity:  1;
+                }
+                &::-moz-placeholder { /* Mozilla Firefox 19+ */
+                   color:    #fff;
+                   opacity:  1;
+                }
+                &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                   color:    #fff;
+                }
+                &::-ms-input-placeholder { /* Microsoft Edge */
+                   color:    #fff;
+                }
+                
+                &::placeholder { /* Most modern browsers support this now. */
+                   color:    #fff;
+                }
             }
         }
 
@@ -176,7 +198,7 @@ body{
             font-size: 17px;
             margin-bottom: 16px;
             text-align: center;
-            color: var(--text-input-search);
+            color: #fff;
             display: -webkit-flex;
             display: -moz-box;
             display: flex;

@@ -27,10 +27,10 @@ $tmpl->addScript('slick.min', '', 'top');
                     <img class="theme-icon icon-dark" src="<?php echo URL_ROOT ?>templates/default/images/iconSearch.svg?v=<?php echo ASSET_VERSION; ?>" />
                     <img class="theme-icon icon-light" src="<?php echo URL_ROOT ?>templates/default/images/iconSearchShortLight.svg?v=<?php echo ASSET_VERSION; ?>" />
                 </a>
-                <a class="rb-item" href="javascript:void(0);">
+                <!-- <a class="rb-item" href="javascript:void(0);">
                     <img class="theme-icon icon-dark" src="<?php echo URL_ROOT ?>templates/default/images/iconNewMenu.svg?v=<?php echo ASSET_VERSION; ?>" />
                     <img class="theme-icon icon-light" src="<?php echo URL_ROOT ?>templates/default/images/iconNewMenu2Light.svg?v=<?php echo ASSET_VERSION; ?>" />
-                </a>
+                </a> -->
             </div>
         </div>
     </div>
