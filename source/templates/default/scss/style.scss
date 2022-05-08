@@ -147,16 +147,19 @@ body{
             -webkit-justify-content: center;
             -moz-box-pack: center;
             justify-content: center;
-            padding-bottom: 16px;
+            padding-bottom: 8px;
+            padding-top: 8px;
+            border: 1px solid var(--divider-input-search);
+            border-radius: 10px;
             
-            &:before {
-                content: "";
-                height: 1px;
-                width: 100%;
-                background-color: var(--divider-input-search);
-                position: absolute;
-                bottom: 0;
-            }
+            // &:before {
+            //     content: "";
+            //     height: 1px;
+            //     width: 100%;
+            //     background-color: var(--divider-input-search);
+            //     position: absolute;
+            //     bottom: 0;
+            // }
 
             input{
                 background-color: transparent!important;
@@ -191,6 +194,14 @@ body{
                    color:    #fff;
                 }
             }
+
+            button{
+                position: absolute;
+                background: transparent;
+                border: none;
+                right: 10px;
+                top: 10px;
+            }
         }
 
         .txtTrending{
@@ -211,6 +222,8 @@ body{
         }
 
         .tagWrapper{
+            justify-content: center;
+            align-items: center;
             a{
                 text-decoration: none;
 
