@@ -27,8 +27,8 @@ $Itemid = 5;
                                         </svg>
                                         <?php echo date('M d', strtotime($item->created_time)); ?>
                                     </span>
+                                    <p><?php echo $item->summary?></p>
                                 </h4>
-                                <p><?php echo $item->summary?></p>
                             </div>
                         </article><!-- /.post-item-->
                     <?php }?>

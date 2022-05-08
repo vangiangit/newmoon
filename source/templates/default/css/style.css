@@ -12546,6 +12546,7 @@ textarea.form-control-lg {
   color: var(--text-fill-slide);
   margin-bottom: 0;
   font-size: 14px;
+  padding-top: 7px;
 }
 .block-news.block-news-latest .slider-nav-bound {
   position: absolute;
@@ -12561,7 +12562,7 @@ textarea.form-control-lg {
   flex-wrap: nowrap !important;
   border-radius: 10px;
   width: 100%;
-  margin-bottom: 22px;
+  margin-bottom: 26px;
   position: relative;
 }
 .block-news.block-news-latest .slider-nav-bound .post-slider-nav .thumb {
