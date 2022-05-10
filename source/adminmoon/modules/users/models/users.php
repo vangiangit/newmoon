@@ -1,5 +1,5 @@
 <?php 
-	class UsersModelsUsers
+	class UsersModelsUsers extends FSModels
 	{
 		var $limit;
 		var $page;
@@ -176,8 +176,8 @@
 		{
 			global $db;
 			$username= FSInput::get('username');
-			$password= md5(FSInput::get('password'));
-			$repass = md5(FSInput::get('repass'));
+			$password= (FSInput::get('password'));
+			$repass = (FSInput::get('repass'));
 			$fullname = FSInput::get('fullname');
 			$fname = FSInput::get('fname');
 			$lname = FSInput::get('lname');
@@ -189,6 +189,10 @@
 			$published = FSInput::get('published');
 			$ordering = FSInput::get('ordering');
 			$time = gmdate('Y-m-d H:i:s');
+
+            $uNews = array(
+                'creator_name' => $fullname
+            );
             $avatar = $_FILES["avatar"]["name"];
             if ($avatar){
                 $fsFile = FSFactory::getClass('FsFiles');
@@ -196,7 +200,7 @@
                 $avatar = $fsFile->uploadImage("avatar", $path, 2000000, $username.'-' . time());
                 if (!$avatar)
                     return false;
-                $avatar = 'images/avatar/'.$avatar;
+                $uNews['creator_avatar'] = $avatar = 'images/avatar/'.$avatar;
             }
 			
 			$id = FSInput::get('id');
@@ -205,6 +209,8 @@
 			{
 				if($password)
 				{
+                    $password = md5($password);
+                    $repass= md5($repass);
 					if($password != $repass)
 						return false;
 
@@ -233,6 +239,8 @@
 				$db->query($sql);
 				$rows = $db->affected_rows();
 				
+                $this->_update($uNews, 'fs_news', 'creator_id='.$id);
+
 				return $id;
 				
 			}

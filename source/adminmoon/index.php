@@ -17,7 +17,7 @@ define('PATH_ADMINISTRATOR', str_replace("\\", "/", $admin_path));
 $admin_folder = str_replace(PATH_BASE, "", PATH_ADMINISTRATOR);
 define('URL_ADMIN', 'https://'.$_SERVER['HTTP_HOST'].'/'.$admin_folder.'/');
 /* Khởi tạo session */
-ini_set('session.gc_maxlifetime', 1000000);
+ini_set('session.gc_maxlifetime', 10000000);
 session_start();
 /* if(!empty($_SESSION['ad_logged'])){
 	session_regenerate_id(true);

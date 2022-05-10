@@ -57,6 +57,9 @@ class NewsModelsNews extends FSModels
                 $where .= " AND a.title LIKE '%" . $keysearch . "%' ";
             }
         }
+        if(@$_SESSION['ad_userid']!=9){
+            $where .= " AND a.creator_id = '" . $_SESSION['ad_userid'] . "' ";
+        }
         $query = " SELECT a.*
 						  FROM 
 						  	" . $this->table_name . " AS a

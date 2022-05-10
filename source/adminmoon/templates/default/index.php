@@ -1,9 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>CMS - FinalStyle</title>
+	<title>CMS - New Moon</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="copyright" content="© 2013 FinalStyle, Thiết kế website Phong Cách Số" /> 
     <meta name="robots" content="noindex, nofollow"/>
     <link rel="shortcut icon" href="templates/default/images/favicon.ico"/>
 	<link rel="stylesheet" type="text/css" href="templates/default/css/reset.css"/>
@@ -32,7 +31,7 @@
                     <a href="<?php echo URL_ADMIN?>"><img src="templates/default/images/logo/logo.jpg?v=<?php echo ASSET_VERSION; ?>" /></a>
                 </div><!--end: .avatar-->
                 <div class="info fr">
-                    <div class="lang">
+                    <div style="display: none;" class="lang">
                         <?php
                         $arrLang = array('vi'=>'Tiếng việt', 'en'=>'English');
                         $language = $_SESSION['adlang'];
@@ -46,7 +45,7 @@
                             <?php } ?>
                         </select>
                     </div><!--end: .lang-->
-                    <div class="name"><?php echo $_SESSION['ad_username']; ?></div>
+                    <div style="padding-top: 7px; padding-bottom: 10px;" class="name"><?php echo $_SESSION['ad_username']; ?></div>
                     <div class="tool">
                         <a href="index.php?module=users&view=users&task=edit&cid=<?php echo $_SESSION['ad_userid']; ?>">Setting</a>
                         <span>|</span>

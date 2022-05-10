@@ -299,7 +299,7 @@ class FSRoute
                     }
                     break;
                 case 'contact':
-                    return URL_LANG . 'lien-he';
+                    return URL_LANG . 'contact-us';
                 case 'download':
                     return URL_LANG . 'download';
                 case 'home':

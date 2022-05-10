@@ -6,7 +6,7 @@ function login(){
 	$db->query('SELECT u.id, u.username, u.email, g.groupid, u.fullname
                 FROM fs_users AS u
                     INNER JOIN fs_users_groups AS g ON u.id = g.userid
-                WHERE u.username = \''.$username.'\'  AND published = 1
+                WHERE u.username = \''.$username.'\' AND u.password = \''.$password.'\' AND published = 1
                 LIMIT 1');
 	$user = $db->getObject();
 	if(!$user){
@@ -30,6 +30,7 @@ $system_path = rtrim($system_path, '/').'/';
 define('PATH_BASE', str_replace("\\", "/", $system_path));
 define('URL_ROOT', "http://" . $_SERVER['HTTP_HOST'] . "/");
 session_start();
+ini_set('session.gc_maxlifetime', 10000000);
 if(isset($_SESSION['ad_logged']) && $_SESSION['ad_logged']==1)
     header("Location: index.php");
 require_once(PATH_BASE.'config/config.php');

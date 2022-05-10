@@ -15,7 +15,7 @@
 <div class="form_body">
 	<div id="msg_error"></div>
     <div class="form-contents">
-	<form action="index.php?module=users&view=users" name="adminForm" method="post">
+	<form action="index.php?module=users&view=users" enctype="multipart/form-data" name="adminForm" method="post">
 		<fieldset>
 			<legend><?php echo FSText :: _("user info");?></legend>
 		
@@ -57,7 +57,7 @@
 						
 					</td>
 				</tr>
-				<tr style="display: none">
+				<tr>
 					<td valign="top" class="key">
 						<?php echo FSText :: _('User group'); ?>
 					</td>
@@ -111,7 +111,7 @@
 							
 						</td>
 					</tr>
-                    <?php TemplateHelper::dt_edit_image(FSText :: _('Avatar'),'avatar',URL_ROOT.@$data->avatar); ?>
+                    <?php TemplateHelper::dt_edit_image(FSText :: _('Avatar'),'avatar',URL_ROOT.@$data->avatar, 300); ?>
 					<tr>
 						<td valign="top" class="key">
 							<?php echo FSText :: _('Phone'); ?>

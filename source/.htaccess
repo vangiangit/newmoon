@@ -18,7 +18,8 @@ RewriteRule ^capcha.jpg$ index.php?module=ajax&view=ajax&raw=1&task=create_image
 RewriteRule ^php.info$ index.php?module=ajax&view=ajax&raw=1&task=php_info [L]
 ErrorDocument 404 /404.html
 ErrorDocument 403 /404.html
-
+#contact
+RewriteRule ^contact-us$ index.php?module=contact&Itemid=10&%{QUERY_STRING} [L]
 RewriteRule ^([^/]*).crawler$ index.php?module=ajax&view=ajax&raw=1&task=$1&%{QUERY_STRING} [L]
 RewriteRule ^([^/]*).api$ index.php?module=ajax&view=ajax&raw=1&task=$1&%{QUERY_STRING} [L]
 #shortlink
@@ -34,5 +35,3 @@ RewriteRule ^([^/]*)(/trang-([0-9]*))?.html$ index.php?module=news&view=cat&ccod
 RewriteRule ^projects$ index.php?module=projects&view=home&Itemid=2&%{QUERY_STRING} [L]
 RewriteRule ^projects/([^/]*)-c([0-9]*)(/trang-([0-9]*))?$ index.php?module=projects&view=cat&ccode=$1&id=$2&page=$4&Itemid=9&%{QUERY_STRING} [L]
 RewriteRule ^projects/([^/]*)-d([0-9]*)$ index.php?module=projects&view=projects&code=$1&id=$2&Itemid=9&%{QUERY_STRING} [L]
-#contact
-RewriteRule ^contact-us$ index.php?module=contact&Itemid=10&%{QUERY_STRING} [L]

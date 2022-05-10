@@ -11671,7 +11671,7 @@ textarea.form-control-lg {
   --divider-line-footer: #f0f0f0;
   --divider-vertical-line: #a19f9f;
   --divider-vertical-line-long-form: #a19f9f;
-  --divider-input-search: #ededed;
+  --divider-input-search: rgba(255,255,255,0.6);
   --divider-line-long-form: #171717;
   --divider-chart: #d0cecc;
   --progress-bar-chart: #f0f0f0;
@@ -12562,7 +12562,7 @@ textarea.form-control-lg {
   flex-wrap: nowrap !important;
   border-radius: 10px;
   width: 100%;
-  margin-bottom: 26px;
+  margin-bottom: 21px;
   position: relative;
 }
 .block-news.block-news-latest .slider-nav-bound .post-slider-nav .thumb {
@@ -12625,6 +12625,10 @@ textarea.form-control-lg {
   }
   .block-news.block-news-latest .post-slider-for-info .heading a {
     font-size: 17px !important;
+    color: var(--text-title-post-color) !important;
+  }
+  .block-news.block-news-latest .post-slider-for-info .heading .date,
+.block-news.block-news-latest .post-slider-for-info .heading p {
     color: var(--text-title-post-color) !important;
   }
   .block-news.block-news-latest .post-slider-nav .creator {
@@ -12977,7 +12981,7 @@ body {
 }
 
 .navbar {
-  background-color: var(--background-header-home);
+  background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: var(--blur-background-header);
   -webkit-backdrop-filter: var(--blur-background-header);
   box-shadow: var(--box-shadow);
@@ -13042,6 +13046,13 @@ body {
   top: 0;
   left: 5.5px;
 }
+.navbar .dropdown:hover .dropdown-menu a {
+  white-space: nowrap;
+}
+.navbar .dropdown:hover .dropdown-menu .nav-link {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 .navbar .has-child > a > span {
   width: 12px;
   height: 7px;
@@ -13066,7 +13077,9 @@ body {
   display: block !important;
 }
 .navbar .searchMobileWrapper .inputSearchWrapper {
+  margin: 0 auto;
   width: 100%;
+  max-width: 600px !important;
   display: -webkit-flex;
   display: -moz-box;
   display: flex;
