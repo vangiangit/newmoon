@@ -1,14 +1,15 @@
 <?php
 global $tmpl;
 $tmpl->addTitle($author->fullname);
+
 $Itemid = 5;
 ?>
 <div class="container">
     <div class="container-author">
-        <img src="/images/iconCoinNM.png" class="author-cover" alt="icon">
+        <img onerror="this.src='/images/iconCoinNM.png'" src="<?php echo URL_ROOT.$author->avatar;?>" class="author-cover" alt="icon">
         <div class="authorInfoContainer">
             <div class="authorInfoLeft">
-                <img src="/images/iconCoinNM.png" class="authorInfoAvatar" alt="icon">
+                <img onerror="this.src='/images/iconCoinNM.png'" src="<?php echo URL_ROOT.$author->avatar;?>" class="authorInfoAvatar" alt="icon">
                 <div class="authorInfoName">
                     <div class="authorUserName">
                         <h4><?php echo $author->fullname;?></h4>

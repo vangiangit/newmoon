@@ -19,6 +19,7 @@ $this -> dt_form_begin(0);
                             <?php
                             TemplateHelper::dt_edit_selectbox(FSText::_('Categories'),'category_id',@$data -> category_id,0,$categories,$field_value = 'id', $field_label='treename',$size = 1,0);
                             TemplateHelper::dt_edit_text(FSText :: _('Title'),'title',@$data -> title);
+                            if($id && $_SESSION['ad_userid']==9) TemplateHelper::dt_edit_selectbox(FSText::_('Creator'),'creator_id',@$data -> creator_id,0,$creators,$field_value = 'id', $field_label='fullname',$size = 1,0);
                             ?>
                         </table>
                     </td>

@@ -5,7 +5,7 @@
 		var $page;
 		function __construct()
 		{
-			$limit = 3;
+			$limit = 30;
 			$page = FSInput::get('page');
 			$this->limit = $limit;
 			$this->page = $page;
@@ -193,16 +193,17 @@
             $uNews = array(
                 'creator_name' => $fullname
             );
-            $avatar = $_FILES["avatar"]["name"];
-            if ($avatar){
+            $str_avatar = '';
+            if ($_FILES["avatar"]["name"]){
                 $fsFile = FSFactory::getClass('FsFiles');
                 $path = PATH_BASE . 'images/avatar/'; 
                 $avatar = $fsFile->uploadImage("avatar", $path, 2000000, $username.'-' . time());
                 if (!$avatar)
                     return false;
                 $uNews['creator_avatar'] = $avatar = 'images/avatar/'.$avatar;
+                $str_avatar = "avatar = '$avatar',";
             }
-			
+			$uNews['creator'] = $username;
 			$id = FSInput::get('id');
 			
 			if(@$id)
@@ -232,10 +233,11 @@
 							country = '$country',
 							published  = '$published',
 							ordering  = '$ordering',
-							avatar  = '$avatar',
+							$str_avatar
 							updated_time = '$time'
 						WHERE id = 	$id 
 				";
+                
 				$db->query($sql);
 				$rows = $db->affected_rows();
 				
@@ -250,8 +252,8 @@
 					return false;
 	
 				$sql = " INSERT INTO fs_users
-							(`username`,`password`,fname,lname,email,phone,address,country,published,ordering,avatar,updated_time,created_time)
-							VALUES ('$username','$password','$fname','$lname','$email','$phone','$address','$country','$published','$ordering','$avatar','$time','$time')
+							(`username`,`password`,fullname,lname,email,phone,address,country,published,ordering,avatar,updated_time,created_time)
+							VALUES ('$username','$password','$fullname','$lname','$email','$phone','$address','$country','$published','$ordering','$avatar','$time','$time')
 							";
 				$db->query($sql);
 				$id = $db->insert();

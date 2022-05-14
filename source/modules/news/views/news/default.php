@@ -18,7 +18,7 @@ $link_creator = FSRoute::_('index.php?module=news&view=home&task=author&id='.$da
                 <div class="creator">
                     <div class="align-items-center d-flex">
                         <a href="<?php echo $link_creator ?>" title="<?php echo htmlspecialchars($data->creator_name); ?>">
-                            <img src="/images/iconCoinNM.png" class="rounded-circle" alt="icon">
+                            <img onerror="this.src='/images/iconCoinNM.png'" src="<?php echo URL_ROOT.$data->creator_avatar ?>" class="rounded-circle" alt="icon">
                             <?php echo $data->creator_name ?>
                         </a>
                         <div class="aic-dot"></div>
@@ -38,6 +38,7 @@ $link_creator = FSRoute::_('index.php?module=news&view=home&task=author&id='.$da
         </div>
     </div>
     <div class="cd-content">
+        <?php if($menus){ ?>
         <div class="colLeft">
             <div class="colLeftSticky">
                 <div class="boxColLeft">
@@ -58,7 +59,8 @@ $link_creator = FSRoute::_('index.php?module=news&view=home&task=author&id='.$da
                 </div><!-- /.boxColLeft-->
             </div><!-- /.colLeftSticky-->
         </div><!-- /.colLeft-->
-        <div class="colContent">
+        <?php } ?>
+        <div class="colContent <?php if(!$menus) echo 'no-colLeft'; ?>">
             <div class="cd-text-description">
                 <?php echo $data->summary; ?>
             </div><!-- /.textDescription-->

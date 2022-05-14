@@ -232,13 +232,13 @@ class Templates{
         echo '    <meta property="og:type" content="article"/>'."\n"; 
         echo '    <meta property="og:title" content="'.$this->title.'"/>'."\n"; 
         echo '    <meta property="og:description" content="'.$this->head_meta_des.'" />'."\n"; 
-        echo '    <meta property="og:url" content="http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'" />'."\n";
+        echo '    <meta property="og:url" content="https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'" />'."\n";
         echo '    <meta property="og:sitename" content="'.$config['title'].'" />'."\n"; 
         echo '    <link type="image/x-icon" href="/favicon.ico" rel=\'icon\' />'."\n";
         echo '    <meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, width=device-width" />'."\n";
         //echo '    <meta name="developer" content="Trần Văn Giang, vangiangfly@gmail.com">'."\n";
         echo '    <meta name="author" content="'.$_SERVER['HTTP_HOST'].'"/>'."\n";
-        echo '    <link rel="canonical" href="http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'" />'."\n";
+        echo '    <link rel="canonical" href="https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'" />'."\n";
         echo '<meta name="yandex-verification" content="c6bf5fc6caed4160" />';
         // echo '<link rel="preconnect" href="https://fonts.googleapis.com">';
         // echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>';

@@ -129,7 +129,7 @@ class FSString
 	function stringStandart($str){
 		$str  =  $this->parseStringFS($str);
 		$str = preg_replace('/\s\s+/', ' ', $str);
-		$arr = array(".","!","~","@","#","$","%","^","&","*","(",")","=","+","|","\\","/","?",",","'");
+		$arr = array(".","!","~","@","#","$","%","^","&","*","(",")","=","+","|","\\","/","?",",","'",":",";","?");
 		$str= str_replace($arr, "", $str);
 		$str = str_replace(' ','-',$str);
         $str		=  str_replace("----","-",$str);

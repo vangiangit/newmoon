@@ -29,7 +29,7 @@ RewriteRule ^news$ index.php?module=news&view=home&Itemid=2&%{QUERY_STRING} [L]
 RewriteRule ^search/([^/]*)$ index.php?module=news&view=home&task=tag&keyword=$1&Itemid=2&%{QUERY_STRING} [L]
 RewriteRule ^tag/([^/]*)$ index.php?module=news&view=home&task=tag&keyword=$1&Itemid=2&%{QUERY_STRING} [L]
 RewriteRule ^author/([^/]*)-([0-9]*)$ index.php?module=news&view=home&task=author&code=$1&id=$2&Itemid=2&%{QUERY_STRING} [L]
-RewriteRule ^([^/]*)-ch([0-9]*).html$ index.php?module=news&view=news&code=$1&id=$2&Itemid=7&%{QUERY_STRING} [L]
+RewriteRule ^([^/]*)-d([0-9]*).html$ index.php?module=news&view=news&code=$1&id=$2&Itemid=7&%{QUERY_STRING} [L]
 RewriteRule ^([^/]*)(/trang-([0-9]*))?.html$ index.php?module=news&view=cat&ccode=$1&page=$3&Itemid=6&%{QUERY_STRING} [L]
 #projects
 RewriteRule ^projects$ index.php?module=projects&view=home&Itemid=2&%{QUERY_STRING} [L]

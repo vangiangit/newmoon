@@ -25,10 +25,6 @@
 				<td>
 					<?php 
 					switch ($item->data_type) {
-						case "text":
-						default:
-							echo "<input type='text' name='$item->name' value='$item->value' size='70' /> ";
-							break;	
 						case "bool":
 							if($item->value == 1)
 							{
@@ -51,8 +47,20 @@
 							$oFCKeditor->Height = 450;
 							$oFCKeditor->Create() ;
 							break;
-						
-					}
+                        case "image":
+                            if($item -> value){
+                                echo '<p><img width="120px" src="'.URL_ROOT.$item -> value.'" /></p>';
+                            }
+                            echo "<input type='file' name='$item->name' size='70' /> ";
+                            break;
+                        case 'textarea':
+                            echo '<textarea style="width: 100%; height: 250px" name="'.$item->name.'">'.$item->value.'</textarea>';
+                            break;
+                        case "text":
+                        default:
+                            echo "<input type='text' name='$item->name' value='$item->value' size='70' /> ";
+                            break;
+                    }
 					?>
 				</td>
 			</tr>

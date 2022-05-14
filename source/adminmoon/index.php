@@ -61,6 +61,8 @@ function loadMainContent($module){
         if(!isset($_GET['module'])) $_GET['module'] = 'home';
         $view = FSInput::get('view', $module);
         $task = FSInput::get('task', 'display');
+        $cid = FSInput::get('cid', '0');
+        $id = FSInput::get('id', '0');
         $task = $task ? $task : 'display';
         $path = PATH_ADMINISTRATOR . DS . 'modules' . DS . $module . DS . 'controllers' . DS . $view . ".php";
         if (!file_exists($path))
@@ -69,6 +71,8 @@ function loadMainContent($module){
         $c = ucfirst($module) . 'Controllers' . ucfirst($view);
         $controller = new $c();
         $permission = FSSecurity::check_permission($module, $view, $task);
+        if($view=='users' && ($task=='edit' || $task=='save' || $task=='Save' || $task=='apply' || $task=='save_into_users') && ($cid==$_SESSION['ad_userid'] || $id==$_SESSION['ad_userid']))
+            $permission = true;
         if (!$permission){
             echo FSText::_("Bạn không có quyền thực hiện chức năng này");
             return;

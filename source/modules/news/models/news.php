@@ -133,7 +133,7 @@ class NewsModelsNews extends FSModels{
         $query = '  SELECT *
                     FROM fs_news_menus 
                     WHERE post_id = '.$id.'
-                    ORDER BY id DESC';
+                    ORDER BY ordering ASC';
 		$sql = $db->query($query);
 		$result = $db->getObjectList();
 		return $result;

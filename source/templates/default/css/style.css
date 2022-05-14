@@ -14545,7 +14545,6 @@ footer .col-lg-9 > ul::after {
   width: 100%;
   border-radius: 1rem;
   overflow: hidden;
-  height: 284px;
 }
 .container-detail .cd-thumbnail-wrapper .thumbnail-box img {
   width: 100%;
@@ -14612,6 +14611,9 @@ footer .col-lg-9 > ul::after {
   padding-left: 275px;
   position: relative;
   z-index: 2;
+}
+.container-detail .cd-content .colContent.no-colLeft {
+  padding-left: 0 !important;
 }
 .container-detail .colLeft {
   width: 250px;

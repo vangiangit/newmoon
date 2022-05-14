@@ -1651,7 +1651,7 @@ footer{
             width: 100%;
             border-radius: 1rem;
             overflow: hidden;
-            height: 284px;
+            // height: 284px;
 
             img{
                 width: 100%;
@@ -1690,6 +1690,10 @@ footer{
             padding-left: 275px;
             position: relative;
             z-index: 2;
+
+            &.no-colLeft{
+                padding-left: 0 !important;
+            }
         }
     }
 

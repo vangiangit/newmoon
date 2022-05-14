@@ -221,7 +221,7 @@ class FSRoute
                             if($task== 'display'){
 								$id  = isset($array_params['id'])?$array_params['id']: 0;
                                 $code  = isset($array_params['code'])?$array_params['code']: 'tin-tuc';
-								return URL_LANG.$code.'-ch'.$id.'.html';
+								return URL_LANG.$code.'-d'.$id.'.html';
 							}else{
 								return URL_ROOT.$url;
 							}

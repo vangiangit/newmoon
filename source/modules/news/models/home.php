@@ -79,7 +79,7 @@ class NewsModelsHome extends FSModels{
 				die('Not exist this url');
 			$where = ' AND id = '.$id.' ';
 		}
-        $query = '  SELECT id, username, fullname
+        $query = '  SELECT id, username, fullname, avatar
                     FROM fs_users 
                     WHERE published = 1 '.$where;
 		$db->query($query);

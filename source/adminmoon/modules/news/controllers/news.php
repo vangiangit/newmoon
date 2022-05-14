@@ -27,6 +27,7 @@ class NewsControllersNews extends Controllers
         $categories = $model->get_categories_tree();
         $categories_home = $model->get_categories_tree();
         $maxOrdering = $model->getMaxOrdering();
+        $creators = [];
         include 'modules/' . $this->module . '/views/' . $this->view . '/detail.php';
     }
     function edit()
@@ -36,6 +37,7 @@ class NewsControllersNews extends Controllers
         $model = $this->model;
         $categories = $model->get_categories_tree();
         $data = $model->get_record_by_id($id);
+        $creators = $model->get_records(' published = 1', 'fs_users');
         include 'modules/' . $this->module . '/views/' . $this->view . '/detail.php';
     }
     function view_comment($new_id)
@@ -51,6 +53,7 @@ class NewsControllersNews extends Controllers
 			<thead class="thead-light">
 				<tr>
                     <th scope="col" class="text-center">Mục lục</th>
+                    <th scope="col" class="text-center">Ordering</th>
                     <th scope="col" class="text-center">Công cụ</th>
 				</tr>
 			</thead>
@@ -58,6 +61,7 @@ class NewsControllersNews extends Controllers
                 <?php foreach ($list as $item){ ?>
                     <tr>
                         <td><?php echo $item->treename ?></td>
+                        <td><?php echo $item->ordering ?></td>
                         <td>#<?php echo $item->link ?></td>
                         <td class="text-center">
                             <a href="javascript:void(0);" onclick="editNews(<?php echo $item->id ?>)"><img src="templates/default/images/icon-edit.png" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -80,7 +84,7 @@ class NewsControllersNews extends Controllers
 	function editNews(){
 		$parent_id = FSInput::get('parent_id', 0, 'int');
 		$id = FSInput::get('id', 0, 'int');
-		$data = $this->model->get_record_by_id($id);
+		$data = $this->model->get_record('id='.$id, 'fs_news_menus');
 		$list = $this->model->get_news_menu($parent_id);?>
         <form class="" role="form" action="index.php?module=news&view=news" id="frmnewsModal" name="frmnewsModal" method="post" enctype="multipart/form-data">
             <table cellspacing="1" class="admintable" style="width: 100%">
@@ -88,6 +92,7 @@ class NewsControllersNews extends Controllers
                 TemplateHelper::dt_edit_selectbox(FSText::_('Mục cha'),'news_parent_id', @$data->parent_id,'', $list, $field_value = 'id', $field_label='treename', $size = 1,0,1);
                 TemplateHelper::dt_edit_text(FSText :: _('Name'),'news_name',@$data->name);
                 TemplateHelper::dt_edit_text(FSText :: _('Link'),'news_link',@$data->link);
+                TemplateHelper::dt_edit_text(FSText :: _('Ordering'),'news_ordering',@$data->ordering);
                 ?>
                 <input name="data_id" type="hidden" value="<?php echo $id ?>">
                 <input name="data_parent_id" type="hidden" value="<?php echo $parent_id ?>">

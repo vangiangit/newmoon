@@ -85,11 +85,20 @@ class NewsModelsNews extends FSModels
         $row['category_name'] = $cat->name;
         $row['category_alias'] = $cat->alias;
 
-        $row['creator'] = @$_SESSION['ad_username']  ;
-        $row['creator_id'] = @$_SESSION['ad_userid'] ;
-        $row['creator_name'] = @$_SESSION['ad_fullname'] ;
-        $row['creator_avatar'] = @$_SESSION['ad_avatar'] ;
-        
+        $creator_id = FSInput::get('creator_id', '0');
+        if($creator_id){
+            $creator = $this->get_record_by_id($creator_id, 'fs_users');
+            $row['creator'] = $creator->username;
+            $row['creator_id'] = $creator->id;
+            $row['creator_name'] = $creator->fullname;
+            $row['creator_avatar'] = $creator->avatar;
+        }else{
+            $creator = $this->get_record_by_id($_SESSION['ad_userid'], 'fs_users');
+            $row['creator'] = $creator->username;
+            $row['creator_id'] = $creator->id;
+            $row['creator_name'] = $creator->fullname;
+            $row['creator_avatar'] = $creator->avatar;
+        }
         $row['content'] = htmlspecialchars_decode(FSInput::get('content'));
         return parent::save($row);
     }

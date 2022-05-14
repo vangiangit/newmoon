@@ -167,7 +167,7 @@
 			
 			if($cid)
 			{
-				setRedirect('index.php?module=users&view=users&cid='.$cid,FSText :: _('Saved'));	
+				setRedirect('index.php?module=users&view=users&task=edit&cid='.$cid,FSText :: _('Saved'));	
 			}
 			else
 			{

@@ -28,7 +28,7 @@ if (realpath($system_path) !== FALSE){
 // ensure there's a trailing slash
 $system_path = rtrim($system_path, '/').'/';
 define('PATH_BASE', str_replace("\\", "/", $system_path));
-define('URL_ROOT', "http://" . $_SERVER['HTTP_HOST'] . "/");
+define('URL_ROOT', "https://" . $_SERVER['HTTP_HOST'] . "/");
 session_start();
 ini_set('session.gc_maxlifetime', 10000000);
 if(isset($_SESSION['ad_logged']) && $_SESSION['ad_logged']==1)

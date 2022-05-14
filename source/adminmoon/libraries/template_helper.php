@@ -156,10 +156,10 @@ class TemplateHelper
 	 */
 	function edit_text($name,$value,$i,$size = 3,$rows = 1){
 		if($rows > 1){
-			$html = '<textarea rows="'.$rows.'" cols="'.$size.'" name="'.$name.'_'.$i.'" >'.htmlspecialchars($value).'</textarea>';
+			$html = '<textarea class="form-control" rows="'.$rows.'" cols="'.$size.'" name="'.$name.'_'.$i.'" >'.htmlspecialchars($value).'</textarea>';
 		    $html .= '<input type="hidden" name="'.$name.'_'.$i.'_original'.'" value="'.htmlspecialchars($value).'"/>';
 		}else{
-			$html = '<input type="text" name="'.$name.'_'.$i.'"  value="'.htmlspecialchars($value).'" size="'.$size.'"/>';
+			$html = '<input class="form-control" type="text" name="'.$name.'_'.$i.'"  value="'.htmlspecialchars($value).'" size="'.$size.'"/>';
 		    $html .= '<input type="hidden" name="'.$name.'_'.$i.'_original'.'" value="'.htmlspecialchars($value).'"/>';
 		}
 		return $html;
@@ -176,7 +176,7 @@ class TemplateHelper
 	function edit_selectbox($name,$value,$i,$arry_select = array(),$field_value = 'id', $field_label='name',$size = 1,$multi  = 0){
 		if(!$multi){
 			$html_sized = $size > 1 ? "size=$size":"" ;
-			$html = '<select name="'.$name.'_'.$i.'" id="'.$name.'_'.$i.'" '.$html_sized.'>';
+			$html = '<select class="form-control" name="'.$name.'_'.$i.'" id="'.$name.'_'.$i.'" '.$html_sized.'>';
 			$compare  = 0;
 			if(@$value)
 				$compare = $value;
@@ -535,7 +535,7 @@ class TemplateHelper
 				$oFCKeditor[$k]->Create() ;
 			}
 		}else{
-			echo '<input type="text" name="'.$name.'" id="'.$name.'" value="'.htmlspecialchars($value).'" size="'.$size.'"/>';
+			echo '<input  class="form-control" type="text" name="'.$name.'" id="'.$name.'" value="'.htmlspecialchars($value).'" size="'.$size.'"/>';
 		}
 		if($comment)
 			echo '<span class=\'comment\'>'.$comment.'</span>';
@@ -621,7 +621,7 @@ class TemplateHelper
 		if($value){
 				$html_w = $width?' width="'.$width.'" ':'';
 				$html_h = $height?' height="'.$height.'" ':'';
-			$html .= '<img src="'.$value.'" '.$html_w.' '.$html_h.' /><br/>';
+			$html .= '<img onerror="this.src=\'/images/no-image.png\'" src="'.$value.'" '.$html_w.' '.$html_h.' /><br/>';
 		}
 		$html .= '<input type="file" name="'.$name.'" />';
 		if($comment)
