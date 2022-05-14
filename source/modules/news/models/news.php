@@ -60,7 +60,7 @@ class NewsModelsNews extends FSModels{
                     FROM '.$this->table_name.' AS n
                     WHERE n.published = 1 '.$sqlWhere.SQL_PUBLISH.SQL_LANG.'
                     ORDER BY RAND()
-                    LIMIT 6';
+                    LIMIT 3';
         $result = $db->query($query); 
         return $db->getObjectList();
     }

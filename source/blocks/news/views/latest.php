@@ -16,7 +16,7 @@ $Itemid = 5;
                             <img class="img-fluid img-bg" src="<?php echo URL_ROOT.str_replace('/original/','/small/', $item->image); ?>" alt="<?php echo $title;?>" />
                             <div class="post-slider-for-info">
                                 <a class="thumb" href="<?php echo $link;?>" title="<?php echo $title;?>">
-                                    <img class="img-fluid" src="<?php echo URL_ROOT.str_replace('/original/','/small/', $item->image); ?>" alt="<?php echo $title;?>" />
+                                    <img onerror="this.src='/images/no-small-news.jpg'" class="img-fluid" src="<?php echo URL_ROOT.str_replace('/original/','/small/', $item->image); ?>" alt="<?php echo $title;?>" />
                                 </a>
                                 <h4 class="heading">
                                     <a href="<?php echo $link;?>" title="<?php echo $title ?>"><?php echo $item->title?></a>
@@ -42,7 +42,7 @@ $Itemid = 5;
                         $link = FSRoute::_('index.php?module=news&view=news&id='.$item->id.'&code='.$item->alias.'&ccode='.$item->category_alias);?>
                         <article class="post-slider-nav">
                             <a class="thumb" href="<?php echo $link;?>" title="<?php echo $title;?>">
-                                <img class="img-fluid" src="<?php echo URL_ROOT.str_replace('/original/','/small/', $item->image); ?>" alt="<?php echo $title;?>" />
+                                <img onerror="this.src='/images/no-small-news.jpg'" class="img-fluid" src="<?php echo URL_ROOT.str_replace('/original/','/small/', $item->image); ?>" alt="<?php echo $title;?>" />
                             </a>
                             <h4 class="heading">
                                 <a href="<?php echo $link;?>" title="<?php echo $title ?>"><?php echo $item->title?></a>

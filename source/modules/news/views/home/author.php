@@ -27,7 +27,7 @@ $Itemid = 5;
         <div class="authorPostHeadTabs">
             <div class="authorHeadContent">
                 <div class="authorTabItem authorTabItemActive">
-                    <img src="/templates/default/images/iconArticleActive.svg" alt="" class="iconTabPost">
+                    <img src="/templates/default/images/iconArticleActive.svg?v=<?php echo ASSET_VERSION; ?>" alt="" class="iconTabPost">
                     All Posts
                 </div>
             </div>

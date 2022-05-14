@@ -14162,12 +14162,12 @@ footer .col-lg-9 > ul::after {
 }
 .container-author .authorInfoContainer .authorInfoLeft .authorInfoName .authorUserName h4, .container-author .authorInfoContainer .authorInfoLeft .authorInfoName .authorUserName .h4 {
   font-size: 28px;
-  color: #fafafa;
+  color: blue;
   font-weight: bold;
 }
 .container-author .authorInfoContainer .authorInfoLeft .authorInfoName .authorUserName div {
   font-size: 15px;
-  color: #a19f9f;
+  color: blue;
   margin-top: 2px;
 }
 .container-author .authorInfoContainer .authorInfoLeft .boxPostNumber {
@@ -14176,7 +14176,7 @@ footer .col-lg-9 > ul::after {
   display: flex;
   font-size: 24px;
   line-height: unset;
-  color: #fafafa;
+  color: blue;
   padding: 4px 30px;
   position: relative;
   -webkit-align-items: center;
@@ -14261,7 +14261,7 @@ footer .col-lg-9 > ul::after {
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  color: #fff;
+  color: blue;
   display: -webkit-flex;
   display: -moz-box;
   display: flex;
@@ -14282,7 +14282,7 @@ footer .col-lg-9 > ul::after {
   margin-right: 8px;
 }
 .container-author .authorPostHeadTabs .authorHeadContent .authorTabItem.authorTabItemActive {
-  color: var(--text-hover-link);
+  color: blue;
 }
 
 .contentWrapperNormal {

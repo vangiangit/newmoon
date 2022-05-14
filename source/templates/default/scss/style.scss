@@ -1218,13 +1218,13 @@ footer{
 
                     h4{
                         font-size: 28px;
-                        color: #fafafa;
+                        color: blue;
                         font-weight: bold;
                     }
 
                     div{
                         font-size: 15px;
-                        color: #a19f9f;
+                        color: blue;
                         margin-top: 2px;
                     }
                 }
@@ -1236,7 +1236,7 @@ footer{
                 display: flex;
                 font-size: 24px;
                 line-height: unset;
-                color: #fafafa;
+                color: blue;
                 padding: 4px 30px;
                 position: relative;
                 -webkit-align-items: center;
@@ -1327,7 +1327,7 @@ footer{
                 cursor: pointer;
                 -webkit-transition: all .3s;
                 transition: all .3s;
-                color: #fff;
+                color: blue;
                 display: -webkit-flex;
                 display: -moz-box;
                 display: flex;
@@ -1349,7 +1349,7 @@ footer{
                 }
 
                 &.authorTabItemActive{
-                    color: var(--text-hover-link);
+                    color: blue;
                 }
             }
         }
