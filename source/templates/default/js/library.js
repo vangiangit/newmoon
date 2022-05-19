@@ -115,7 +115,7 @@ function fsAlert($msg){
 
 function goSetIdTop($id){
 	offset = $('#'+$id).offset();
-	$("html,body").animate({scrollTop:offset.top}, 200);
+	$("html,body").animate({scrollTop:(offset.top -100)}, 200);
 }
 
 jQuery(document).ready(function($){

@@ -1,6 +1,6 @@
 <?php
 $string = new FSString();
-global $tmpl;
+global $tmpl, $config;
 if(trim($cat->seo_title != ''))
     $tmpl->addTitle($cat->seo_title);
 else
@@ -16,13 +16,13 @@ $Itemid = 5;
         <?php echo $cat->summary?>
     </h1>
     <div class="listTag d-flex">
-        <a href="javascript:void(0);">
+        <a href="<?php echo $config['submit_your_project'] ?>">
             <div class="hashTag">
                 <div>Submit Your Project</div>
             </div>
         </a>
     </div>
-    <div class="row list-news">
+    <div class="row d-none list-news">
         <?php $i = 0;
         foreach($listNews as $item){
             $i++;?>
@@ -32,7 +32,7 @@ $Itemid = 5;
         <?php if($i==3) break; } ?>
     </div><!-- /.list-grid-->
     <?php if($tags){ ?>
-    <div class="listTag d-flex">
+    <div class="listTag listTaga d-flex">
         <?php $tags = explode(',', $cat->tags); ?>
         <a href="javascript:void(0);" data-tag="all">
             <div class="hashTag">
@@ -69,7 +69,7 @@ $Itemid = 5;
     <?php }?>
 </div><!-- /.container-->
 <script type="text/javascript">
-    $('.listTag a').click(function(){
+    $('.listTaga a').click(function(){
         $tag = $(this).data('tag');
         if($tag=='all'){
             $('.project-tag').removeClass('d-none');

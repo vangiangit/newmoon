@@ -7,6 +7,11 @@ $toolbar->addButton('Save',FSText :: _('Save'),'','save.png');
 $toolbar->addButton('back',FSText :: _('Cancel'),'','back.png');   
 $this -> dt_form_begin(0);
 ?>
+<style>
+    input.form-control{
+        height: 32px !important;
+    }
+</style>
 <link rel="stylesheet" type="text/css" href="templates/default/css/bootstrap.min.css"/>
 <script type="text/javascript" src="templates/default/js/bootstrap.min.js"></script>
 <table cellspacing="1" class="admintable admintable-news" style="width: 100%; table-layout: fixed">

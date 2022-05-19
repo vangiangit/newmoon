@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ic-mouse</title>
+    <g id="Landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Post-Detail/-Dark" transform="translate(-72.000000, -221.000000)">
+            <g id="Group-9" transform="translate(56.000000, 133.000000)">
+                <g id="Group-6-Copy" transform="translate(0.000000, 80.000000)">
+                    <g id="ic-mouse" transform="translate(16.000000, 8.000000)">
+                        <rect id="Rectangle" x="0" y="0" width="24" height="24" rx="8"></rect>
+                        <g id="mouse" transform="translate(12.000000, 12.000000) scale(-1, 1) translate(-12.000000, -12.000000) translate(4.000000, 4.000000)" fill-rule="nonzero" stroke="#656464" stroke-dasharray="0,0" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11.2319792,9.53259879 C10.4229332,9.80189121 9.79930277,10.4246464 9.52962077,11.2325237 L8.5520204,14.1442143 C7.72611924,16.6520001 4.18653819,16.6015098 3.4112024,14.0937241 L0.124457919,3.52399922 C-0.51603684,1.42015215 1.42230271,-0.515368683 3.49548317,0.124200819 L14.0973462,3.40617146 C16.6087599,4.19721796 16.6424681,7.73167692 14.1479095,8.55638498 L11.2319792,9.53259879 Z" id="Vector"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

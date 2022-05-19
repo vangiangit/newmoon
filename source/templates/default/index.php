@@ -85,7 +85,7 @@ $tmpl->addScript('slick.min', '', 'top');
             <div class="col-lg-3">
                 <p>
                     <a class="navbar-brand" href="<?php echo URL_ROOT ?>">
-                        <img src="?v=<?php echo ASSET_VERSION; ?>" />
+                        <img src="<?php echo URL_ROOT.$config['logo'] ?>?v=<?php echo ASSET_VERSION; ?>" />
                     </a>
                 </p>
                 <p>

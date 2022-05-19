@@ -133,9 +133,11 @@ class NewsModelsNews extends FSModels{
         $query = '  SELECT *
                     FROM fs_news_menus 
                     WHERE post_id = '.$id.'
-                    ORDER BY ordering ASC';
+                    ORDER BY parent_id ASC, ordering ASC';
 		$sql = $db->query($query);
-		$result = $db->getObjectList();
+		$result = $db->getObjectListByKey('id');
+        // $tree_class  = FSFactory::getClass('tree','tree/');
+		// return $list = $tree_class -> indentRows($result);
 		return $result;
     }
     

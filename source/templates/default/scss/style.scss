@@ -23,7 +23,10 @@ body{
     background-color: var(--background-general);
     padding-top: 92px;
 }
-
+body ::-webkit-scrollbar {
+    display: block;
+    width: 0;
+}
 .navbar{
     background-color: rgb(255, 255, 255, 0.8);// var(--background-header-home);
     backdrop-filter: var(--blur-background-header);
@@ -37,8 +40,8 @@ body{
             text-transform: uppercase;
             font-weight: bold;
             color: var(--text-title-color);
-            padding-right: 2rem;
-            padding-left: 2rem;
+            padding-right: 1.5rem;
+            padding-left: 1.5rem;
         }
     }
 
@@ -1061,9 +1064,30 @@ footer{
         p{
             display: none;
         }
+
+        .info{
+            .heading{
+                -webkit-line-clamp: 3;
+                font-size: 18px;
+            }
+        }
+
+        .creator{
+            margin-top: 0;
+        }
     }
 }
 
+@media (max-width: 768px){
+    .block-news-list{
+        .list-item{
+            .info{
+                padding-top: 5px;
+                padding-bottom: 5px; 
+            }
+        }
+    }
+}
 .container-news{
     .block-heading{
         @include block-heading;
@@ -1456,8 +1480,8 @@ footer{
                     }
 
                     ul{
-                        max-height: -webkit-calc(100vh - 40px);
-                        max-height: calc(100vh - 40px);
+                        max-height: -webkit-calc(100vh - 400px);
+                        max-height: calc(100vh - 400px);
                         overflow: auto;
                         scrollbar-width: none;
                         margin: 0;
@@ -1467,10 +1491,11 @@ footer{
                             margin: 0;
                             padding: 0;
                             list-style: none;
-                            padding: 8px 16px;
+                            padding: 8px 5px;
                             border-radius: 10px;
                             margin-bottom: 4px;
                             cursor: pointer;
+                            font-weight: normal !important;
 
                             .textNumber{
                                 display: -webkit-flex;
@@ -1481,7 +1506,15 @@ footer{
                                 -webkit-justify-content: center;
                                 -moz-box-pack: center;
                                 justify-content: center;
-                                margin-right: 12px;
+                                margin-right: 7px;
+                            }
+
+                            ul{
+                                padding-left: 12px;
+
+                                img{
+                                    margin-right: 5px;
+                                }
                             }
                         }
                     }
@@ -1505,25 +1538,29 @@ footer{
                 background: var(--content-background-linear);
 
                 .post-title{
-                    font-size: 38px;
-                    padding-left: 50px;
-                    padding-right: 50px;
+                    font-size: 28px;
+                    padding-left: 20px;
+                    padding-right: 20px;
                     font-weight: bold;
                 }
 
                 .infoWrapper{
                     -webkit-flex-wrap: nowrap;
                     flex-wrap: nowrap;
-                    margin-bottom: 40px;
+                    margin-bottom: 10px;
                     -webkit-flex-direction: row;
                     -moz-box-orient: horizontal;
                     -moz-box-direction: normal;
                     flex-direction: row;
+
+                    .creator{
+                        @include post-creator;
+                    }
                 }
 
                 .pd50{
-                    padding-left: 50px;
-                    padding-right: 50px;
+                    padding-left: 20px;
+                    padding-right: 20px;
                 }
 
                 .textDescription{
@@ -1546,9 +1583,7 @@ footer{
                     img{
                         max-width: 100%;
                         border-radius: 10px;
-                        cursor: pointer;
-                        display: block;
-                        object-fit: contain;
+                        display: inline-block !important;
                     }
 
                     h2 {
@@ -1572,10 +1607,6 @@ footer{
                     width: 100%;
                     border-radius: 1rem;
                     overflow: hidden;
-                    min-width: 284px;
-                    min-height: 159.75px;
-                    height: 552.938px;
-                    max-height: 552.938px;
 
                     img{
                         width: 100%;
@@ -1753,37 +1784,42 @@ footer{
 
             .boxColLeftWrap{
                 padding: 20px 24px;
-            }
 
-            ul{
-                max-height: -webkit-calc(100vh - 40px);
-                max-height: calc(100vh - 40px);
-                overflow: auto;
-                scrollbar-width: none;
-                margin: 0;
-                padding: 0;
-                z-index: 3;
-
-                li{
+                > ul{
+                    max-height: -webkit-calc(100vh - 40px);
+                    max-height: calc(100vh - 40px);
+                    overflow: auto;
+                    scrollbar-width: none;
                     margin: 0;
                     padding: 0;
-                    list-style: none;
-                    padding: 8px 16px;
-                    border-radius: 10px;
-                    margin-bottom: 4px;
-                    cursor: pointer;
                     z-index: 3;
+    
+                    li{
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                        padding: 8px 16px;
+                        border-radius: 10px;
+                        margin-bottom: 4px;
+                        cursor: pointer;
+                        z-index: 3;
+    
+                        .textNumber{
+                            display: -webkit-flex;
+                            display: -moz-box;
+                            display: flex;
+                            min-width: 24px;
+                            height: 24px;
+                            -webkit-justify-content: center;
+                            -moz-box-pack: center;
+                            justify-content: center;
+                            margin-right: 12px;
+                        }
 
-                    .textNumber{
-                        display: -webkit-flex;
-                        display: -moz-box;
-                        display: flex;
-                        min-width: 24px;
-                        height: 24px;
-                        -webkit-justify-content: center;
-                        -moz-box-pack: center;
-                        justify-content: center;
-                        margin-right: 12px;
+                        ul{
+                            margin: 0;
+                            padding: 0;
+                        }
                     }
                 }
             }
@@ -1908,6 +1944,16 @@ footer{
             box-shadow: var(--card-shadow) !important;
             color: var(--text-title-post-color) !important;
         }
+    }
+}
+
+@media (max-width: 768px){
+    .colCenter{
+        .postContent{
+            .post-title{
+                font-size: 24px !important;
+            }
+        } 
     }
 }
 

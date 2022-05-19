@@ -215,6 +215,8 @@ class NewsModelsNews extends FSModels
 
     function get_news_menu($id){
 		global $db;
+        if(!intval($id))
+            return false;
 		$query = " 	SELECT a.*
                     FROM 
                     fs_news_menus AS a WHERE post_id = $id

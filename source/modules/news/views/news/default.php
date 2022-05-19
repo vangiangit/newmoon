@@ -18,7 +18,8 @@ $tmpl->setMeta('og:image', URL_ROOT.str_replace('/original/','/og-image/', $data
                         <?php if($menus){ ?>
                             <div class="boxColLeft mb-4">
                                 <div class="boxColLeftWrap" style="padding: 20px 12px;">
-                                <ul>
+                                    <?php echo $htmlMenus?>
+                                    <?php /* <ul>
                                         <?php $i=0;
                                         foreach($menus as $item){ 
                                             $i++;?>
@@ -29,7 +30,7 @@ $tmpl->setMeta('og:image', URL_ROOT.str_replace('/original/','/og-image/', $data
                                                 </div>
                                             </li>
                                         <?php } ?>
-                                    </ul>
+                                    </ul> */ ?>
                                 </div>
                             </div><!-- /.boxColLeft-->
                         <?php } ?>
@@ -60,7 +61,18 @@ $tmpl->setMeta('og:image', URL_ROOT.str_replace('/original/','/og-image/', $data
                     <div class="postContent">
                         <h1 class="post-title pd50"><?php echo $data->title;?></h1>
                         <div class="infoWrapper pd50">
-
+                            <div class="creator">
+                                <div class="align-items-center d-flex">
+                                    <a href="<?php echo $link_creator ?>" title="<?php echo htmlspecialchars($data->creator_name); ?>">
+                                        <img onerror="this.src='/images/iconCoinNM.png'" src="<?php echo URL_ROOT.$data->creator_avatar ?>" class="rounded-circle" alt="icon">
+                                        <?php echo $data->creator_name ?>
+                                    </a>
+                                    <div class="aic-dot"></div>
+                                    <div class="aic-date">
+                                        <?php echo date('M d', strtotime($data->created_time)); ?>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="thumbnailWrapper pd50">
                             <div class="thumbnailBox">

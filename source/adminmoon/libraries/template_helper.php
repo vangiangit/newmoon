@@ -548,7 +548,7 @@ class TemplateHelper
 		echo '<tr><b>'.$title.'</b><br />';
 		if($rows > 1){
 			if(!$editor){
-				echo  '<textarea rows="'.$rows.'" cols="'.$size.'" name="'.$name.'" id="'.$name.'" >'.$value.'</textarea>';
+				echo  '<textarea class="form-control" rows="'.$rows.'" cols="'.$size.'" name="'.$name.'" id="'.$name.'" >'.$value.'</textarea>';
 			} else {
 				$k = 'oFCKeditor_'.$name;
 				$oFCKeditor[$k] = new FCKeditor($name) ;
@@ -559,7 +559,7 @@ class TemplateHelper
 				$oFCKeditor[$k]->Create() ;
 			}
 		}else{
-			echo '<input type="text" name="'.$name.'" id="'.$name.'" value="'.htmlspecialchars($value).'" size="'.$size.'"/>';
+			echo '<input class="form-control" type="text" name="'.$name.'" id="'.$name.'" value="'.htmlspecialchars($value).'" size="'.$size.'"/>';
 		}
 		if($comment)
 			echo '<span class=\'comment\'>'.$comment.'</span>';
@@ -585,7 +585,7 @@ class TemplateHelper
 		if (! isset ( $value )) $value = $default;
 		echo '<tr>';
 		echo '	<td class="value"><b>'. $title.'</b><br />';
-		echo '		<input type="text" name="' . $name . '"  readonly="true" id="' . $name . '" value="' . htmlspecialchars ( $value ) . '" size="' . $size . '"/>';
+		echo '		<input  type="text" name="' . $name . '"  readonly="true" id="' . $name . '" value="' . htmlspecialchars ( $value ) . '" size="' . $size . '"/>';
 		echo '		<a href="javascript:void(0)" onclick="javascript:NewCssCal (\''.$name.'\',\'YYYYmmdd\',\'arrow\',true,\'24\')">';
 		echo '			<img border="0" alt="Calenda" src="templates/default/images/cal.gif">';
 		echo '		</a>';
