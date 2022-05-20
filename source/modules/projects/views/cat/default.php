@@ -17,7 +17,7 @@ $Itemid = 5;
     </h1>
     <div class="listTag d-flex">
         <a href="<?php echo $config['submit_your_project'] ?>">
-            <div class="hashTag">
+            <div style="background-color: #0d6efd !important; color: #fff !important;" class="hashTag">
                 <div>Submit Your Project</div>
             </div>
         </a>
@@ -31,16 +31,18 @@ $Itemid = 5;
             </div>
         <?php if($i==3) break; } ?>
     </div><!-- /.list-grid-->
-    <?php $tags = explode(',', $cat->tags); ?>
-    <?php if($tags){ ?>
+    <?php $tags = explode(',', trim($cat->tags));?>
+    <?php if(!empty($tags)){ ?>
     <div class="listTag listTaga d-flex">
-        <a href="javascript:void(0);" data-tag="all">
+        <a class="selected" href="javascript:void(0);" data-tag="all">
             <div class="hashTag">
                 <div>All</div>
             </div>
         </a>
         <?php 
         foreach($tags as $tag){ 
+            if(trim($tag)=='')
+                continue;
         ?>
             <a href="javascript:void(0);" data-tag="<?php echo $string->stringStandart($tag); ?>">
                 <div class="hashTag">
@@ -70,6 +72,10 @@ $Itemid = 5;
 </div><!-- /.container-->
 <script type="text/javascript">
     $('.listTaga a').click(function(){
+        $('.listTaga a').removeClass('selected');
+
+        $(this).addClass('selected');
+
         $tag = $(this).data('tag');
         if($tag=='all'){
             $('.project-tag').removeClass('d-none');

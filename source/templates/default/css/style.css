@@ -14802,6 +14802,10 @@ footer .col-lg-9 > ul::after {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
+.listTag a.selected .hashTag {
+  background-color: #292929 !important;
+  color: #fff !important;
+}
 .listTag a:hover .hashTag {
   color: #cfb160;
 }
