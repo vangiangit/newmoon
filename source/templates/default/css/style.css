@@ -12599,8 +12599,8 @@ textarea.form-control-lg {
 }
 .block-news.block-news-latest .slider-nav-bound .post-slider-nav .heading a {
   font-size: 15px;
-  line-height: 22px;
-  -webkit-line-clamp: 2;
+  line-height: 18px;
+  -webkit-line-clamp: 3;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -13816,13 +13816,13 @@ footer .col-lg-9 > ul::after {
 }
 .grid-item .info .heading {
   overflow: hidden;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   word-break: break-word;
   font-weight: 600;
   color: var(--text-title-post-color);
-  font-size: 21px;
+  font-size: 18px;
   line-height: normal;
 }
 .grid-item .info .heading a {
@@ -13979,13 +13979,13 @@ footer .col-lg-9 > ul::after {
 }
 .list-item .info .heading {
   overflow: hidden;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   word-break: break-word;
   font-weight: 600;
   color: var(--text-title-post-color);
-  font-size: 21px;
+  font-size: 18px;
   line-height: normal;
 }
 .list-item .info .heading a {

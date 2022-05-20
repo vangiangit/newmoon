@@ -16,6 +16,7 @@ class NewsControllersNews extends FSControllers{
         $otherList = $this->model->getOtherNewsList($data->category_id);
         $menus = $this->model->getMenuList($data->id);
         $htmlMenus = $this->menu($menus);
+        $this->model->update_hits($data->id);
         /* Thêm thanh điều hướng */
         global $tmpl;
         $breadcrumbs = array();

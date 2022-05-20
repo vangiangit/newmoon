@@ -20,6 +20,7 @@ $fitler_config['filter'][] = $filter_categories;
 //CONFIG	
 $list_config = array();
 $list_config[] = array('title'=>'Title','field'=>'title','ordering'=> 1, 'type'=>'text','col_width' => '25%','arr_params'=>array('size'=> 30), 'align'=>'left');
+$list_config[] = array('title'=>'Viewed','field'=>'hits','ordering'=> 1, 'type'=>'text', 'align'=>'right');
 //$list_config[] = array('title'=>'Image','field'=>'image','type'=>'image','no_col'=>1,'arr_params'=>array('search'=>'/original/','replace'=>'/tiny/', 'height'=>'75px'));
 //$list_config[] = array('title'=>'Summary','field'=>'summary','type'=>'edit_text','col_width' => '20%','arr_params'=>array('size'=>30,'rows'=>8));
 $list_config[] = array('title'=>'Category','field'=>'category_name','ordering'=> 1, 'type'=>'text', 'align'=>'left');

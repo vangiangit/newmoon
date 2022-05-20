@@ -31,9 +31,9 @@ $Itemid = 5;
             </div>
         <?php if($i==3) break; } ?>
     </div><!-- /.list-grid-->
+    <?php $tags = explode(',', $cat->tags); ?>
     <?php if($tags){ ?>
     <div class="listTag listTaga d-flex">
-        <?php $tags = explode(',', $cat->tags); ?>
         <a href="javascript:void(0);" data-tag="all">
             <div class="hashTag">
                 <div>All</div>

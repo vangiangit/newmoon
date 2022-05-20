@@ -8,6 +8,7 @@ $tmpl->addMetakey($seo_keyword);
 $tmpl->addMetades($seo_description);
 $Itemid = 5;		
 $tmpl->setMeta('og:image', URL_ROOT.str_replace('/original/','/og-image/', $data->image));
+$link_creator = FSRoute::_('index.php?module=news&view=home&task=author&id='.$data->creator_id.'&code='.$data->creator.'&Itemid='.$Itemid);
 ?>
 <div class="contentWrapperNormal">
     <div class="minHeight">

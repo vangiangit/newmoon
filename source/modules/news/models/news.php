@@ -196,4 +196,16 @@ class NewsModelsNews extends FSModels{
         }
         return $list;
     }
+
+    function update_hits($news_id){
+        if(!$news_id)
+            return;
+        global $db;
+        $sql = "UPDATE fs_news 
+                SET hits = hits + 1 
+                WHERE  id = '$news_id'";
+        $db->query($sql);
+        $rows = $db->affected_rows();
+        return $rows;
+    }
 }
