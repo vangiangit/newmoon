@@ -212,23 +212,23 @@ class FSRoute
                                 case 'author':
                                     $id  = isset($array_params['id'])?$array_params['id']: 0;
                                     $code  = isset($array_params['code'])?$array_params['code']: 'admin';
-                                    return URL_LANG.'author/'.$code.'-'.$id;
+                                    return URL_ROOT.'author/'.$code.'-'.$id;
                                 default:
-                                    return URL_LANG.'news';
+                                    return URL_ROOT.'news';
                             }
                             
                         case 'news':
                             if($task== 'display'){
 								$id  = isset($array_params['id'])?$array_params['id']: 0;
                                 $code  = isset($array_params['code'])?$array_params['code']: 'tin-tuc';
-								return URL_LANG.$code.'-d'.$id.'.html';
+								return URL_ROOT.$code.'-d'.$id.'.html';
 							}else{
 								return URL_ROOT.$url;
 							}
                         case 'cat':
                             $id  = isset($array_params['id'])?$array_params['id']: 0;
 							$ccode  = isset($array_params['ccode'])?$array_params['ccode']: 'danh-muc-tin-tuc';
-							return URL_LANG.$ccode.'.html';
+							return URL_ROOT.$ccode.'.html';
                         default:
                             return URL_ROOT . $url;
                     }

@@ -11,7 +11,7 @@ $Itemid = 5;
             <div class="row list-grid">
                 <?php foreach($list as $item){?>
                     <div class="col-lg-4">
-                        <?php $tmpl->grid_item($item, 'small'); ?>
+                        <?php $tmpl->grid_item($item, 'tiny'); ?>
                     </div>
                 <?php }?>
             </div><!-- /.row-->

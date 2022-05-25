@@ -14,7 +14,7 @@ $Itemid = 5;
                     $i++;
                 ?>
                     <div class="<?php if($i=='1') echo 'col-lg-12'; else echo 'col-lg-6'; ?>">
-                        <?php $tmpl->list_item($item, 'small'); ?>
+                        <?php $tmpl->list_item($item, 'tiny'); ?>
                     </div>
                 <?php }?>
             </div><!-- /.row-->

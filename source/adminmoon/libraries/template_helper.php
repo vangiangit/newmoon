@@ -80,8 +80,8 @@ class TemplateHelper
 	}
 	function views($link)
 		{
-				$html =  "<a title=\"Views\" href=\"$link\">";
-				$html .="<img border=\"0\" alt=\"Views\" src=\"templates/default/images/view.jpg\" /></a>";
+				$html =  "<a target='_blank' title=\"Views\" href=\"$link\">";
+				$html .="<img style='height: 20px;' border=\"0\" alt=\"Views\" src=\"templates/default/images/eye.png\" /></a>";
 			return $html;
 		}
 			function edit($link)
@@ -307,7 +307,7 @@ class TemplateHelper
 				$html_body .= '<tr class="row'.($i%2).'">';
 				$html_body .= '<td>'.($i+1).'<input type="hidden" name="id_'.$i.'" value="'.$row->id.'"/> </td>';
 				$html_body .= '<td><input type="checkbox" onclick="isChecked(this.checked);" value="'.$row->id.'"  name="id[]" id="cb'.$i.'"> </td>';
-				 
+				$link_preview = FSRoute::_("index.php?module=".$this -> module."&view=".$this -> view."&code=".$row->alias."&id=".$row->id); 
 				foreach($arr_config as $col){
 					if(!count($col)){
 						continue;
@@ -339,6 +339,9 @@ class TemplateHelper
 							case 'edit':
 								$html_body .= TemplateHelper::edit($link_view);
 								break;
+                            case 'view':
+                                $html_body .= TemplateHelper::views($link_preview);
+                                break;
                             case 'reply':
 								$html_body .= TemplateHelper::reply("index.php?module=".$this -> module."&view=".$this -> view."&task=reply&id=".$row->id);
 								break;

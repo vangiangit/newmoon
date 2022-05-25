@@ -9,7 +9,7 @@ class ProjectsModelsCat extends FSModels{
         parent::__construct();
         $this->table_name = 'fs_projects';
         $this->table_category = 'fs_projects_categories';
-        $this->limit = 10;
+        $this->limit = 30;
     }
     
     /**

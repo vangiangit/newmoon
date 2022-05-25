@@ -606,6 +606,12 @@ class Templates{
                         </a>
                         <?php } ?>
                     </p>
+                    <?php  
+                    $tags = explode(',', $item->tags);
+                    if($tags){ 
+                    ?>
+                        <p><?php foreach($tags as $tag) echo trim($tag).' ';?></p>
+                    <?php } ?>
                 </div>
             </article><!-- /.grid-item-->
         <?php

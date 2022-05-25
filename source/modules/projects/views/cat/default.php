@@ -44,7 +44,7 @@ $Itemid = 5;
             if(trim($tag)=='')
                 continue;
         ?>
-            <a href="javascript:void(0);" data-tag="<?php echo $string->stringStandart($tag); ?>">
+            <a href="javascript:void(0);" data-tag="<?php echo $string->stringStandart(trim($tag)); ?>">
                 <div class="hashTag">
                     <div><?php echo trim($tag) ?></div>
                 </div>

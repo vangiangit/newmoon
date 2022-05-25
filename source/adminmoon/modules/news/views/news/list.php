@@ -28,6 +28,7 @@ $list_config[] = array('title'=>'Creator','field'=>'creator_name','ordering'=> 1
 $list_config[] = array('title'=>'Ordering','field'=>'ordering','ordering'=> 1, 'type'=>'edit_text','arr_params'=>array('size'=>3));
 $list_config[] = array('title'=>'Published','field'=>'published','ordering'=> 1, 'type'=>'published');
 $list_config[] = array('title'=>'Edit','type'=>'edit');
+$list_config[] = array('title'=>'View','type'=>'view');
 //$list_config[] = array('title'=>'Comment','field'=>'id','type'=>'text','arr_params'=>array('function'=>'view_comment'));
 $list_config[] = array('title'=>'Created time','field'=>'created_time','ordering'=> 1, 'type'=>'datetime');
 $list_config[] = array('title'=>'Id','field'=>'id','ordering'=> 1, 'type'=>'text');
