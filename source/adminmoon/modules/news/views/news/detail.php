@@ -106,7 +106,7 @@ $this -> dt_form_begin(0);
         });
     }
 
-    function removenews($id){
+    function removeNews($id){
         var rConfirm = confirm("Bạn có chắc muốn xóa bản ghi này?");
         if (rConfirm == true) {
             $.ajax({

@@ -9,7 +9,7 @@ class NewsModelsHome extends FSModels{
         parent::__construct();
         $this->table_name = 'fs_news';
         $this->table_category = 'fs_news_categories';
-        $this->limit = 10;
+        $this->limit = 24;
     }
     
     /**

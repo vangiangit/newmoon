@@ -90,32 +90,32 @@ class Pagination
             $end_page = $current_page + $maxpage;
             if ($end_page > $num_of_page)
                 $end_page = $num_of_page;
-            $html .= "<ul class='web-pagination pagination'>";
+            $html .= "<ul style='justify-content: center; margin: 0; padding-bottom: 15px;' class='web-pagination pagination text-center'>";
             if (($current_page > 1) && ($num_of_page > 1))
             {
                 //$html .= "<a title='first_page' href='" . Pagination::create_link_with_page($this->url, 0) . "' title='" . FSText::_('First page') . "' >" . $first_page . "</a>";
-                $html .= "<li><a rel='nofollow' class='pageLink' title='pre_page' href='" . Pagination::create_link_with_page($this->url, $current_page - 1) . "' title='" . FSText::_('Previous') . "' >" . $previous ."</a></li>";
+                $html .= "<li class=\"page-item\"><a rel='nofollow' class='pageLink page-link' title='pre_page' href='" . Pagination::create_link_with_page($this->url, $current_page - 1) . "' title='" . FSText::_('Previous') . "' >" . $previous ."</a></li>";
                 if ($start_page != 1)
-                    $html .= "<li><a class='pageLink'>...</a> </li>";
+                    $html .= "<li class=\"page-item\"><a class='pageLink page-link'>...</a> </li>";
             }
             for ($i = $start_page; $i <= $end_page; $i++)
             {
                 if ($i != $current_page)
                 {
                     if ($i == 1)
-                        $html .= "<li><a rel='nofollow' class='pageLink' title='Page " . $i . "' href='" . Pagination::create_link_with_page($this->url, 0) . "' title='first page' >" . $i . "</a></li>";
+                        $html .= "<li class=\"page-item\"><a class=\"page-link\" rel='nofollow' class='pageLink' title='Page " . $i . "' href='" . Pagination::create_link_with_page($this->url, 0) . "' title='first page' >" . $i . "</a></li>";
                     else
-                        $html .= "<li><a rel='nofollow' class='pageLink' title='Page " . $i . "' href='" . Pagination::create_link_with_page($this->url, $i) . "' title='" . $i . "' >" . $i . "</a></li>";
+                        $html .= "<li class=\"page-item\"><a class=\"page-link\" rel='nofollow' class='pageLink' title='Page " . $i . "' href='" . Pagination::create_link_with_page($this->url, $i) . "' title='" . $i . "' >" . $i . "</a></li>";
                 } else
                 {
-                    $html .= "<li class=\"active\"><a title='Page " . $i . "' class='current pageLink'>" . $i . "</a></li>";
+                    $html .= "<li class=\"active page-item\"><a class=\"page-link\" title='Page " . $i . "' class='current pageLink'>" . $i . "</a></li>";
                 }
             }
             if (($current_page < $num_of_page) && ($num_of_page > 1))
             {
                 if ($end_page < $num_of_page)
-                    $html .= "<li><a class='pageLink'>...</a></li> ";
-                $html .= "<li><a rel='nofollow' class='pageLink' title='Next page' href='" . Pagination::create_link_with_page($this->url, $current_page + 1) . "' >" . $next . "</a></li>";
+                    $html .= "<li class=\"page-item\"><a class='pageLink page-link'>...</a></li> ";
+                $html .= "<li class=\"page-item\"><a rel='nofollow' class='pageLink page-link' title='Next page' href='" . Pagination::create_link_with_page($this->url, $current_page + 1) . "' >" . $next . "</a></li>";
                 //$html .= "<a title='Last page' href='" . Pagination::create_link_with_page($this->url, $num_of_page) . "' >" . $last_page . "</a>";
             }
             $html .= "</ul>";
