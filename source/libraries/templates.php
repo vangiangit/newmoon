@@ -233,7 +233,7 @@ class Templates{
         echo '    <meta property="og:title" content="'.htmlspecialchars_decode($this->title).'"/>'."\n"; 
         echo '    <meta property="og:description" content="'.htmlspecialchars_decode($this->head_meta_des).'" />'."\n"; 
         echo '    <meta property="og:url" content="https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'].'" />'."\n";
-        echo '    <meta property="og:sitename" content="'.$config['title'].'" />'."\n"; 
+        echo '    <meta property="og:sitename" content="'.htmlspecialchars_decode($config['title']).'" />'."\n"; 
         echo '    <link type="image/x-icon" href="/favicon.ico" rel=\'icon\' />'."\n";
         echo '    <meta name="viewport" content="user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, width=device-width" />'."\n";
         //echo '    <meta name="developer" content="Trần Văn Giang, vangiangfly@gmail.com">'."\n";

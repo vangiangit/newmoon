@@ -659,9 +659,9 @@ class TemplateHelper
 		$compare = isset($value)?$value:$default;
 		foreach($array_value as $key => $item){
 			if($compare == $key){
-				$html .= '<input type="radio" name="'.$name.'" value="'.$key.'" checked="checked" />'.$item.'&nbsp;&nbsp;';
+				$html .= '<input type="radio" name="'.$name.'" value="'.$key.'" checked="checked" />'.FSText :: _($item).'&nbsp;&nbsp;';
 			}else{
-				$html .= '<input type="radio" name="'.$name.'" value="'.$key.'" />'.$item.'&nbsp;&nbsp;';
+				$html .= '<input type="radio" name="'.$name.'" value="'.$key.'" />'.FSText :: _($item).'&nbsp;&nbsp;';
 			}
 		}
 		$html .= '</td></tr>';
@@ -673,9 +673,9 @@ class TemplateHelper
 		$compare = isset($value)?$value:$default;
 		foreach($array_value as $key => $item){
 			if($compare == $key){
-				$html .= '<input type="radio" name="'.$name.'" value="'.$key.'" checked="checked" />'.$item.'&nbsp;&nbsp;';
+				$html .= '<input type="radio" name="'.$name.'" value="'.$key.'" checked="checked" />'.FSText :: _($item).'&nbsp;&nbsp;';
 			}else{
-				$html .= '<input type="radio" name="'.$name.'" value="'.$key.'" />'.$item.'&nbsp;&nbsp;';
+				$html .= '<input type="radio" name="'.$name.'" value="'.$key.'" />'.FSText :: _($item).'&nbsp;&nbsp;';
 			}
 		}
 		$html .= '</td></tr>';

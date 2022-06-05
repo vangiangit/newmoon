@@ -15,7 +15,7 @@ class NewsModelsNews extends FSModels
         $this->table_category_name = 'fs_news_categories';
         $this->table_types = 'fs_news_types';
         $this->arr_img_paths = array(
-            array('tiny', 360, 204, 'resize_image_fix'),
+            array('tiny', 540, 306, 'resize_image_fix'),
             array('small', 1200, 675, 'resize_image_fix'),
             array('og-image', 600, 314, 'resize_image_fix'),
         );

@@ -70,7 +70,7 @@
 					</th>
 					
 					<th class="title" width="15%">
-						<?php echo FSText :: _('Lo&#7841;i'); ?>
+						<?php echo FSText :: _('Loại'); ?>
 					</th>
 					<th class="title" width="7%">
 						<?php echo TemplateHelper::orderTable(FSText :: _('Ordering'),'ordering',$sort_field,$sort_direct); ?>
@@ -79,7 +79,7 @@
 						<?php echo TemplateHelper::orderTable(FSText :: _('Published'),'published',$sort_field,$sort_direct); ?>
 					</th>
 					<th class="title" width="10%">
-						<?php echo TemplateHelper::orderTable(FSText :: _('V&#7883; tr&#237;'),'position',$sort_field,$sort_direct); ?>
+						<?php echo TemplateHelper::orderTable(FSText :: _('Vị trí'),'position',$sort_field,$sort_direct); ?>
 					</th>
 					<th class="title" width="7%">
 						<?php echo TemplateHelper::orderTable(FSText :: _('Id'),'id',$sort_field,$sort_direct); ?>
@@ -96,7 +96,7 @@
 							<td>
 								<input type="checkbox" onclick="isChecked(this.checked);" value="<?php echo $row->id; ?>"  name="cid[]" id="cb<?php echo $i; ?>">
 							</td>
-							<td style="text-align: left;"><a href='<?php echo $link_detail; ?>'><?php echo $row->title; ?></a></td>
+							<td style="text-align: left;"><a href='<?php echo $link_detail; ?>'><?php echo FSText :: _($row->title); ?></a></td>
 							<td style="text-align: left;"><?php echo isset($listmoduletype[$row->module])?$listmoduletype[$row->module]->name:$row->module; ?></td>
 							<td><?php echo $row->ordering; ?></td>
 							<td><?php echo TemplateHelper::published("cb".($i),$row->published?"unpublished":"published"); ?></td>

@@ -52,9 +52,9 @@ class NewsControllersNews extends Controllers
 		<table class="table table-bordered table-hover">
 			<thead class="thead-light">
 				<tr>
-                    <th scope="col" class="text-center">Mục lục</th>
-                    <th scope="col" class="text-center">Ordering</th>
-                    <th scope="col" class="text-center">Công cụ</th>
+                    <th scope="col" class="text-center"><?php echo FSText :: _('Mục lục');?></th>
+                    <th scope="col" class="text-center"><?php echo FSText :: _('Ordering');?></th>
+                    <th scope="col" class="text-center"><?php echo FSText :: _('Công cụ');?></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -73,7 +73,7 @@ class NewsControllersNews extends Controllers
             <tfoot>
                 <tr>
                     <td colspan="2" class="text-center">
-                        <a href="javascript:void(0);" title="Thêm" onclick="editNews(0)"><i class="fa fa-plus-square"></i> Thêm mới</a>
+                        <a href="javascript:void(0);" title="Thêm" onclick="editNews(0)"><i class="fa fa-plus-square"></i> <?php echo FSText :: _('Thêm mới'); ?></a>
                     </td>
                 </tr>
             </tfoot>
