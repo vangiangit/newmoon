@@ -674,7 +674,10 @@ footer{
     }
 }
 
-@media (max-width: 768px){
+@media (max-width: 960px){
+    .contentWrapper{
+        display: block !important;
+    }
     .navbar-toggle{
         float: none !important;
         padding-left: 0 !important;
@@ -748,8 +751,8 @@ footer{
 
         .colRight{
             padding-left: 0 !important;
-            width: unset;
-            max-width: unset;
+            width: unset !important;
+            max-width: unset !important;
         }
     }
 

@@ -266,7 +266,17 @@ class Templates{
             foreach ($arr_script_top as $item){
                 echo "<script type=\"text/javascript\" src=\"$item\"></script>\n";
             }
-        }
+        }?>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MYJ1DVELMK"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MYJ1DVELMK');
+        </script>
+        <?php
 		echo '</head>'."\n";
 		echo '<body>'."\n";?>
         <?php

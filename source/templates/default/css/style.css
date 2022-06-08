@@ -13616,7 +13616,11 @@ footer .col-lg-9 > ul::after {
   background: left -90px url("../images/sprinter.png") no-repeat;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
+  .contentWrapper {
+    display: block !important;
+  }
+
   .navbar-toggle {
     float: none !important;
     padding-left: 0 !important;
@@ -13682,8 +13686,8 @@ footer .col-lg-9 > ul::after {
   }
   .contentWrapperNormal main .contentWrapper.row .colRight {
     padding-left: 0 !important;
-    width: unset;
-    max-width: unset;
+    width: unset !important;
+    max-width: unset !important;
   }
 
   .container-detail .cd-content .colContent {
